@@ -287,6 +287,12 @@
     <Compile Include="FrmKasa.Designer.cs">
       <DependentUpon>FrmKasa.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVeriTabanı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVeriTabanı.Designer.cs">
+      <DependentUpon>FrmVeriTabanı.cs</DependentUpon>
+    </Compile>
     <Compile Include="geciciForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -450,6 +456,9 @@
     <EmbeddedResource Include="FrmKasa.resx">
       <DependentUpon>FrmKasa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmVeriTabanı.resx">
+      <DependentUpon>FrmVeriTabanı.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="geciciForm.resx">
       <DependentUpon>geciciForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -523,6 +532,8 @@
     <None Include="Resources\redo.svg" />
     <None Include="Resources\redo_16x16.png" />
     <None Include="Resources\undo_16x16.png" />
+    <None Include="Resources\undo.svg" />
+    <None Include="Resources\newdatasource.svg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

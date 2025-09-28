@@ -78,5 +78,19 @@ namespace Ticari_Otomasyon
 
             }
         }
+
+        private void labelControl4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmVeriTabanı baglantiVeriTabanı = new FrmVeriTabanı();
+                baglantiVeriTabanı.Show();
+                this.Hide();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show($"Hata: {exception.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

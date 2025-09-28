@@ -143,6 +143,16 @@ namespace Ticari_Otomasyon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage newdatasource {
+            get {
+                object obj = ResourceManager.GetObject("newdatasource", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage normalpriority {
             get {
                 object obj = ResourceManager.GetObject("normalpriority", resourceCulture);
@@ -276,6 +286,16 @@ namespace Ticari_Otomasyon.Properties {
         internal static DevExpress.Utils.Svg.SvgImage treemap {
             get {
                 object obj = ResourceManager.GetObject("treemap", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage undo {
+            get {
+                object obj = ResourceManager.GetObject("undo", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
