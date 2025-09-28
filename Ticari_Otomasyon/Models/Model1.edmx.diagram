@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="95063f6027be443aa0eabb79b420e534" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Notlar" PointX="0.5" PointY="1.5" Width="1.5" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="7" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Bankalar" Width="1.5" PointX="6" PointY="14.75" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_FirmaHareketler" Width="2.25" PointX="6" PointY="5.625" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Giderler" Width="1.5" PointX="0.75" PointY="13" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Ilceler" Width="1.5" PointX="3" PointY="10.25" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Kodlar" Width="1.5" PointX="3.75" PointY="3" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_MusteriHareketler" Width="2.25" PointX="9" PointY="5.625" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Musteriler" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Personeller" Width="1.5" PointX="3.75" PointY="5.75" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Sehirler" Width="1.5" PointX="0.75" PointY="10.375" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Sirketler" Width="1.5" PointX="3.75" PointY="13" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Stoklar" Width="1.5" PointX="8.75" PointY="3" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_Bankalar_Tbl_Sirketler" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_FirmaHareketler_Tbl_Personeller" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_FirmaHareketler_Tbl_Sirketler" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_Ilceler_Tbl_Sehirler" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_MusteriHareketler_Tbl_Musteriler" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_MusteriHareketler_Tbl_Personeller" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Admin" Width="1.5" PointX="3.75" PointY="0.875" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_AltKategoriler" Width="1.5" PointX="12.75" PointY="18.375" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Kategoriler" Width="1.5" PointX="10.5" PointY="17.625" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_AltKa__Kateg__69C6B1F5" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_FaturaBilgi" Width="1.5" PointX="8.375" PointY="11" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_FaturaDetay" Width="2.375" PointX="10.625" PointY="11.5" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_FaturaDetay_Tbl_FaturaBilgi" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Urunler" Width="1.5" PointX="4.25" PointY="19.5" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_Urunl__AltKa__6ABAD62E" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_FirmaHareketler_Tbl_Urunler" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_MusteriHareketler_Tbl_Urunler" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

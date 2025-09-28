@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" id="Layer_4">
+  <defs>
+    <style>.Blue{fill:#1177d7;}.Yellow{fill:#ffb115;}.Red{fill:#d11c1c;}.Green{fill:#039c23;}.cls-1{opacity:0.5;}.Black{fill:#727272;}</style>
+  </defs>
+  <rect x="2" y="2" width="28" height="10" class="Blue" />
+  <rect x="2" y="14" width="10" height="16" class="Yellow" />
+  <rect x="14" y="14" width="16" height="8" class="Red" />
+  <rect x="14" y="24" width="10" height="6" class="Green" />
+  <g class="cls-1">
+    <rect x="26" y="24" width="4" height="6" class="Black" />
+  </g>
+</svg>
