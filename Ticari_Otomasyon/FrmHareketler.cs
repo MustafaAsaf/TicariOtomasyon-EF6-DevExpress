@@ -29,8 +29,10 @@ namespace Ticari_Otomasyon
         {
             GetFirmaMusteriHareketleri();
             GetSahisMusteriHareketleri();
+            GetStokHareketleri();
             gridViewFirmaHareket.BestFitColumns(true);
             gridViewMusteriHareket.BestFitColumns(true);
+            gridView1.BestFitColumns(true);
         }
         public void GetFirmaMusteriHareketleri()
         {
@@ -79,6 +81,31 @@ namespace Ticari_Otomasyon
                         fh.Notlar
                     }).ToList();
                     gridControlMusteriHareket.DataSource = spendingList;
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show($"Hata: {exception.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void GetStokHareketleri()
+        {
+            try
+            {
+                using (var values = new DboTicariOtomasyonEntities1())
+                {
+                    var stockList = values.Tbl_UrunLoglari.Select(lg => new
+                    {
+                        ID=lg.LogId,
+                        Adı=lg.UrunAdi,
+                        Marka=lg.UrunMarka,
+                        İşlemTipi=lg.IslemTipi,
+                        EskiDeger=lg.EskiDeger,
+                        YeniDeger=lg.YeniDeger,
+                        İşlemTarihi=lg.IslemTarihi,
+                        Kullanıcı=lg.Kullanici
+                    }).ToList();
+                    gridControlStokHareket.DataSource=stockList;
                 }
             }
             catch (Exception exception)

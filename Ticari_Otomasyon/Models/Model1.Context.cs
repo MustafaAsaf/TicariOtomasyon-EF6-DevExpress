@@ -46,6 +46,7 @@ namespace Ticari_Otomasyon.Models
         public virtual DbSet<Tbl_FaturaBilgi> Tbl_FaturaBilgi { get; set; }
         public virtual DbSet<Tbl_FaturaDetay> Tbl_FaturaDetay { get; set; }
         public virtual DbSet<Tbl_Urunler> Tbl_Urunler { get; set; }
+        public virtual DbSet<Tbl_UrunLoglari> Tbl_UrunLoglari { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

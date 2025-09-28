@@ -31,10 +31,11 @@
         <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_FaturaBilgi" Width="1.5" PointX="8.375" PointY="11" />
         <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_FaturaDetay" Width="2.375" PointX="10.625" PointY="11.5" />
         <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_FaturaDetay_Tbl_FaturaBilgi" />
-        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Urunler" Width="1.5" PointX="4.25" PointY="19.5" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Urunler" Width="1.5" PointX="3.25" PointY="19.5" />
         <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_Urunl__AltKa__6ABAD62E" />
         <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_FirmaHareketler_Tbl_Urunler" />
         <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_MusteriHareketler_Tbl_Urunler" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_UrunLoglari" Width="1.5" PointX="11.375" PointY="0.75" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

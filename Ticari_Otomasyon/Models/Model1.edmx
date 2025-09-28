@@ -242,6 +242,20 @@
           <Property Name="UrunDetay" Type="nvarchar(max)" />
           <Property Name="AltKategoriID" Type="int" />
         </EntityType>
+        <EntityType Name="Tbl_UrunLoglari">
+          <Key>
+            <PropertyRef Name="LogId" />
+          </Key>
+          <Property Name="LogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UrunId" Type="int" Nullable="false" />
+          <Property Name="UrunAdi" Type="nvarchar" MaxLength="100" />
+          <Property Name="UrunMarka" Type="nvarchar" MaxLength="100" />
+          <Property Name="IslemTipi" Type="nvarchar" MaxLength="20" />
+          <Property Name="EskiDeger" Type="nvarchar" MaxLength="500" />
+          <Property Name="YeniDeger" Type="nvarchar" MaxLength="500" />
+          <Property Name="IslemTarihi" Type="datetime" />
+          <Property Name="Kullanici" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <Association Name="FK__Tbl_AltKa__Kateg__69C6B1F5">
           <End Role="Tbl_Kategoriler" Type="Self.Tbl_Kategoriler" Multiplicity="1" />
           <End Role="Tbl_AltKategoriler" Type="Self.Tbl_AltKategoriler" Multiplicity="*" />
@@ -427,6 +441,7 @@
           <EntitySet Name="Tbl_Sirketler" EntityType="Self.Tbl_Sirketler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Stoklar" EntityType="Self.Tbl_Stoklar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Urunler" EntityType="Self.Tbl_Urunler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_UrunLoglari" EntityType="Self.Tbl_UrunLoglari" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Tbl_AltKa__Kateg__69C6B1F5" Association="Self.FK__Tbl_AltKa__Kateg__69C6B1F5">
             <End Role="Tbl_Kategoriler" EntitySet="Tbl_Kategoriler" />
             <End Role="Tbl_AltKategoriler" EntitySet="Tbl_AltKategoriler" />
@@ -572,6 +587,7 @@
             <End Role="Tbl_Urunler" EntitySet="Tbl_Urunler" />
             <End Role="Tbl_MusteriHareketler" EntitySet="Tbl_MusteriHareketler" />
           </AssociationSet>
+          <EntitySet Name="Tbl_UrunLoglari" EntityType="DboTicariOtomasyonModel.Tbl_UrunLoglari" />
           </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -1000,6 +1016,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Tbl_UrunLoglari">
+          <Key>
+            <PropertyRef Name="LogId" />
+          </Key>
+          <Property Name="LogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UrunId" Type="Int32" Nullable="false" />
+          <Property Name="UrunAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UrunMarka" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IslemTipi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EskiDeger" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="YeniDeger" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IslemTarihi" Type="DateTime" Precision="3" />
+          <Property Name="Kullanici" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1316,6 +1346,21 @@
                 <ScalarProperty Name="UrunMarka" ColumnName="UrunMarka" />
                 <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
                 <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_UrunLoglari">
+            <EntityTypeMapping TypeName="DboTicariOtomasyonModel.Tbl_UrunLoglari">
+              <MappingFragment StoreEntitySet="Tbl_UrunLoglari">
+                <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+                <ScalarProperty Name="IslemTarihi" ColumnName="IslemTarihi" />
+                <ScalarProperty Name="YeniDeger" ColumnName="YeniDeger" />
+                <ScalarProperty Name="EskiDeger" ColumnName="EskiDeger" />
+                <ScalarProperty Name="IslemTipi" ColumnName="IslemTipi" />
+                <ScalarProperty Name="UrunMarka" ColumnName="UrunMarka" />
+                <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+                <ScalarProperty Name="UrunId" ColumnName="UrunId" />
+                <ScalarProperty Name="LogId" ColumnName="LogId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
