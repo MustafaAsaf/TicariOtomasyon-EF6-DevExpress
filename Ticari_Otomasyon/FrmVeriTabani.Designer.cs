@@ -1,6 +1,6 @@
 ﻿namespace Ticari_Otomasyon
 {
-    partial class FrmVeriTabanı
+    partial class FrmVeriTabani
     {
         /// <summary>
         /// Required designer variable.
@@ -116,7 +116,6 @@
             // 
             // txtSifre
             // 
-            this.txtSifre.Enabled = false;
             this.txtSifre.Location = new System.Drawing.Point(189, 168);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(8);
             this.txtSifre.Name = "txtSifre";
@@ -128,7 +127,6 @@
             // 
             // txtKullaniciAdi
             // 
-            this.txtKullaniciAdi.Enabled = false;
             this.txtKullaniciAdi.Location = new System.Drawing.Point(189, 128);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(8);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
@@ -147,7 +145,7 @@
             this.cbAuthentication.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbAuthentication.Properties.Items.AddRange(new object[] {
-            "Windows",
+            "Windows Authentication",
             "SQL Server"});
             this.cbAuthentication.Size = new System.Drawing.Size(296, 24);
             this.cbAuthentication.TabIndex = 30;
@@ -163,7 +161,7 @@
             this.txtServerName.Size = new System.Drawing.Size(296, 24);
             this.txtServerName.TabIndex = 28;
             // 
-            // FrmVeriTabanı
+            // FrmVeriTabani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,7 +177,7 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.simpleButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "FrmVeriTabanı";
+            this.Name = "FrmVeriTabani";
             this.Text = "Veri Tabanı Oluştur";
             ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).EndInit();

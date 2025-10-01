@@ -53,10 +53,10 @@ namespace Ticari_Otomasyon
 
             try
             {
-                using (var context= new DboTicariOtomasyonEntities1())
+                using (var context = new DboTicariOtomasyonEntities1())
                 {
                     var user = context.Tbl_Admin
-                        .FirstOrDefault(u=>u.AdminKullaniciAdi== userName && u.AdminSifre==password);
+                        .FirstOrDefault(u => u.AdminKullaniciAdi == userName && u.AdminSifre == password);
 
                     if (user != null) //user değişkeni veri tabanında varsa ve textedit nesneleriyle uyuşuyorsa.
                     {
@@ -83,7 +83,7 @@ namespace Ticari_Otomasyon
         {
             try
             {
-                FrmVeriTabanı baglantiVeriTabanı = new FrmVeriTabanı();
+                FrmVeriTabani baglantiVeriTabanı = new FrmVeriTabani();
                 baglantiVeriTabanı.Show();
                 this.Hide();
             }
