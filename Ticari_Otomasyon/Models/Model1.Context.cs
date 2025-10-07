@@ -21,7 +21,7 @@ namespace Ticari_Otomasyon.Models
             : base("name=DboTicariOtomasyonEntities1")
         {
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

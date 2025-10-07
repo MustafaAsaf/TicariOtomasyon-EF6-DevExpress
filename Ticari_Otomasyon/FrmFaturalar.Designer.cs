@@ -63,6 +63,7 @@
             this.comboBoxTeslimEden = new DevExpress.XtraEditors.ComboBoxEdit();
             this.comboBoxAlici = new DevExpress.XtraEditors.ComboBoxEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.btnClear = new DevExpress.XtraEditors.SimpleButton();
@@ -70,7 +71,17 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkEditZaman = new DevExpress.XtraEditors.CheckEdit();
             this.comboBoxFaturaTipi = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtVergiDaire = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -83,17 +94,7 @@
             this.txtFaturaNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxMarka.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbUrunAdi.Properties)).BeginInit();
@@ -111,6 +112,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxTeslimEden.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxAlici.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -119,18 +122,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEditZaman.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxFaturaTipi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVergiDaire.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFaturaID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFaturaNo.Properties)).BeginInit();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
-            this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
-            this.panelControl4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox5
@@ -538,6 +540,15 @@
             this.xtraTabPage2.Size = new System.Drawing.Size(404, 800);
             this.xtraTabPage2.Text = "Fatura Detayları";
             // 
+            // panelControl4
+            // 
+            this.panelControl4.Controls.Add(this.groupBox5);
+            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl4.Location = new System.Drawing.Point(0, 0);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(404, 800);
+            this.panelControl4.TabIndex = 0;
+            // 
             // gridView1
             // 
             this.gridView1.DetailHeight = 280;
@@ -618,167 +629,23 @@
             this.xtraTabPage1.Size = new System.Drawing.Size(404, 800);
             this.xtraTabPage1.Text = "Fatura Bilgileri";
             // 
-            // groupBox1
+            // panelControl3
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox1.Controls.Add(this.comboBoxFaturaTipi);
-            this.groupBox1.Controls.Add(this.txtVergiDaire);
-            this.groupBox1.Controls.Add(this.labelControl5);
-            this.groupBox1.Controls.Add(this.txtSaat);
-            this.groupBox1.Controls.Add(this.txtFaturaID);
-            this.groupBox1.Controls.Add(this.txtTarih);
-            this.groupBox1.Controls.Add(this.labelControl3);
-            this.groupBox1.Controls.Add(this.labelControl9);
-            this.groupBox1.Controls.Add(this.labelControl4);
-            this.groupBox1.Controls.Add(this.txtFaturaNo);
-            this.groupBox1.Controls.Add(this.labelControl1);
-            this.groupBox1.Controls.Add(this.labelControl2);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(2, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(400, 278);
-            this.groupBox1.TabIndex = 32;
-            this.groupBox1.TabStop = false;
-            // 
-            // comboBoxFaturaTipi
-            // 
-            this.comboBoxFaturaTipi.Location = new System.Drawing.Point(146, 60);
-            this.comboBoxFaturaTipi.Margin = new System.Windows.Forms.Padding(6);
-            this.comboBoxFaturaTipi.Name = "comboBoxFaturaTipi";
-            this.comboBoxFaturaTipi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
-            this.comboBoxFaturaTipi.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxFaturaTipi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxFaturaTipi.Properties.Items.AddRange(new object[] {
-            "ŞAHIS",
-            "KURUMSAL"});
-            this.comboBoxFaturaTipi.Size = new System.Drawing.Size(226, 28);
-            this.comboBoxFaturaTipi.TabIndex = 53;
-            // 
-            // txtVergiDaire
-            // 
-            this.txtVergiDaire.Location = new System.Drawing.Point(146, 219);
-            this.txtVergiDaire.Margin = new System.Windows.Forms.Padding(8);
-            this.txtVergiDaire.Name = "txtVergiDaire";
-            this.txtVergiDaire.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
-            this.txtVergiDaire.Properties.Appearance.Options.UseFont = true;
-            this.txtVergiDaire.Size = new System.Drawing.Size(226, 28);
-            this.txtVergiDaire.TabIndex = 29;
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(24, 222);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(8);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(109, 21);
-            this.labelControl5.TabIndex = 33;
-            this.labelControl5.Text = "VERGİ DAİRE:";
-            // 
-            // txtSaat
-            // 
-            this.txtSaat.Font = new System.Drawing.Font("Tahoma", 10.2F);
-            this.txtSaat.Location = new System.Drawing.Point(146, 179);
-            this.txtSaat.Margin = new System.Windows.Forms.Padding(6);
-            this.txtSaat.Mask = "00:00";
-            this.txtSaat.Name = "txtSaat";
-            this.txtSaat.Size = new System.Drawing.Size(226, 28);
-            this.txtSaat.TabIndex = 32;
-            this.txtSaat.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtFaturaID
-            // 
-            this.txtFaturaID.Enabled = false;
-            this.txtFaturaID.Location = new System.Drawing.Point(146, 23);
-            this.txtFaturaID.Margin = new System.Windows.Forms.Padding(8);
-            this.txtFaturaID.Name = "txtFaturaID";
-            this.txtFaturaID.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
-            this.txtFaturaID.Properties.Appearance.Options.UseFont = true;
-            this.txtFaturaID.Size = new System.Drawing.Size(226, 28);
-            this.txtFaturaID.TabIndex = 30;
-            // 
-            // txtTarih
-            // 
-            this.txtTarih.Font = new System.Drawing.Font("Tahoma", 10.2F);
-            this.txtTarih.Location = new System.Drawing.Point(146, 138);
-            this.txtTarih.Margin = new System.Windows.Forms.Padding(6);
-            this.txtTarih.Mask = "00/00/0000";
-            this.txtTarih.Name = "txtTarih";
-            this.txtTarih.Size = new System.Drawing.Size(226, 28);
-            this.txtTarih.TabIndex = 31;
-            this.txtTarih.ValidatingType = typeof(System.DateTime);
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(83, 182);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(8);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(47, 21);
-            this.labelControl3.TabIndex = 27;
-            this.labelControl3.Text = "SAAT:";
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(106, 27);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(8);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(24, 21);
-            this.labelControl9.TabIndex = 29;
-            this.labelControl9.Text = "ID:";
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(75, 146);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(8);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(55, 21);
-            this.labelControl4.TabIndex = 25;
-            this.labelControl4.Text = "TARİH:";
-            // 
-            // txtFaturaNo
-            // 
-            this.txtFaturaNo.Location = new System.Drawing.Point(146, 100);
-            this.txtFaturaNo.Margin = new System.Windows.Forms.Padding(8);
-            this.txtFaturaNo.Name = "txtFaturaNo";
-            this.txtFaturaNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
-            this.txtFaturaNo.Properties.Appearance.Options.UseFont = true;
-            this.txtFaturaNo.Size = new System.Drawing.Size(226, 28);
-            this.txtFaturaNo.TabIndex = 28;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(32, 102);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(8);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(97, 21);
-            this.labelControl1.TabIndex = 27;
-            this.labelControl1.Text = "FATURA NO:";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(23, 62);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(8);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(105, 21);
-            this.labelControl2.TabIndex = 25;
-            this.labelControl2.Text = "FATURA TİPİ:";
+            this.panelControl3.Controls.Add(this.groupBox3);
+            this.panelControl3.Controls.Add(this.groupBox1);
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl3.Location = new System.Drawing.Point(0, 0);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(404, 800);
+            this.panelControl3.TabIndex = 0;
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox3.Controls.Add(this.txtAliciVergiDaire);
             this.groupBox3.Controls.Add(this.labelControl21);
+            this.groupBox3.Controls.Add(this.txtVergiDaire);
+            this.groupBox3.Controls.Add(this.labelControl5);
             this.groupBox3.Controls.Add(this.txtAliciEMail);
             this.groupBox3.Controls.Add(this.txtAliciTelefon);
             this.groupBox3.Controls.Add(this.txtAliciAdres);
@@ -889,6 +756,170 @@
             this.labelControl8.TabIndex = 25;
             this.labelControl8.Text = "ALICI:";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox1.Controls.Add(this.checkEditZaman);
+            this.groupBox1.Controls.Add(this.comboBoxFaturaTipi);
+            this.groupBox1.Controls.Add(this.txtSaat);
+            this.groupBox1.Controls.Add(this.txtFaturaID);
+            this.groupBox1.Controls.Add(this.txtTarih);
+            this.groupBox1.Controls.Add(this.labelControl3);
+            this.groupBox1.Controls.Add(this.labelControl9);
+            this.groupBox1.Controls.Add(this.labelControl4);
+            this.groupBox1.Controls.Add(this.txtFaturaNo);
+            this.groupBox1.Controls.Add(this.labelControl1);
+            this.groupBox1.Controls.Add(this.labelControl2);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(2, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(400, 310);
+            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabStop = false;
+            // 
+            // checkEditZaman
+            // 
+            this.checkEditZaman.Location = new System.Drawing.Point(193, 219);
+            this.checkEditZaman.Name = "checkEditZaman";
+            this.checkEditZaman.Properties.Caption = "Güncel Tarih ve Saat";
+            this.checkEditZaman.Size = new System.Drawing.Size(157, 24);
+            this.checkEditZaman.TabIndex = 54;
+            this.checkEditZaman.CheckedChanged += new System.EventHandler(this.checkEditZaman_CheckedChanged);
+            // 
+            // comboBoxFaturaTipi
+            // 
+            this.comboBoxFaturaTipi.Location = new System.Drawing.Point(146, 60);
+            this.comboBoxFaturaTipi.Margin = new System.Windows.Forms.Padding(6);
+            this.comboBoxFaturaTipi.Name = "comboBoxFaturaTipi";
+            this.comboBoxFaturaTipi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.comboBoxFaturaTipi.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxFaturaTipi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxFaturaTipi.Properties.Items.AddRange(new object[] {
+            "ŞAHIS",
+            "KURUMSAL"});
+            this.comboBoxFaturaTipi.Size = new System.Drawing.Size(226, 28);
+            this.comboBoxFaturaTipi.TabIndex = 53;
+            // 
+            // txtVergiDaire
+            // 
+            this.txtVergiDaire.Location = new System.Drawing.Point(146, 10);
+            this.txtVergiDaire.Margin = new System.Windows.Forms.Padding(8);
+            this.txtVergiDaire.Name = "txtVergiDaire";
+            this.txtVergiDaire.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.txtVergiDaire.Properties.Appearance.Options.UseFont = true;
+            this.txtVergiDaire.Size = new System.Drawing.Size(226, 28);
+            this.txtVergiDaire.TabIndex = 29;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(19, 13);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(8);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(109, 21);
+            this.labelControl5.TabIndex = 33;
+            this.labelControl5.Text = "VERGİ DAİRE:";
+            // 
+            // txtSaat
+            // 
+            this.txtSaat.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.txtSaat.Location = new System.Drawing.Point(146, 179);
+            this.txtSaat.Margin = new System.Windows.Forms.Padding(6);
+            this.txtSaat.Mask = "00:00";
+            this.txtSaat.Name = "txtSaat";
+            this.txtSaat.Size = new System.Drawing.Size(226, 28);
+            this.txtSaat.TabIndex = 32;
+            this.txtSaat.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtFaturaID
+            // 
+            this.txtFaturaID.Enabled = false;
+            this.txtFaturaID.Location = new System.Drawing.Point(146, 23);
+            this.txtFaturaID.Margin = new System.Windows.Forms.Padding(8);
+            this.txtFaturaID.Name = "txtFaturaID";
+            this.txtFaturaID.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.txtFaturaID.Properties.Appearance.Options.UseFont = true;
+            this.txtFaturaID.Size = new System.Drawing.Size(226, 28);
+            this.txtFaturaID.TabIndex = 30;
+            // 
+            // txtTarih
+            // 
+            this.txtTarih.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.txtTarih.Location = new System.Drawing.Point(146, 138);
+            this.txtTarih.Margin = new System.Windows.Forms.Padding(6);
+            this.txtTarih.Mask = "00/00/0000";
+            this.txtTarih.Name = "txtTarih";
+            this.txtTarih.Size = new System.Drawing.Size(226, 28);
+            this.txtTarih.TabIndex = 31;
+            this.txtTarih.ValidatingType = typeof(System.DateTime);
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(83, 182);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(8);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(47, 21);
+            this.labelControl3.TabIndex = 27;
+            this.labelControl3.Text = "SAAT:";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(106, 27);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(8);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(24, 21);
+            this.labelControl9.TabIndex = 29;
+            this.labelControl9.Text = "ID:";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(75, 146);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(8);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(55, 21);
+            this.labelControl4.TabIndex = 25;
+            this.labelControl4.Text = "TARİH:";
+            // 
+            // txtFaturaNo
+            // 
+            this.txtFaturaNo.Location = new System.Drawing.Point(146, 100);
+            this.txtFaturaNo.Margin = new System.Windows.Forms.Padding(8);
+            this.txtFaturaNo.Name = "txtFaturaNo";
+            this.txtFaturaNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.txtFaturaNo.Properties.Appearance.Options.UseFont = true;
+            this.txtFaturaNo.Size = new System.Drawing.Size(226, 28);
+            this.txtFaturaNo.TabIndex = 28;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(32, 102);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(8);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(97, 21);
+            this.labelControl1.TabIndex = 27;
+            this.labelControl1.Text = "FATURA NO:";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(23, 62);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(8);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(105, 21);
+            this.labelControl2.TabIndex = 25;
+            this.labelControl2.Text = "FATURA TİPİ:";
+            // 
             // panelControl2
             // 
             this.panelControl2.Controls.Add(this.gridControl1);
@@ -897,25 +928,6 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1288, 834);
             this.panelControl2.TabIndex = 1;
-            // 
-            // panelControl3
-            // 
-            this.panelControl3.Controls.Add(this.groupBox3);
-            this.panelControl3.Controls.Add(this.groupBox1);
-            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(0, 0);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(404, 800);
-            this.panelControl3.TabIndex = 0;
-            // 
-            // panelControl4
-            // 
-            this.panelControl4.Controls.Add(this.groupBox5);
-            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl4.Location = new System.Drawing.Point(0, 0);
-            this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(404, 800);
-            this.panelControl4.TabIndex = 0;
             // 
             // FrmFaturalar
             // 
@@ -945,6 +957,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxTeslimEden.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxAlici.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -953,20 +967,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEditZaman.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxFaturaTipi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVergiDaire.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFaturaID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFaturaNo.Properties)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
-            this.panelControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
-            this.panelControl4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1038,5 +1051,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.PanelControl panelControl3;
+        private DevExpress.XtraEditors.CheckEdit checkEditZaman;
     }
 }

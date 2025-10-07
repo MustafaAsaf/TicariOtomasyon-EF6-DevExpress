@@ -258,11 +258,11 @@
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.txtMusteriAd);
             this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl1.Location = new System.Drawing.Point(-2, 2);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(6);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(410, 830);
+            this.groupControl1.Size = new System.Drawing.Size(406, 830);
             this.groupControl1.TabIndex = 4;
             // 
             // btnUpdate

@@ -640,5 +640,39 @@ namespace Ticari_Otomasyon
                 txtFaturaIDForeign.Text = gridView1.GetFocusedRowCellValue("FaturaID").ToString();
             }
         }
+
+        private void checkEditZaman_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                // CheckEdit nesnesinin Checked (işaretli) olup olmadığını kontrol edin
+                if (checkEditZaman.Checked)
+                {
+                    // CheckEdit işaretliyse, anlık tarih ve saati alın
+                    DateTime simdi = DateTime.Now;
+
+                    txtTarih.Text = simdi.ToString("dd.MM.yyyy");
+
+                    // Veya kısa tarih formatını kullanabilirsiniz:
+                    // txtTarih.EditValue = simdi.ToShortDateString();
+                   
+                    txtSaat.Text = simdi.ToString("HH:mm");
+
+                    // Veya kısa saat formatını kullanabilirsiniz:
+                    // txtSaat.EditValue = simdi.ToShortTimeString();
+                }
+                else
+                {
+                    // CheckEdit işaretli değilse, TextEdit nesnelerini temizleyin
+                    txtTarih.Text = null; // veya txtTarih.Text = string.Empty;
+                    txtSaat.Text = null;  // veya txtSaat.Text = string.Empty;
+                }
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show($"Hata: {exception.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
