@@ -185,7 +185,7 @@ namespace Ticari_Otomasyon
             {
                 if (gridView1.FocusedRowHandle >= 0) // Seçili satır kontrolü
                 {
-                    int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("GiderId")); // ID'yi al
+                    int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID")); // ID'yi al
                     var removeValues = dataBase.Tbl_Giderler.Find(id);
 
                     if (removeValues != null)

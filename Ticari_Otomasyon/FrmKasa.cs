@@ -44,6 +44,7 @@ namespace Ticari_Otomasyon
                     DateTime monthStart = new DateTime(today.Year, today.Month, 1);
                     DateTime weekStart = today.AddDays(-7);
 
+
                     // 🔹 FaturaDetayları belleğe çekiyoruz
                     var faturaDetayList = db.Tbl_FaturaDetay
                         .Include("Tbl_FaturaBilgi") // ilişkili tabloyu da getir
@@ -70,11 +71,17 @@ namespace Ticari_Otomasyon
                     lblAylikGelir.Text = aylikGelir.ToString("N2") + " ₺";
 
                     // Toplam Aylık Gider
+                    var thisYear = today.Year.ToString();
+                    // Ay adını Türkçe olarak alalım
+                    var thisMonthName = today.ToString("MMMM", new System.Globalization.CultureInfo("tr-TR"));
+
+                    // Örnek: "Ekim"
                     var aylikGider = db.Tbl_Giderler
-                        .Where(g => g.GiderYıl == today.Year.ToString() && g.GiderAy == today.Month.ToString())
-                        .ToList() // burada da listeye çekelim
+                        .Where(g => g.GiderYıl == thisYear && g.GiderAy == thisMonthName)
+                        .ToList()
                         .Sum(g => (decimal)(g.GiderElektrik + g.GiderSu + g.GiderDogalgaz +
                                             g.GiderInternet + g.GiderMaaslar + g.GiderEkstra));
+
                     lblAylikGider.Text = aylikGider.ToString("N2") + " ₺";
 
                     // Aylık Kasa Bakiyesi

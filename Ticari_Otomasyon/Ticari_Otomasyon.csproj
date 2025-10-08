@@ -251,12 +251,6 @@
     <Compile Include="FrmSirketler.Designer.cs">
       <DependentUpon>FrmSirketler.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmStokDetay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmStokDetay.Designer.cs">
-      <DependentUpon>FrmStokDetay.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmStoklar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -432,9 +426,6 @@
     <EmbeddedResource Include="FrmSirketler.resx">
       <DependentUpon>FrmSirketler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmStokDetay.resx">
-      <DependentUpon>FrmStokDetay.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmStoklar.resx">
       <DependentUpon>FrmStoklar.cs</DependentUpon>
     </EmbeddedResource>
@@ -523,6 +514,9 @@
     <None Include="Resources\redo.svg" />
     <None Include="Resources\redo_16x16.png" />
     <None Include="Resources\undo_16x16.png" />
+    <None Include="Resources\edit.svg" />
+    <None Include="Resources\ShoppingCart.svg" />
+    <None Include="Resources\TrackersMirrored.svg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -103,6 +103,16 @@ namespace Ticari_Otomasyon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage edit {
+            get {
+                object obj = ResourceManager.GetObject("edit", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage floatingobjectsendbehindtext {
             get {
                 object obj = ResourceManager.GetObject("floatingobjectsendbehindtext", resourceCulture);
@@ -243,6 +253,16 @@ namespace Ticari_Otomasyon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage ShoppingCart {
+            get {
+                object obj = ResourceManager.GetObject("ShoppingCart", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage singlepageview {
             get {
                 object obj = ResourceManager.GetObject("singlepageview", resourceCulture);
@@ -256,6 +276,16 @@ namespace Ticari_Otomasyon.Properties {
         internal static DevExpress.Utils.Svg.SvgImage snapinsertfooter {
             get {
                 object obj = ResourceManager.GetObject("snapinsertfooter", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage TrackersMirrored {
+            get {
+                object obj = ResourceManager.GetObject("TrackersMirrored", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }

@@ -101,7 +101,7 @@
             // txtNotlar
             // 
             this.txtNotlar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtNotlar.Location = new System.Drawing.Point(157, 360);
+            this.txtNotlar.Location = new System.Drawing.Point(154, 367);
             this.txtNotlar.Margin = new System.Windows.Forms.Padding(6);
             this.txtNotlar.Name = "txtNotlar";
             this.txtNotlar.Size = new System.Drawing.Size(227, 180);
@@ -112,7 +112,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(71, 363);
+            this.labelControl1.Location = new System.Drawing.Point(68, 370);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(69, 21);
@@ -121,7 +121,7 @@
             // 
             // txtEkstra
             // 
-            this.txtEkstra.Location = new System.Drawing.Point(158, 317);
+            this.txtEkstra.Location = new System.Drawing.Point(155, 324);
             this.txtEkstra.Margin = new System.Windows.Forms.Padding(6);
             this.txtEkstra.Name = "txtEkstra";
             this.txtEkstra.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -131,7 +131,7 @@
             // 
             // txtMaaslar
             // 
-            this.txtMaaslar.Location = new System.Drawing.Point(158, 277);
+            this.txtMaaslar.Location = new System.Drawing.Point(155, 284);
             this.txtMaaslar.Margin = new System.Windows.Forms.Padding(6);
             this.txtMaaslar.Name = "txtMaaslar";
             this.txtMaaslar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -141,7 +141,7 @@
             // 
             // txtSu
             // 
-            this.txtSu.Location = new System.Drawing.Point(158, 157);
+            this.txtSu.Location = new System.Drawing.Point(155, 164);
             this.txtSu.Margin = new System.Windows.Forms.Padding(6);
             this.txtSu.Name = "txtSu";
             this.txtSu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -151,7 +151,7 @@
             // 
             // comboBoxYil
             // 
-            this.comboBoxYil.Location = new System.Drawing.Point(158, 75);
+            this.comboBoxYil.Location = new System.Drawing.Point(155, 82);
             this.comboBoxYil.Name = "comboBoxYil";
             this.comboBoxYil.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
             this.comboBoxYil.Properties.Appearance.Options.UseFont = true;
@@ -162,7 +162,7 @@
             // 
             // comboBoxAy
             // 
-            this.comboBoxAy.Location = new System.Drawing.Point(157, 36);
+            this.comboBoxAy.Location = new System.Drawing.Point(154, 43);
             this.comboBoxAy.Name = "comboBoxAy";
             this.comboBoxAy.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F);
             this.comboBoxAy.Properties.Appearance.Options.UseFont = true;
@@ -190,7 +190,7 @@
             this.btnClear.Appearance.Options.UseFont = true;
             this.btnClear.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClear.ImageOptions.SvgImage")));
             this.btnClear.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnClear.Location = new System.Drawing.Point(324, 594);
+            this.btnClear.Location = new System.Drawing.Point(321, 601);
             this.btnClear.Margin = new System.Windows.Forms.Padding(6);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(60, 50);
@@ -203,7 +203,7 @@
             this.btnUpdate.Appearance.Options.UseFont = true;
             this.btnUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUpdate.ImageOptions.SvgImage")));
             this.btnUpdate.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnUpdate.Location = new System.Drawing.Point(255, 594);
+            this.btnUpdate.Location = new System.Drawing.Point(252, 601);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(60, 50);
@@ -216,7 +216,7 @@
             this.btnDelete.Appearance.Options.UseFont = true;
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
             this.btnDelete.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnDelete.Location = new System.Drawing.Point(187, 594);
+            this.btnDelete.Location = new System.Drawing.Point(184, 601);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(6);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(60, 50);
@@ -229,7 +229,7 @@
             this.btnAdd.Appearance.Options.UseFont = true;
             this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
             this.btnAdd.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnAdd.Location = new System.Drawing.Point(119, 594);
+            this.btnAdd.Location = new System.Drawing.Point(116, 601);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(6);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(60, 50);
@@ -283,7 +283,7 @@
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
             this.btnSave.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnSave.Location = new System.Drawing.Point(50, 594);
+            this.btnSave.Location = new System.Drawing.Point(47, 601);
             this.btnSave.Margin = new System.Windows.Forms.Padding(6);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(60, 50);
@@ -294,7 +294,7 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(71, 320);
+            this.labelControl7.Location = new System.Drawing.Point(68, 327);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(67, 21);
@@ -305,7 +305,7 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(58, 280);
+            this.labelControl9.Location = new System.Drawing.Point(55, 287);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(80, 21);
@@ -314,7 +314,7 @@
             // 
             // txtInternet
             // 
-            this.txtInternet.Location = new System.Drawing.Point(158, 237);
+            this.txtInternet.Location = new System.Drawing.Point(155, 244);
             this.txtInternet.Margin = new System.Windows.Forms.Padding(6);
             this.txtInternet.Name = "txtInternet";
             this.txtInternet.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -324,7 +324,7 @@
             // 
             // txtDogalgaz
             // 
-            this.txtDogalgaz.Location = new System.Drawing.Point(158, 197);
+            this.txtDogalgaz.Location = new System.Drawing.Point(155, 204);
             this.txtDogalgaz.Margin = new System.Windows.Forms.Padding(6);
             this.txtDogalgaz.Name = "txtDogalgaz";
             this.txtDogalgaz.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -336,7 +336,7 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(53, 240);
+            this.labelControl8.Location = new System.Drawing.Point(50, 247);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(85, 21);
@@ -347,7 +347,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(46, 200);
+            this.labelControl6.Location = new System.Drawing.Point(43, 207);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(92, 21);
@@ -358,7 +358,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(112, 160);
+            this.labelControl5.Location = new System.Drawing.Point(109, 167);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(26, 21);
@@ -367,7 +367,7 @@
             // 
             // txtElektrik
             // 
-            this.txtElektrik.Location = new System.Drawing.Point(158, 117);
+            this.txtElektrik.Location = new System.Drawing.Point(155, 124);
             this.txtElektrik.Margin = new System.Windows.Forms.Padding(6);
             this.txtElektrik.Name = "txtElektrik";
             this.txtElektrik.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -379,7 +379,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(57, 120);
+            this.labelControl4.Location = new System.Drawing.Point(54, 127);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(81, 21);
@@ -390,7 +390,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(108, 78);
+            this.labelControl3.Location = new System.Drawing.Point(105, 85);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(30, 21);
@@ -401,7 +401,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(111, 39);
+            this.labelControl2.Location = new System.Drawing.Point(108, 46);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(27, 21);
