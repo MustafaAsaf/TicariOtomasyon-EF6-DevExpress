@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView2 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStoklar));
             this.gridViewAltKategoriler = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControlKategoriler = new DevExpress.XtraGrid.GridControl();
@@ -50,6 +50,8 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.btnUpdateAltKategori = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAddAltKategori = new DevExpress.XtraEditors.SimpleButton();
             this.cmbKategori = new System.Windows.Forms.ComboBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtAltKategoriAdi = new System.Windows.Forms.TextBox();
@@ -58,12 +60,12 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.btnClear = new DevExpress.XtraEditors.SimpleButton();
-            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnUpdateKategori = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAddKategori = new DevExpress.XtraEditors.SimpleButton();
             this.txtKategoriAdi = new System.Windows.Forms.TextBox();
             this.txtKategoriID = new System.Windows.Forms.TextBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -75,8 +77,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -105,15 +107,17 @@
             // 
             this.gridViewAltKategoriler.GridControl = this.gridControlKategoriler;
             this.gridViewAltKategoriler.Name = "gridViewAltKategoriler";
+            this.gridViewAltKategoriler.OptionsView.ShowGroupPanel = false;
             this.gridViewAltKategoriler.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewAltKategoriler_FocusedRowChanged);
+            this.gridViewAltKategoriler.Click += new System.EventHandler(this.gridViewAltKategoriler_Click);
             // 
             // gridControlKategoriler
             // 
             this.gridControlKategoriler.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.LevelTemplate = this.gridViewAltKategoriler;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.LevelTemplate = this.gridViewAltKategoriler;
+            gridLevelNode2.RelationName = "Level1";
             this.gridControlKategoriler.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gridControlKategoriler.Location = new System.Drawing.Point(3, 3);
             this.gridControlKategoriler.MainView = this.gridViewKategoriler;
             this.gridControlKategoriler.Name = "gridControlKategoriler";
@@ -128,7 +132,7 @@
             this.gridViewKategoriler.GridControl = this.gridControlKategoriler;
             this.gridViewKategoriler.Name = "gridViewKategoriler";
             this.gridViewKategoriler.OptionsView.ShowGroupPanel = false;
-            this.gridViewKategoriler.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridViewKategoriler_RowClick);
+            this.gridViewKategoriler.MasterRowExpanded += new DevExpress.XtraGrid.Views.Grid.CustomMasterRowEventHandler(this.gridViewKategoriler_MasterRowExpanded);
             this.gridViewKategoriler.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewKategoriler_FocusedRowChanged);
             // 
             // tableLayoutPanel1
@@ -161,20 +165,20 @@
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.Location = new System.Drawing.Point(2, 2);
             this.chartControl1.Name = "chartControl1";
-            series1.LegendTextPattern = "{A}";
-            series1.Name = "Series 1";
-            series1.SeriesID = 0;
-            series1.View = pieSeriesView1;
+            series2.LegendTextPattern = "{A}";
+            series2.Name = "Series 1";
+            series2.SeriesID = 0;
+            series2.View = pieSeriesView2;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
+        series2};
             this.chartControl1.Size = new System.Drawing.Size(1100, 830);
             this.chartControl1.TabIndex = 2;
-            chartTitle1.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 14F, DevExpress.Drawing.DXFontStyle.Bold);
-            chartTitle1.Text = "Ürünlerin Kategori Dağılımı";
-            chartTitle1.TextColor = System.Drawing.Color.DarkBlue;
-            chartTitle1.TitleID = 0;
+            chartTitle2.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 14F, DevExpress.Drawing.DXFontStyle.Bold);
+            chartTitle2.Text = "Ürünlerin Kategori Dağılımı";
+            chartTitle2.TextColor = System.Drawing.Color.DarkBlue;
+            chartTitle2.TitleID = 0;
             this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle1});
+            chartTitle2});
             // 
             // panelControl2
             // 
@@ -282,6 +286,8 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.btnUpdateAltKategori);
+            this.groupControl2.Controls.Add(this.btnAddAltKategori);
             this.groupControl2.Controls.Add(this.cmbKategori);
             this.groupControl2.Controls.Add(this.labelControl3);
             this.groupControl2.Controls.Add(this.txtAltKategoriAdi);
@@ -295,13 +301,42 @@
             this.groupControl2.TabIndex = 11;
             this.groupControl2.Text = "Alt Kategoriler";
             // 
+            // btnUpdateAltKategori
+            // 
+            this.btnUpdateAltKategori.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUpdateAltKategori.Appearance.Options.UseFont = true;
+            this.btnUpdateAltKategori.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
+            this.btnUpdateAltKategori.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
+            this.btnUpdateAltKategori.Location = new System.Drawing.Point(495, 77);
+            this.btnUpdateAltKategori.Margin = new System.Windows.Forms.Padding(6);
+            this.btnUpdateAltKategori.Name = "btnUpdateAltKategori";
+            this.btnUpdateAltKategori.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnUpdateAltKategori.Size = new System.Drawing.Size(60, 50);
+            this.btnUpdateAltKategori.TabIndex = 31;
+            this.btnUpdateAltKategori.Click += new System.EventHandler(this.btnUpdateAltKategori_Click);
+            // 
+            // btnAddAltKategori
+            // 
+            this.btnAddAltKategori.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddAltKategori.Appearance.Options.UseFont = true;
+            this.btnAddAltKategori.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddAltKategori.ImageOptions.SvgImage")));
+            this.btnAddAltKategori.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
+            this.btnAddAltKategori.Location = new System.Drawing.Point(423, 74);
+            this.btnAddAltKategori.Margin = new System.Windows.Forms.Padding(6);
+            this.btnAddAltKategori.Name = "btnAddAltKategori";
+            this.btnAddAltKategori.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnAddAltKategori.Size = new System.Drawing.Size(60, 50);
+            this.btnAddAltKategori.TabIndex = 31;
+            this.btnAddAltKategori.Click += new System.EventHandler(this.btnAddAltKategori_Click);
+            // 
             // cmbKategori
             // 
+            this.cmbKategori.Enabled = false;
             this.cmbKategori.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbKategori.FormattingEnabled = true;
-            this.cmbKategori.Location = new System.Drawing.Point(157, 117);
+            this.cmbKategori.Location = new System.Drawing.Point(157, 114);
             this.cmbKategori.Name = "cmbKategori";
-            this.cmbKategori.Size = new System.Drawing.Size(257, 26);
+            this.cmbKategori.Size = new System.Drawing.Size(237, 26);
             this.cmbKategori.TabIndex = 5;
             // 
             // labelControl3
@@ -316,15 +351,15 @@
             // 
             // txtAltKategoriAdi
             // 
-            this.txtAltKategoriAdi.Enabled = false;
             this.txtAltKategoriAdi.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAltKategoriAdi.Location = new System.Drawing.Point(157, 74);
             this.txtAltKategoriAdi.Name = "txtAltKategoriAdi";
-            this.txtAltKategoriAdi.Size = new System.Drawing.Size(257, 26);
+            this.txtAltKategoriAdi.Size = new System.Drawing.Size(237, 26);
             this.txtAltKategoriAdi.TabIndex = 4;
             // 
             // txtAltKategoriID
             // 
+            this.txtAltKategoriID.Enabled = false;
             this.txtAltKategoriID.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAltKategoriID.Location = new System.Drawing.Point(157, 35);
             this.txtAltKategoriID.Name = "txtAltKategoriID";
@@ -354,9 +389,7 @@
             // panelControl4
             // 
             this.panelControl4.Controls.Add(this.btnClear);
-            this.panelControl4.Controls.Add(this.btnUpdate);
             this.panelControl4.Controls.Add(this.btnDelete);
-            this.panelControl4.Controls.Add(this.btnAdd);
             this.panelControl4.Controls.Add(this.btnSave);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(3, 297);
@@ -370,23 +403,12 @@
             this.btnClear.Appearance.Options.UseFont = true;
             this.btnClear.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClear.ImageOptions.SvgImage")));
             this.btnClear.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnClear.Location = new System.Drawing.Point(378, 17);
+            this.btnClear.Location = new System.Drawing.Point(313, 17);
             this.btnClear.Margin = new System.Windows.Forms.Padding(6);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(60, 50);
             this.btnClear.TabIndex = 30;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUpdate.Appearance.Options.UseFont = true;
-            this.btnUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUpdate.ImageOptions.SvgImage")));
-            this.btnUpdate.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnUpdate.Location = new System.Drawing.Point(309, 17);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(6);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(60, 50);
-            this.btnUpdate.TabIndex = 29;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDelete
             // 
@@ -399,19 +421,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(60, 50);
             this.btnDelete.TabIndex = 28;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAdd.Appearance.Options.UseFont = true;
-            this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
-            this.btnAdd.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnAdd.Location = new System.Drawing.Point(173, 17);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(6);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(60, 50);
-            this.btnAdd.TabIndex = 27;
-  
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -419,7 +429,7 @@
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
             this.btnSave.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnSave.Location = new System.Drawing.Point(104, 17);
+            this.btnSave.Location = new System.Drawing.Point(168, 17);
             this.btnSave.Margin = new System.Windows.Forms.Padding(6);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(60, 50);
@@ -436,6 +446,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.btnUpdateKategori);
+            this.groupControl1.Controls.Add(this.btnAddKategori);
             this.groupControl1.Controls.Add(this.txtKategoriAdi);
             this.groupControl1.Controls.Add(this.txtKategoriID);
             this.groupControl1.Controls.Add(this.labelControl2);
@@ -447,13 +459,40 @@
             this.groupControl1.TabIndex = 10;
             this.groupControl1.Text = "Kategori";
             // 
+            // btnUpdateKategori
+            // 
+            this.btnUpdateKategori.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUpdateKategori.Appearance.Options.UseFont = true;
+            this.btnUpdateKategori.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
+            this.btnUpdateKategori.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
+            this.btnUpdateKategori.Location = new System.Drawing.Point(495, 41);
+            this.btnUpdateKategori.Margin = new System.Windows.Forms.Padding(6);
+            this.btnUpdateKategori.Name = "btnUpdateKategori";
+            this.btnUpdateKategori.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnUpdateKategori.Size = new System.Drawing.Size(60, 50);
+            this.btnUpdateKategori.TabIndex = 32;
+            this.btnUpdateKategori.Click += new System.EventHandler(this.btnUpdateKategori_Click);
+            // 
+            // btnAddKategori
+            // 
+            this.btnAddKategori.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddKategori.Appearance.Options.UseFont = true;
+            this.btnAddKategori.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddKategori.ImageOptions.SvgImage")));
+            this.btnAddKategori.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
+            this.btnAddKategori.Location = new System.Drawing.Point(423, 41);
+            this.btnAddKategori.Margin = new System.Windows.Forms.Padding(6);
+            this.btnAddKategori.Name = "btnAddKategori";
+            this.btnAddKategori.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnAddKategori.Size = new System.Drawing.Size(60, 50);
+            this.btnAddKategori.TabIndex = 31;
+            this.btnAddKategori.Click += new System.EventHandler(this.btnAddKategori_Click);
+            // 
             // txtKategoriAdi
             // 
-            this.txtKategoriAdi.Enabled = false;
             this.txtKategoriAdi.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtKategoriAdi.Location = new System.Drawing.Point(157, 70);
             this.txtKategoriAdi.Name = "txtKategoriAdi";
-            this.txtKategoriAdi.Size = new System.Drawing.Size(257, 26);
+            this.txtKategoriAdi.Size = new System.Drawing.Size(237, 26);
             this.txtKategoriAdi.TabIndex = 3;
             // 
             // txtKategoriID
@@ -501,8 +540,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
@@ -551,9 +590,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.SimpleButton btnClear;
-        private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
-        private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.PanelControl panelControl6;
         private DevExpress.XtraEditors.PanelControl panelControl5;
@@ -569,5 +606,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private System.Windows.Forms.ComboBox cmbKategori;
+        private DevExpress.XtraEditors.SimpleButton btnUpdateAltKategori;
+        private DevExpress.XtraEditors.SimpleButton btnAddAltKategori;
+        private DevExpress.XtraEditors.SimpleButton btnUpdateKategori;
+        private DevExpress.XtraEditors.SimpleButton btnAddKategori;
     }
 }
