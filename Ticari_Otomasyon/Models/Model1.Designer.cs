@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\monster\Desktop\CSharpEgitimKampı\DXTicariOtomasyon 3.6\Ticari_Otomasyon\Ticari_Otomasyon\Models\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\monster\Desktop\CSharpEgitimKampı\DXTicariOtomasyon 3.7\Ticari_Otomasyon\Ticari_Otomasyon\Models\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

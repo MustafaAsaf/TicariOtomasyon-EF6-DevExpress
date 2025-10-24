@@ -21,7 +21,7 @@ namespace Ticari_Otomasyon.Models
             : base("name=DboTicariOtomasyonEntities1")
         {
         }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -47,6 +47,10 @@ namespace Ticari_Otomasyon.Models
         public virtual DbSet<Tbl_FaturaDetay> Tbl_FaturaDetay { get; set; }
         public virtual DbSet<Tbl_Urunler> Tbl_Urunler { get; set; }
         public virtual DbSet<Tbl_UrunLoglari> Tbl_UrunLoglari { get; set; }
+        public virtual DbSet<Tbl_AdminKurallari> Tbl_AdminKurallari { get; set; }
+        public virtual DbSet<Tbl_Izinler> Tbl_Izinler { get; set; }
+        public virtual DbSet<Tbl_Rol_Izinleri> Tbl_Rol_Izinleri { get; set; }
+        public virtual DbSet<Tbl_Roller> Tbl_Roller { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

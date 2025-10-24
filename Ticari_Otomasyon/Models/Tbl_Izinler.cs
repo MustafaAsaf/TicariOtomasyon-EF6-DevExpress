@@ -12,19 +12,19 @@ namespace Ticari_Otomasyon.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Tbl_Admin
+    public partial class Tbl_Izinler
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Tbl_Admin()
+        public Tbl_Izinler()
         {
-            this.Tbl_AdminKurallari = new HashSet<Tbl_AdminKurallari>();
+            this.Tbl_Rol_Izinleri = new HashSet<Tbl_Rol_Izinleri>();
         }
     
-        public int AdminID { get; set; }
-        public string AdminKullaniciAdi { get; set; }
-        public string AdminSifre { get; set; }
+        public int IzinId { get; set; }
+        public string IzinKey { get; set; }
+        public string Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tbl_AdminKurallari> Tbl_AdminKurallari { get; set; }
+        public virtual ICollection<Tbl_Rol_Izinleri> Tbl_Rol_Izinleri { get; set; }
     }
 }

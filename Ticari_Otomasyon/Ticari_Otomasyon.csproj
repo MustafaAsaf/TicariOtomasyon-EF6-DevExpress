@@ -321,6 +321,9 @@
     <Compile Include="Models\Tbl_Admin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Tbl_AdminKurallari.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Tbl_AltKategoriler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -342,6 +345,9 @@
     <Compile Include="Models\Tbl_Ilceler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Tbl_Izinler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Tbl_Kategoriler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -358,6 +364,12 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Tbl_Personeller.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tbl_Roller.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tbl_Rol_Izinleri.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Tbl_Sehirler.cs">

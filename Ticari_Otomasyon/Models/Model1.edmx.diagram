@@ -36,6 +36,14 @@
         <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_FirmaHareketler_Tbl_Urunler" />
         <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_MusteriHareketler_Tbl_Urunler" />
         <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_UrunLoglari" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_AdminKurallari" Width="1.5" PointX="14.625" PointY="3.625" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Izinler" Width="1.5" PointX="12.375" PointY="21.5" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Rol_Izinleri" Width="1.5" PointX="14.625" PointY="6.375" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Roller" Width="1.5" PointX="12.375" PointY="6.375" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B96" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_Admin__RolId__0BE6BFCF" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_Rol_I__IzinI__08162EEB" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_Rol_I__RolId__07220AB2" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
