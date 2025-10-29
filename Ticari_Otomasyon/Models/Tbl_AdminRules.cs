@@ -12,7 +12,7 @@ namespace Ticari_Otomasyon.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Tbl_AdminKurallari
+    public partial class Tbl_AdminRules
     {
         public int AdminRoleId { get; set; }
         public int AdminID { get; set; }

@@ -17,7 +17,7 @@ namespace Ticari_Otomasyon.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Tbl_Admin()
         {
-            this.Tbl_AdminKurallari = new HashSet<Tbl_AdminKurallari>();
+            this.Tbl_AdminRules = new HashSet<Tbl_AdminRules>();
         }
     
         public int AdminID { get; set; }
@@ -25,6 +25,6 @@ namespace Ticari_Otomasyon.Models
         public string AdminSifre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tbl_AdminKurallari> Tbl_AdminKurallari { get; set; }
+        public virtual ICollection<Tbl_AdminRules> Tbl_AdminRules { get; set; }
     }
 }

@@ -27,6 +27,11 @@ namespace Ticari_Otomasyon
         DboTicariOtomasyonEntities1 db = new DboTicariOtomasyonEntities1();
         private void FrmStoklar_Load(object sender, EventArgs e)
         {
+            if (!CurrentUser.HasPermission("ViewStock"))
+            {
+                MessageBox.Show("Bu ekrana erişim izniniz yok!", "Yetkisiz erişim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             groupProduct();
             pastaGrafikCategory();
             getKategoriler();

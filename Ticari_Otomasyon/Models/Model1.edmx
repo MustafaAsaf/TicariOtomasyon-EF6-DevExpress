@@ -23,7 +23,7 @@
           <Property Name="AdminKullaniciAdi" Type="varchar" MaxLength="50" />
           <Property Name="AdminSifre" Type="varchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="Tbl_AdminKurallari">
+        <EntityType Name="Tbl_AdminRules">
           <Key>
             <PropertyRef Name="AdminRoleId" />
           </Key>
@@ -290,24 +290,24 @@
         </EntityType>
         <Association Name="FK__Tbl_Admin__Admin__0AF29B96">
           <End Role="Tbl_Admin" Type="Self.Tbl_Admin" Multiplicity="1" />
-          <End Role="Tbl_AdminKurallari" Type="Self.Tbl_AdminKurallari" Multiplicity="*" />
+          <End Role="Tbl_AdminRules" Type="Self.Tbl_AdminRules" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Tbl_Admin">
               <PropertyRef Name="AdminID" />
             </Principal>
-            <Dependent Role="Tbl_AdminKurallari">
+            <Dependent Role="Tbl_AdminRules">
               <PropertyRef Name="AdminID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__Tbl_Admin__RolId__0BE6BFCF">
           <End Role="Tbl_Roller" Type="Self.Tbl_Roller" Multiplicity="1" />
-          <End Role="Tbl_AdminKurallari" Type="Self.Tbl_AdminKurallari" Multiplicity="*" />
+          <End Role="Tbl_AdminRules" Type="Self.Tbl_AdminRules" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Tbl_Roller">
               <PropertyRef Name="RolId" />
             </Principal>
-            <Dependent Role="Tbl_AdminKurallari">
+            <Dependent Role="Tbl_AdminRules">
               <PropertyRef Name="RolId" />
             </Dependent>
           </ReferentialConstraint>
@@ -504,7 +504,7 @@
         <EntityContainer Name="DboTicariOtomasyonModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Admin" EntityType="Self.Tbl_Admin" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Tbl_AdminKurallari" EntityType="Self.Tbl_AdminKurallari" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_AdminRules" EntityType="Self.Tbl_AdminRules" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_AltKategoriler" EntityType="Self.Tbl_AltKategoriler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Bankalar" EntityType="Self.Tbl_Bankalar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_FaturaBilgi" EntityType="Self.Tbl_FaturaBilgi" Schema="dbo" store:Type="Tables" />
@@ -528,11 +528,11 @@
           <EntitySet Name="Tbl_UrunLoglari" EntityType="Self.Tbl_UrunLoglari" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Tbl_Admin__Admin__0AF29B96" Association="Self.FK__Tbl_Admin__Admin__0AF29B96">
             <End Role="Tbl_Admin" EntitySet="Tbl_Admin" />
-            <End Role="Tbl_AdminKurallari" EntitySet="Tbl_AdminKurallari" />
+            <End Role="Tbl_AdminRules" EntitySet="Tbl_AdminRules" />
           </AssociationSet>
           <AssociationSet Name="FK__Tbl_Admin__RolId__0BE6BFCF" Association="Self.FK__Tbl_Admin__RolId__0BE6BFCF">
             <End Role="Tbl_Roller" EntitySet="Tbl_Roller" />
-            <End Role="Tbl_AdminKurallari" EntitySet="Tbl_AdminKurallari" />
+            <End Role="Tbl_AdminRules" EntitySet="Tbl_AdminRules" />
           </AssociationSet>
           <AssociationSet Name="FK__Tbl_AltKa__Kateg__69C6B1F5" Association="Self.FK__Tbl_AltKa__Kateg__69C6B1F5">
             <End Role="Tbl_Kategoriler" EntitySet="Tbl_Kategoriler" />
@@ -688,18 +688,9 @@
             <End Role="Tbl_MusteriHareketler" EntitySet="Tbl_MusteriHareketler" />
           </AssociationSet>
           <EntitySet Name="Tbl_UrunLoglari" EntityType="DboTicariOtomasyonModel.Tbl_UrunLoglari" />
-          <EntitySet Name="Tbl_AdminKurallari" EntityType="DboTicariOtomasyonModel.Tbl_AdminKurallari" />
           <EntitySet Name="Tbl_Izinler" EntityType="DboTicariOtomasyonModel.Tbl_Izinler" />
           <EntitySet Name="Tbl_Rol_Izinleri" EntityType="DboTicariOtomasyonModel.Tbl_Rol_Izinleri" />
           <EntitySet Name="Tbl_Roller" EntityType="DboTicariOtomasyonModel.Tbl_Roller" />
-          <AssociationSet Name="FK__Tbl_Admin__Admin__0AF29B96" Association="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B96">
-            <End Role="Tbl_Admin" EntitySet="Tbl_Admin" />
-            <End Role="Tbl_AdminKurallari" EntitySet="Tbl_AdminKurallari" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Tbl_Admin__RolId__0BE6BFCF" Association="DboTicariOtomasyonModel.FK__Tbl_Admin__RolId__0BE6BFCF">
-            <End Role="Tbl_Roller" EntitySet="Tbl_Roller" />
-            <End Role="Tbl_AdminKurallari" EntitySet="Tbl_AdminKurallari" />
-          </AssociationSet>
           <AssociationSet Name="FK__Tbl_Rol_I__IzinI__08162EEB" Association="DboTicariOtomasyonModel.FK__Tbl_Rol_I__IzinI__08162EEB">
             <End Role="Tbl_Izinler" EntitySet="Tbl_Izinler" />
             <End Role="Tbl_Rol_Izinleri" EntitySet="Tbl_Rol_Izinleri" />
@@ -707,6 +698,15 @@
           <AssociationSet Name="FK__Tbl_Rol_I__RolId__07220AB2" Association="DboTicariOtomasyonModel.FK__Tbl_Rol_I__RolId__07220AB2">
             <End Role="Tbl_Roller" EntitySet="Tbl_Roller" />
             <End Role="Tbl_Rol_Izinleri" EntitySet="Tbl_Rol_Izinleri" />
+          </AssociationSet>
+          <EntitySet Name="Tbl_AdminRules" EntityType="DboTicariOtomasyonModel.Tbl_AdminRules" />
+          <AssociationSet Name="FK__Tbl_Admin__Admin__0AF29B961" Association="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B961">
+            <End Role="Tbl_Admin" EntitySet="Tbl_Admin" />
+            <End Role="Tbl_AdminRules" EntitySet="Tbl_AdminRules" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tbl_Admin__RolId__0BE6BFCF1" Association="DboTicariOtomasyonModel.FK__Tbl_Admin__RolId__0BE6BFCF1">
+            <End Role="Tbl_Roller" EntitySet="Tbl_Roller" />
+            <End Role="Tbl_AdminRules" EntitySet="Tbl_AdminRules" />
           </AssociationSet>
           </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -1008,7 +1008,7 @@
           <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AdminKullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="AdminSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Tbl_AdminKurallari" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B96" FromRole="Tbl_Admin" ToRole="Tbl_AdminKurallari" />
+          <NavigationProperty Name="Tbl_AdminRules" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B961" FromRole="Tbl_Admin" ToRole="Tbl_AdminRules" />
         </EntityType>
         <EntityType Name="Tbl_AltKategoriler">
           <Key>
@@ -1151,16 +1151,6 @@
           <Property Name="IslemTarihi" Type="DateTime" Precision="3" />
           <Property Name="Kullanici" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="Tbl_AdminKurallari">
-          <Key>
-            <PropertyRef Name="AdminRoleId" />
-          </Key>
-          <Property Name="AdminRoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AdminID" Type="Int32" Nullable="false" />
-          <Property Name="RolId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Tbl_Admin" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B96" FromRole="Tbl_AdminKurallari" ToRole="Tbl_Admin" />
-          <NavigationProperty Name="Tbl_Roller" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__RolId__0BE6BFCF" FromRole="Tbl_AdminKurallari" ToRole="Tbl_Roller" />
-        </EntityType>
         <EntityType Name="Tbl_Izinler">
           <Key>
             <PropertyRef Name="IzinId" />
@@ -1187,33 +1177,9 @@
           <Property Name="RolId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RolAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IsSuperAdmin" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Tbl_AdminKurallari" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__RolId__0BE6BFCF" FromRole="Tbl_Roller" ToRole="Tbl_AdminKurallari" />
           <NavigationProperty Name="Tbl_Rol_Izinleri" Relationship="DboTicariOtomasyonModel.FK__Tbl_Rol_I__RolId__07220AB2" FromRole="Tbl_Roller" ToRole="Tbl_Rol_Izinleri" />
+          <NavigationProperty Name="Tbl_AdminRules" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__RolId__0BE6BFCF1" FromRole="Tbl_Roller" ToRole="Tbl_AdminRules" />
         </EntityType>
-        <Association Name="FK__Tbl_Admin__Admin__0AF29B96">
-          <End Type="DboTicariOtomasyonModel.Tbl_Admin" Role="Tbl_Admin" Multiplicity="1" />
-          <End Type="DboTicariOtomasyonModel.Tbl_AdminKurallari" Role="Tbl_AdminKurallari" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Tbl_Admin">
-              <PropertyRef Name="AdminID" />
-            </Principal>
-            <Dependent Role="Tbl_AdminKurallari">
-              <PropertyRef Name="AdminID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Tbl_Admin__RolId__0BE6BFCF">
-          <End Type="DboTicariOtomasyonModel.Tbl_Roller" Role="Tbl_Roller" Multiplicity="1" />
-          <End Type="DboTicariOtomasyonModel.Tbl_AdminKurallari" Role="Tbl_AdminKurallari" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Tbl_Roller">
-              <PropertyRef Name="RolId" />
-            </Principal>
-            <Dependent Role="Tbl_AdminKurallari">
-              <PropertyRef Name="RolId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Tbl_Rol_I__IzinI__08162EEB">
           <End Type="DboTicariOtomasyonModel.Tbl_Izinler" Role="Tbl_Izinler" Multiplicity="1" />
           <End Type="DboTicariOtomasyonModel.Tbl_Rol_Izinleri" Role="Tbl_Rol_Izinleri" Multiplicity="*" />
@@ -1234,6 +1200,40 @@
               <PropertyRef Name="RolId" />
             </Principal>
             <Dependent Role="Tbl_Rol_Izinleri">
+              <PropertyRef Name="RolId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Tbl_AdminRules">
+          <Key>
+            <PropertyRef Name="AdminRoleId" />
+          </Key>
+          <Property Name="AdminRoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdminID" Type="Int32" Nullable="false" />
+          <Property Name="RolId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Tbl_Admin" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B961" FromRole="Tbl_AdminRules" ToRole="Tbl_Admin" />
+          <NavigationProperty Name="Tbl_Roller" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__RolId__0BE6BFCF1" FromRole="Tbl_AdminRules" ToRole="Tbl_Roller" />
+        </EntityType>
+        <Association Name="FK__Tbl_Admin__Admin__0AF29B961">
+          <End Type="DboTicariOtomasyonModel.Tbl_Admin" Role="Tbl_Admin" Multiplicity="1" />
+          <End Type="DboTicariOtomasyonModel.Tbl_AdminRules" Role="Tbl_AdminRules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Admin">
+              <PropertyRef Name="AdminID" />
+            </Principal>
+            <Dependent Role="Tbl_AdminRules">
+              <PropertyRef Name="AdminID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tbl_Admin__RolId__0BE6BFCF1">
+          <End Type="DboTicariOtomasyonModel.Tbl_Roller" Role="Tbl_Roller" Multiplicity="1" />
+          <End Type="DboTicariOtomasyonModel.Tbl_AdminRules" Role="Tbl_AdminRules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Roller">
+              <PropertyRef Name="RolId" />
+            </Principal>
+            <Dependent Role="Tbl_AdminRules">
               <PropertyRef Name="RolId" />
             </Dependent>
           </ReferentialConstraint>
@@ -1572,15 +1572,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Tbl_AdminKurallari">
-            <EntityTypeMapping TypeName="DboTicariOtomasyonModel.Tbl_AdminKurallari">
-              <MappingFragment StoreEntitySet="Tbl_AdminKurallari">
-                <ScalarProperty Name="RolId" ColumnName="RolId" />
-                <ScalarProperty Name="AdminID" ColumnName="AdminID" />
-                <ScalarProperty Name="AdminRoleId" ColumnName="AdminRoleId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Tbl_Izinler">
             <EntityTypeMapping TypeName="DboTicariOtomasyonModel.Tbl_Izinler">
               <MappingFragment StoreEntitySet="Tbl_Izinler">
@@ -1605,6 +1596,15 @@
                 <ScalarProperty Name="IsSuperAdmin" ColumnName="IsSuperAdmin" />
                 <ScalarProperty Name="RolAdi" ColumnName="RolAdi" />
                 <ScalarProperty Name="RolId" ColumnName="RolId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_AdminRules">
+            <EntityTypeMapping TypeName="DboTicariOtomasyonModel.Tbl_AdminRules">
+              <MappingFragment StoreEntitySet="Tbl_AdminRules">
+                <ScalarProperty Name="RolId" ColumnName="RolId" />
+                <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+                <ScalarProperty Name="AdminRoleId" ColumnName="AdminRoleId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

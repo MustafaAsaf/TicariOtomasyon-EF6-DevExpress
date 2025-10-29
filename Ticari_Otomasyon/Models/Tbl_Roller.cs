@@ -17,8 +17,8 @@ namespace Ticari_Otomasyon.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Tbl_Roller()
         {
-            this.Tbl_AdminKurallari = new HashSet<Tbl_AdminKurallari>();
             this.Tbl_Rol_Izinleri = new HashSet<Tbl_Rol_Izinleri>();
+            this.Tbl_AdminRules = new HashSet<Tbl_AdminRules>();
         }
     
         public int RolId { get; set; }
@@ -26,8 +26,8 @@ namespace Ticari_Otomasyon.Models
         public bool IsSuperAdmin { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tbl_AdminKurallari> Tbl_AdminKurallari { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tbl_Rol_Izinleri> Tbl_Rol_Izinleri { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tbl_AdminRules> Tbl_AdminRules { get; set; }
     }
 }

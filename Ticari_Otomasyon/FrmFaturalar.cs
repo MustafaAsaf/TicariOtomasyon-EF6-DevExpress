@@ -172,6 +172,9 @@ namespace Ticari_Otomasyon
         }
         private void FrmFaturalar_Load(object sender, EventArgs e)
         {
+            // Giriş yapan kullanıcıyı temsil eden global nesne
+            // CurrentUser.RolePermissions bir List<string> tutuyor (örneğin ["ViewStock", "ViewInvoice"])
+
             GetPersonel();
             GetAlici();
             GetAll();

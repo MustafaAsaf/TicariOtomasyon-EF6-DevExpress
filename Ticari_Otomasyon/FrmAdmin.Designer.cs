@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.SvgImageItem svgImageItem3 = new DevExpress.XtraEditors.SvgImageItem("1/1");
+            DevExpress.XtraEditors.SvgImageItem svgImageItem1 = new DevExpress.XtraEditors.SvgImageItem("1/1");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdmin));
             this.svgImageBox1 = new DevExpress.XtraEditors.SvgImageBox();
             this.txtKullaniciAdi = new DevExpress.XtraEditors.TextEdit();
@@ -38,6 +38,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).BeginInit();
@@ -46,9 +47,9 @@
             // 
             // svgImageBox1
             // 
-            svgImageItem3.Appearance.Normal.BorderColor = DevExpress.LookAndFeel.DXSkinColors.IconColors.Black;
-            svgImageItem3.Appearance.Normal.FillColor = DevExpress.LookAndFeel.DXSkinColors.IconColors.Blue;
-            this.svgImageBox1.CustomizedItems.Add(svgImageItem3);
+            svgImageItem1.Appearance.Normal.BorderColor = DevExpress.LookAndFeel.DXSkinColors.IconColors.Black;
+            svgImageItem1.Appearance.Normal.FillColor = DevExpress.LookAndFeel.DXSkinColors.IconColors.Blue;
+            this.svgImageBox1.CustomizedItems.Add(svgImageItem1);
             this.svgImageBox1.Location = new System.Drawing.Point(191, 12);
             this.svgImageBox1.Name = "svgImageBox1";
             this.svgImageBox1.Size = new System.Drawing.Size(163, 148);
@@ -134,11 +135,25 @@
             this.checkEdit1.TabIndex = 7;
             this.checkEdit1.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
             // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton2.Appearance.Options.UseBackColor = true;
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Location = new System.Drawing.Point(12, 38);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(144, 31);
+            this.simpleButton2.TabIndex = 8;
+            this.simpleButton2.Text = "Giriş Yap 2";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 583);
+            this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.checkEdit1);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.labelControl3);
@@ -171,5 +186,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }
