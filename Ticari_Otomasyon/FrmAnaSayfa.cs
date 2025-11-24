@@ -21,8 +21,7 @@ namespace Ticari_Otomasyon
 
         private void FrmAnaSayfa_Load(object sender, EventArgs e)
         {
-            hareket();
-            azalanStok();
+            hareket();      
             ajanda();
             fihrist();
             dovizIslemleri();
@@ -77,8 +76,7 @@ namespace Ticari_Otomasyon
                     .OrderBy(x => x.ToplamAdet) //En düşükten en yükseğe sıralama
                     .Where(x => x.ToplamAdet < 10) // 10'dan az stok filtreleme
                     .ToList();
-                gridControl2.DataSource= veriler;
-                gridView2.RowStyle += rowStyle;
+      
             }
         }
 

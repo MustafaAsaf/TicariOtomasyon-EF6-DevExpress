@@ -16,7 +16,8 @@ namespace Ticari_Otomasyon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAnaSayfa());
+            Application.Run(new FrmAdmin());
+            //Application.Run(new FrmAna());
         }
     }
 }

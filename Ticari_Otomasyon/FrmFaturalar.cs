@@ -234,9 +234,15 @@ namespace Ticari_Otomasyon
                 GetAll();
                 ClearForm(xtraTabControl1);
             }
-            catch (Exception exception)
+            catch (System.Data.Entity.Validation.DbEntityValidationException ex)
             {
-                MessageBox.Show($"Hata: {exception.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                foreach (var eve in ex.EntityValidationErrors)
+                {
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        MessageBox.Show($"Property: {ve.PropertyName} - Error: {ve.ErrorMessage}");
+                    }
+                }
             }
         }
         private void btnDelete_Click_1(object sender, EventArgs e)
