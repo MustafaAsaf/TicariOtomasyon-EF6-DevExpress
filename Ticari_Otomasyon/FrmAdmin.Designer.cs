@@ -36,7 +36,6 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).BeginInit();
@@ -113,19 +112,6 @@
             this.labelControl3.TabIndex = 5;
             this.labelControl3.Text = "Şifre";
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Question;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(58, 454);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(389, 56);
-            this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Text = "Giriş Yap";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
             // checkEdit1
             // 
             this.checkEdit1.Location = new System.Drawing.Point(339, 411);
@@ -137,15 +123,15 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.SteelBlue;
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton2.Appearance.Options.UseBackColor = true;
             this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(12, 38);
+            this.simpleButton2.Location = new System.Drawing.Point(48, 441);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(144, 31);
+            this.simpleButton2.Size = new System.Drawing.Size(399, 56);
             this.simpleButton2.TabIndex = 8;
-            this.simpleButton2.Text = "Giriş Yap 2";
+            this.simpleButton2.Text = "Giriş Yap ";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // FrmAdmin
@@ -155,7 +141,6 @@
             this.ClientSize = new System.Drawing.Size(532, 583);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.checkEdit1);
-            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
@@ -184,7 +169,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }

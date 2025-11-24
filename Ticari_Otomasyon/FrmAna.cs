@@ -267,7 +267,7 @@ namespace Ticari_Otomasyon
         private FrmFaturalar _frmFaturalar;
         private void barButtonFaturalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (!CurrentUser.HasPermission("ViewInvoice"))// Fatura görüntüleme izni yoksa
+            if (!CurrentUser.HasPermission("ViewInvoices"))// Fatura görüntüleme izni yoksa
             {
                 MessageBox.Show("Bu ekrana erişim izniniz yok!",
                     "Yetkisiz Erişim",

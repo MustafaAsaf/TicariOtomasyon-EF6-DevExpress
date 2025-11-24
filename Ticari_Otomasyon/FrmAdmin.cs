@@ -46,38 +46,7 @@ namespace Ticari_Otomasyon
             txtSifre.Properties.UseSystemPasswordChar = true;
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            string userName= txtKullaniciAdi.Text;
-            string password= txtSifre.Text;
-
-            try
-            {
-                using (var context= new DboTicariOtomasyonEntities1())
-                {
-                    var user = context.Tbl_Admin
-                        .FirstOrDefault(u=>u.AdminKullaniciAdi== userName && u.AdminSifre==password);
-
-                    if (user != null) //user değişkeni veri tabanında varsa ve textedit nesneleriyle uyuşuyorsa.
-                    {
-                        MessageBox.Show("Giriş başarılı!", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // Ana formu açın veya bir sonraki işlemi başlatın.
-                        FrmAna frmAna = new FrmAna();
-                        frmAna.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Kullanıcı adı veya şifre hatalı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show($"Hata: {exception.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-        }
+        
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
@@ -115,6 +84,7 @@ namespace Ticari_Otomasyon
             CurrentUser.Roller = roller.Select(r => r.RolAdi).ToList();
             CurrentUser.Izinler = izinler;
             CurrentUser.IsSuperAdmin = roller.Any(r => r.IsSuperAdmin);
+            CurrentUser.ProfilResim = admin.AdminProfilResim;
 
             // Ana forma geçiş
             FrmAna ana = new FrmAna();

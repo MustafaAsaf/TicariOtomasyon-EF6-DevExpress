@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,8 +24,9 @@ namespace Ticari_Otomasyon
         {
             hareket();      
             ajanda();
-            fihrist();
             dovizIslemleri();
+            azalanStok();
+            userInformation();
         }
 
        
@@ -76,7 +78,11 @@ namespace Ticari_Otomasyon
                     .OrderBy(x => x.ToplamAdet) //En düşükten en yükseğe sıralama
                     .Where(x => x.ToplamAdet < 10) // 10'dan az stok filtreleme
                     .ToList();
-      
+
+                gridControl4.DataSource = veriler;
+
+                gridView4.RowStyle += rowStyle;
+
             }
         }
 
@@ -131,11 +137,39 @@ namespace Ticari_Otomasyon
                 MessageBox.Show("HATA");
             }
         }
-
-
         public void dovizIslemleri()
         {
             webBrowser1.Navigate("https://www.tcmb.gov.tr/kurlar/today.xml");
+        }
+
+        public void userInformation()
+        {
+            lbl_KullaniciAdi.Text = CurrentUser.KullaniciAdi;
+
+            // Birden fazla rol varsa ilkini gösterebiliriz
+            if (CurrentUser.Roller != null && CurrentUser.Roller.Count > 0)
+                lbl_Gorev.Text = CurrentUser.Roller[0];
+            else
+                lbl_Gorev.Text = "Rol bulunamadı";
+
+            // Profil resmini göster
+            if (CurrentUser.ProfilResim != null && CurrentUser.ProfilResim.Length > 0)
+            {
+                pictureBox_Profil.Image = ByteToImage(CurrentUser.ProfilResim);
+            }
+            else
+            {
+                pictureBox_Profil.Image = null; // Profil resmi yoksa boş bırak
+            }
+        }
+
+        // Yardımcı fonksiyon: byte[] -> Image
+        private Image ByteToImage(byte[] byteArray)
+        {
+            using (MemoryStream ms = new MemoryStream(byteArray))
+            {
+                return Image.FromStream(ms);
+            }
         }
 
     }

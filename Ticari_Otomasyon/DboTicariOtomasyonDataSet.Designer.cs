@@ -1160,6 +1160,8 @@ namespace Ticari_Otomasyon {
             
             private global::System.Data.DataColumn columnAdminSifre;
             
+            private global::System.Data.DataColumn columnAdminProfilResim;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Tbl_AdminDataTable() {
@@ -1219,6 +1221,14 @@ namespace Ticari_Otomasyon {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AdminProfilResimColumn {
+                get {
+                    return this.columnAdminProfilResim;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1254,12 +1264,13 @@ namespace Ticari_Otomasyon {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Tbl_AdminRow AddTbl_AdminRow(string AdminKullaniciAdi, string AdminSifre) {
+            public Tbl_AdminRow AddTbl_AdminRow(string AdminKullaniciAdi, string AdminSifre, byte[] AdminProfilResim) {
                 Tbl_AdminRow rowTbl_AdminRow = ((Tbl_AdminRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         AdminKullaniciAdi,
                         null,
-                        AdminSifre};
+                        AdminSifre,
+                        AdminProfilResim};
                 rowTbl_AdminRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTbl_AdminRow);
                 return rowTbl_AdminRow;
@@ -1292,6 +1303,7 @@ namespace Ticari_Otomasyon {
                 this.columnAdminKullaniciAdi = base.Columns["AdminKullaniciAdi"];
                 this.columnAdminID = base.Columns["AdminID"];
                 this.columnAdminSifre = base.Columns["AdminSifre"];
+                this.columnAdminProfilResim = base.Columns["AdminProfilResim"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1303,6 +1315,8 @@ namespace Ticari_Otomasyon {
                 base.Columns.Add(this.columnAdminID);
                 this.columnAdminSifre = new global::System.Data.DataColumn("AdminSifre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAdminSifre);
+                this.columnAdminProfilResim = new global::System.Data.DataColumn("AdminProfilResim", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdminProfilResim);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnAdminID}, true));
                 this.columnAdminKullaniciAdi.MaxLength = 50;
@@ -9347,6 +9361,22 @@ namespace Ticari_Otomasyon {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public byte[] AdminProfilResim {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableTbl_Admin.AdminProfilResimColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AdminProfilResim\' in table \'Tbl_Admin\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTbl_Admin.AdminProfilResimColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsAdminKullaniciAdiNull() {
                 return this.IsNull(this.tableTbl_Admin.AdminKullaniciAdiColumn);
             }
@@ -9367,6 +9397,18 @@ namespace Ticari_Otomasyon {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetAdminSifreNull() {
                 this[this.tableTbl_Admin.AdminSifreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAdminProfilResimNull() {
+                return this.IsNull(this.tableTbl_Admin.AdminProfilResimColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAdminProfilResimNull() {
+                this[this.tableTbl_Admin.AdminProfilResimColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14764,6 +14806,7 @@ namespace Ticari_Otomasyon.DboTicariOtomasyonDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("AdminKullaniciAdi", "AdminKullaniciAdi");
             tableMapping.ColumnMappings.Add("AdminID", "AdminID");
             tableMapping.ColumnMappings.Add("AdminSifre", "AdminSifre");
+            tableMapping.ColumnMappings.Add("AdminProfilResim", "AdminProfilResim");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -14776,19 +14819,22 @@ namespace Ticari_Otomasyon.DboTicariOtomasyonDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdminSifre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminSifre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Tbl_Admin] ([AdminKullaniciAdi], [AdminSifre]) VALUES (@AdminKullani" +
-                "ciAdi, @AdminSifre);\r\nSELECT AdminKullaniciAdi, AdminID, AdminSifre FROM Tbl_Adm" +
-                "in WHERE (AdminID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Tbl_Admin] ([AdminKullaniciAdi], [AdminSifre], [AdminProfilResim]) V" +
+                "ALUES (@AdminKullaniciAdi, @AdminSifre, @AdminProfilResim);\r\nSELECT AdminKullani" +
+                "ciAdi, AdminID, AdminSifre, AdminProfilResim FROM Tbl_Admin WHERE (AdminID = SCO" +
+                "PE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdminKullaniciAdi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminKullaniciAdi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdminSifre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminSifre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdminProfilResim", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminProfilResim", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Tbl_Admin] SET [AdminKullaniciAdi] = @AdminKullaniciAdi, [AdminSifre] = @AdminSifre WHERE (((@IsNull_AdminKullaniciAdi = 1 AND [AdminKullaniciAdi] IS NULL) OR ([AdminKullaniciAdi] = @Original_AdminKullaniciAdi)) AND ([AdminID] = @Original_AdminID) AND ((@IsNull_AdminSifre = 1 AND [AdminSifre] IS NULL) OR ([AdminSifre] = @Original_AdminSifre)));
-SELECT AdminKullaniciAdi, AdminID, AdminSifre FROM Tbl_Admin WHERE (AdminID = @AdminID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Tbl_Admin] SET [AdminKullaniciAdi] = @AdminKullaniciAdi, [AdminSifre] = @AdminSifre, [AdminProfilResim] = @AdminProfilResim WHERE (((@IsNull_AdminKullaniciAdi = 1 AND [AdminKullaniciAdi] IS NULL) OR ([AdminKullaniciAdi] = @Original_AdminKullaniciAdi)) AND ([AdminID] = @Original_AdminID) AND ((@IsNull_AdminSifre = 1 AND [AdminSifre] IS NULL) OR ([AdminSifre] = @Original_AdminSifre)));
+SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim FROM Tbl_Admin WHERE (AdminID = @AdminID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdminKullaniciAdi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminKullaniciAdi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdminSifre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminSifre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdminProfilResim", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminProfilResim", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AdminKullaniciAdi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminKullaniciAdi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdminKullaniciAdi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminKullaniciAdi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdminID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -14810,7 +14856,8 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre FROM Tbl_Admin WHERE (AdminID = @A
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT AdminKullaniciAdi, AdminID, AdminSifre\r\nFROM     Tbl_Admin";
+            this._commandCollection[0].CommandText = "SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim\r\nFROM     Tbl_Adm" +
+                "in";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -14909,7 +14956,7 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre FROM Tbl_Admin WHERE (AdminID = @A
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string AdminKullaniciAdi, string AdminSifre) {
+        public virtual int Insert(string AdminKullaniciAdi, string AdminSifre, byte[] AdminProfilResim) {
             if ((AdminKullaniciAdi == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -14921,6 +14968,12 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre FROM Tbl_Admin WHERE (AdminID = @A
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(AdminSifre));
+            }
+            if ((AdminProfilResim == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((byte[])(AdminProfilResim));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -14942,7 +14995,7 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre FROM Tbl_Admin WHERE (AdminID = @A
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string AdminKullaniciAdi, string AdminSifre, string Original_AdminKullaniciAdi, int Original_AdminID, string Original_AdminSifre, int AdminID) {
+        public virtual int Update(string AdminKullaniciAdi, string AdminSifre, byte[] AdminProfilResim, string Original_AdminKullaniciAdi, int Original_AdminID, string Original_AdminSifre, int AdminID) {
             if ((AdminKullaniciAdi == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -14955,24 +15008,30 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre FROM Tbl_Admin WHERE (AdminID = @A
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(AdminSifre));
             }
+            if ((AdminProfilResim == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((byte[])(AdminProfilResim));
+            }
             if ((Original_AdminKullaniciAdi == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_AdminKullaniciAdi));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_AdminKullaniciAdi));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_AdminID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_AdminID));
             if ((Original_AdminSifre == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_AdminSifre));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_AdminSifre));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(AdminID));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(AdminID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -14993,8 +15052,8 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre FROM Tbl_Admin WHERE (AdminID = @A
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string AdminKullaniciAdi, string AdminSifre, string Original_AdminKullaniciAdi, int Original_AdminID, string Original_AdminSifre) {
-            return this.Update(AdminKullaniciAdi, AdminSifre, Original_AdminKullaniciAdi, Original_AdminID, Original_AdminSifre, Original_AdminID);
+        public virtual int Update(string AdminKullaniciAdi, string AdminSifre, byte[] AdminProfilResim, string Original_AdminKullaniciAdi, int Original_AdminID, string Original_AdminSifre) {
+            return this.Update(AdminKullaniciAdi, AdminSifre, AdminProfilResim, Original_AdminKullaniciAdi, Original_AdminID, Original_AdminSifre, Original_AdminID);
         }
     }
     

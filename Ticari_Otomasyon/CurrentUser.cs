@@ -13,6 +13,7 @@ namespace Ticari_Otomasyon
         public static List<string> Roller { get; set; }
         public static List<string> Izinler { get; set; }
         public static bool IsSuperAdmin { get; set; }
+        public static byte[] ProfilResim { get; set; }
 
         public static bool HasPermission(string key)
         {

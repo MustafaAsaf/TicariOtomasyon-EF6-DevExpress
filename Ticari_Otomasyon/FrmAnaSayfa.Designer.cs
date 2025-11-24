@@ -32,23 +32,30 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnaSayfa));
             this.tableLayoutAna = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutSol = new System.Windows.Forms.TableLayoutPanel();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.gridControl4 = new DevExpress.XtraGrid.GridControl();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl3 = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.lbl_Gorev = new DevExpress.XtraEditors.LabelControl();
+            this.lbl_KullaniciAdi = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.gridControl4 = new DevExpress.XtraGrid.GridControl();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureBox_Profil = new System.Windows.Forms.PictureBox();
             this.tableLayoutAna.SuspendLayout();
             this.tableLayoutSol.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
@@ -57,15 +64,12 @@
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-            this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Profil)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutAna
@@ -100,6 +104,37 @@
             this.tableLayoutSol.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutSol.Size = new System.Drawing.Size(1214, 834);
             this.tableLayoutSol.TabIndex = 0;
+            // 
+            // groupControl4
+            // 
+            this.groupControl4.Controls.Add(this.gridControl4);
+            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl4.Location = new System.Drawing.Point(610, 420);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(601, 411);
+            this.groupControl4.TabIndex = 14;
+            this.groupControl4.Text = "AZALAN SLOTLAR";
+            // 
+            // gridControl4
+            // 
+            this.gridControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl4.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
+            this.gridControl4.Location = new System.Drawing.Point(2, 28);
+            this.gridControl4.MainView = this.gridView4;
+            this.gridControl4.Margin = new System.Windows.Forms.Padding(2);
+            this.gridControl4.Name = "gridControl4";
+            this.gridControl4.Size = new System.Drawing.Size(597, 381);
+            this.gridControl4.TabIndex = 0;
+            this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            // 
+            // gridView4
+            // 
+            this.gridView4.DetailHeight = 292;
+            this.gridView4.GridControl = this.gridControl4;
+            this.gridView4.Name = "gridView4";
+            this.gridView4.OptionsEditForm.PopupEditFormWidth = 667;
+            this.gridView4.OptionsView.ShowGroupPanel = false;
             // 
             // groupControl2
             // 
@@ -165,6 +200,59 @@
             this.gridView1.OptionsEditForm.PopupEditFormWidth = 667;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.pictureBox_Profil);
+            this.panelControl1.Controls.Add(this.lbl_Gorev);
+            this.panelControl1.Controls.Add(this.lbl_KullaniciAdi);
+            this.panelControl1.Controls.Add(this.labelControl2);
+            this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(3, 3);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(601, 411);
+            this.panelControl1.TabIndex = 15;
+            // 
+            // lbl_Gorev
+            // 
+            this.lbl_Gorev.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_Gorev.Appearance.Options.UseFont = true;
+            this.lbl_Gorev.Location = new System.Drawing.Point(145, 85);
+            this.lbl_Gorev.Name = "lbl_Gorev";
+            this.lbl_Gorev.Size = new System.Drawing.Size(114, 24);
+            this.lbl_Gorev.TabIndex = 3;
+            this.lbl_Gorev.Text = "...................";
+            // 
+            // lbl_KullaniciAdi
+            // 
+            this.lbl_KullaniciAdi.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_KullaniciAdi.Appearance.Options.UseFont = true;
+            this.lbl_KullaniciAdi.Location = new System.Drawing.Point(145, 41);
+            this.lbl_KullaniciAdi.Name = "lbl_KullaniciAdi";
+            this.lbl_KullaniciAdi.Size = new System.Drawing.Size(114, 24);
+            this.lbl_KullaniciAdi.TabIndex = 2;
+            this.lbl_KullaniciAdi.Text = "...................";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(104, 85);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(35, 24);
+            this.labelControl2.TabIndex = 1;
+            this.labelControl2.Text = "Rol:";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(24, 41);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(115, 24);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Kullanıcı Adı:";
+            // 
             // xtraTabControl1
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -195,62 +283,16 @@
             this.webBrowser1.Size = new System.Drawing.Size(482, 780);
             this.webBrowser1.TabIndex = 0;
             // 
-            // groupControl4
+            // pictureBox_Profil
             // 
-            this.groupControl4.Controls.Add(this.gridControl4);
-            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl4.Location = new System.Drawing.Point(610, 420);
-            this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(601, 411);
-            this.groupControl4.TabIndex = 14;
-            this.groupControl4.Text = "AZALAN SLOTLAR";
-            // 
-            // gridControl4
-            // 
-            this.gridControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl4.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.gridControl4.Location = new System.Drawing.Point(2, 28);
-            this.gridControl4.MainView = this.gridView4;
-            this.gridControl4.Margin = new System.Windows.Forms.Padding(2);
-            this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(597, 381);
-            this.gridControl4.TabIndex = 0;
-            this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView4});
-            // 
-            // gridView4
-            // 
-            this.gridView4.DetailHeight = 292;
-            this.gridView4.GridControl = this.gridControl4;
-            this.gridView4.Name = "gridView4";
-            this.gridView4.OptionsEditForm.PopupEditFormWidth = 667;
-            this.gridView4.OptionsView.ShowGroupPanel = false;
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.labelControl2);
-            this.panelControl1.Controls.Add(this.labelControl1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(3, 3);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(601, 411);
-            this.panelControl1.TabIndex = 15;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(24, 41);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(73, 16);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Kullanıcı Adı:";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(24, 63);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(38, 16);
-            this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "Görev:";
+            this.pictureBox_Profil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_Profil.Enabled = false;
+            this.pictureBox_Profil.Location = new System.Drawing.Point(322, 50);
+            this.pictureBox_Profil.Name = "pictureBox_Profil";
+            this.pictureBox_Profil.Size = new System.Drawing.Size(240, 240);
+            this.pictureBox_Profil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Profil.TabIndex = 62;
+            this.pictureBox_Profil.TabStop = false;
             // 
             // FrmAnaSayfa
             // 
@@ -267,6 +309,10 @@
             this.Load += new System.EventHandler(this.FrmAnaSayfa_Load);
             this.tableLayoutAna.ResumeLayout(false);
             this.tableLayoutSol.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
@@ -275,16 +321,13 @@
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
-            this.xtraTabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
-            this.groupControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
+            this.xtraTabControl1.ResumeLayout(false);
+            this.xtraTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Profil)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,5 +351,8 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl lbl_Gorev;
+        private DevExpress.XtraEditors.LabelControl lbl_KullaniciAdi;
+        private System.Windows.Forms.PictureBox pictureBox_Profil;
     }
 }
