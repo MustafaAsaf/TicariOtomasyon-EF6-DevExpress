@@ -59,7 +59,7 @@ namespace Ticari_Otomasyon
             }
         }
 
-        public void GetAll()
+        public void GetAllAdminList()
         {
             try
             {
@@ -82,20 +82,22 @@ namespace Ticari_Otomasyon
                 MessageBox.Show($"Hata: {exception.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    
-        public void TumAdminleriYukle()
+
+        public void GetAllRole_Permisson()
         {
             try
             {
                 using (var values = new DboTicariOtomasyonEntities1())
                 {
-                    var adminList = values.Tbl_Admin.Select(adm => new
+                    var roleList = values.Tbl_Rol_Izinleri.Select(role => new
                     {
-                        adm.AdminID,
-                        adm.AdminKullaniciAdi,
-                        adm.AdminSifre
+                        ID=role.Rol_IzinleriId,
+                        Rol=role.Tbl_Roller.RolAdi,
+                        Izin=role.Tbl_Izinler.IzinKey,
                     }).ToList();
-                    gridControl1.DataSource = adminList;
+                    gridControl2.DataSource = roleList;
+                    ListeleIzinler();
+                    ListeleRoller();
                 }
             }
             catch (Exception exception)
@@ -108,71 +110,32 @@ namespace Ticari_Otomasyon
         {
             using (var db = new DboTicariOtomasyonEntities1())
             {
-                combobox_Roller.Properties.Items.Clear(); // Önce temizle
                 var roller = dataBase.Tbl_Roller.Select(s => s.RolAdi).ToList();
+
+                combobox_Roller.Properties.Items.Clear(); // Önce temizle
                 combobox_Roller.Properties.Items.AddRange(roller);
+
+                combobox_Roller2.Properties.Items.Clear(); // Önce temizle
+                combobox_Roller2.Properties.Items.AddRange(roller);
+            }
+        }
+
+        public void ListeleIzinler()
+        {
+            using (var db = new DboTicariOtomasyonEntities1())
+            {
+                var izinler = dataBase.Tbl_Izinler.Select(s => s.IzinKey).ToList();
+                comboBoxIzinler.Properties.Items.Clear(); // Önce temizle
+                comboBoxIzinler.Properties.Items.AddRange(izinler);
             }
         }
 
         private void FrmAyarlar_Load(object sender, EventArgs e)
         {
-           
-            GetAll();
+            GetAllAdminList();
+            GetAllRole_Permisson();
         }
-
-        private void gridView1_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            int focusedRowHandle = gridView1.FocusedRowHandle;
-            if (focusedRowHandle < 0) return;
-
-            // Grid’deki AdminRoleId’yi alıyoruz
-            var idDegeri = gridView1.GetRowCellValue(focusedRowHandle, "ID");
-            if (idDegeri == null) return;
-
-            int adminRoleId = Convert.ToInt32(idDegeri);
-
-            using (var db = new DboTicariOtomasyonEntities1())
-            {
-                // Tbl_AdminRules üzerinden admin ve rol bilgilerini çek
-                var adminRole = db.Tbl_AdminRules
-                                  .Where(ar => ar.AdminRoleId == adminRoleId)
-                                  .Select(ar => new
-                                  {
-                                      ar.AdminID,
-                                      ar.RolId,
-                                      KullaniciAdi = ar.Tbl_Admin.AdminKullaniciAdi,
-                                      Sifre = ar.Tbl_Admin.AdminSifre,
-                                      ProfilResim = ar.Tbl_Admin.AdminProfilResim,
-                                      RolAdi = ar.Tbl_Roller.RolAdi,
-                                      SuperAdmin = ar.Tbl_Roller.IsSuperAdmin
-                                  })
-                                  .FirstOrDefault();
-
-                if (adminRole != null)
-                {
-                    txtKullaniciAdi.Text = adminRole.KullaniciAdi;
-                    txtSifre.Text = adminRole.Sifre;
-                    pictureBox1.Image = adminRole.ProfilResim != null ? ByteToImage(adminRole.ProfilResim) : null;
-
-                    combobox_Roller.Text = adminRole.RolAdi;
-                    //checkBoxSuperAdmin.Checked = adminRole.SuperAdmin; // Eğer SuperAdmin gösteriyorsan
-                }
-            }
-        }
-
-        private void btn_image_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Resim |*.jpg;*.png;*.jpeg";
-
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox1.Image = Image.FromFile(ofd.FileName);
-                profilResimBytes = File.ReadAllBytes(ofd.FileName);
-            }
-        }
-
-
+   
         // Byte dizisini Image'a dönüştüren yardımcı fonksiyon
         private Image ByteToImage(byte[] byteArray)
         {
@@ -192,7 +155,10 @@ namespace Ticari_Otomasyon
             }
         }
 
-        private void btnAdd_Click_1(object sender, EventArgs e)
+       
+       
+        //CRUD KODLARI
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
@@ -211,7 +177,7 @@ namespace Ticari_Otomasyon
                     AdminProfilResim = pictureBox1.Image != null ? ImageToByte(pictureBox1.Image) : null
                 };
 
-                Tbl_AdminRules adminRules= new Tbl_AdminRules
+                Tbl_AdminRules adminRules = new Tbl_AdminRules
                 {
                     AdminID = tblAdmin.AdminID,
                     RolId = dataBase.Tbl_Roller.FirstOrDefault(r => r.RolAdi == combobox_Roller.Text)?.RolId ?? 0
@@ -223,7 +189,7 @@ namespace Ticari_Otomasyon
 
                 MessageBox.Show("Yeni Admin Eklendi!", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                GetAll();
+                GetAllAdminList();
                 txtKullaniciAdi.Text = "";
                 txtSifre.Text = "";
                 pictureBox1.Image = null; // Fotoğraf kutusunu temizle
@@ -232,10 +198,15 @@ namespace Ticari_Otomasyon
             {
                 MessageBox.Show($"Hata: {exception.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-           
         }
-        private void btnDelete_Click_1(object sender, EventArgs e)
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            dataBase.SaveChanges();
+            MessageBox.Show("Kaydedildi !");
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             try
             {
@@ -274,7 +245,7 @@ namespace Ticari_Otomasyon
 
                             MessageBox.Show("Kayıt Silindi", "ADMİNLER", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            GetAll(); // Grid'i yenile
+                            GetAllAdminList(); // Grid'i yenile
                             txtKullaniciAdi.Text = "";
                             txtSifre.Text = "";
                             pictureBox1.Image = null;
@@ -290,10 +261,9 @@ namespace Ticari_Otomasyon
             {
                 MessageBox.Show($"Hata: {exception.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
-        private void btnUpdate_Click_1(object sender, EventArgs e)
+
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
             {
@@ -367,7 +337,7 @@ namespace Ticari_Otomasyon
 
                     MessageBox.Show("Kayıt başarıyla güncellendi!", "ADMİNLER", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    GetAll(); // Grid'i yenile
+                    GetAllAdminList(); // Grid'i yenile
                     txtKullaniciAdi.Text = "";
                     txtSifre.Text = "";
                     pictureBox1.Image = null;
@@ -378,21 +348,26 @@ namespace Ticari_Otomasyon
             {
                 MessageBox.Show("Güncelleme sırasında bir hata oluştu! " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        private void btnClear_Click_1(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
             ClearForm(this);
         }
 
-        private void btnSave_Click_1(object sender, EventArgs e)
+        private void btn_image_Click_1(object sender, EventArgs e)
         {
-            dataBase.SaveChanges();
-            MessageBox.Show("Kaydedildi !");
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Resim |*.jpg;*.png;*.jpeg";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(ofd.FileName);
+                profilResimBytes = File.ReadAllBytes(ofd.FileName);
+            }
         }
 
-        private void checkEdit1_CheckedChanged_1(object sender, EventArgs e)
+        private void checkEdit1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkEdit1.Checked)
             {
@@ -403,6 +378,56 @@ namespace Ticari_Otomasyon
             {
                 // Şifreyi gizle
                 txtSifre.Properties.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            int focusedRowHandle = gridView1.FocusedRowHandle;
+            if (focusedRowHandle < 0) return;
+
+            // Grid’deki AdminRoleId’yi alıyoruz
+            var idDegeri = gridView1.GetRowCellValue(focusedRowHandle, "ID");
+            if (idDegeri == null) return;
+
+            int adminRoleId = Convert.ToInt32(idDegeri);
+
+            using (var db = new DboTicariOtomasyonEntities1())
+            {
+                // Tbl_AdminRules üzerinden admin ve rol bilgilerini çek
+                var adminRole = db.Tbl_AdminRules
+                                  .Where(ar => ar.AdminRoleId == adminRoleId)
+                                  .Select(ar => new
+                                  {
+                                      ar.AdminID,
+                                      ar.RolId,
+                                      KullaniciAdi = ar.Tbl_Admin.AdminKullaniciAdi,
+                                      Sifre = ar.Tbl_Admin.AdminSifre,
+                                      ProfilResim = ar.Tbl_Admin.AdminProfilResim,
+                                      RolAdi = ar.Tbl_Roller.RolAdi,
+                                      SuperAdmin = ar.Tbl_Roller.IsSuperAdmin
+                                  })
+                                  .FirstOrDefault();
+
+                if (adminRole != null)
+                {
+                    txtKullaniciAdi.Text = adminRole.KullaniciAdi;
+                    txtSifre.Text = adminRole.Sifre;
+                    pictureBox1.Image = adminRole.ProfilResim != null ? ByteToImage(adminRole.ProfilResim) : null;
+
+                    combobox_Roller.Text = adminRole.RolAdi;
+                    //checkBoxSuperAdmin.Checked = adminRole.SuperAdmin; // Eğer SuperAdmin gösteriyorsan
+                }
+            }
+        }
+
+        private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if (gridView2.FocusedRowHandle >= 0) // Seçili satır varsa
+            {
+               combobox_Roller2.Text = gridView2.GetFocusedRowCellValue("Rol").ToString();
+               comboBoxIzinler.Text = gridView2.GetFocusedRowCellValue("Izin").ToString();
+
             }
         }
     }

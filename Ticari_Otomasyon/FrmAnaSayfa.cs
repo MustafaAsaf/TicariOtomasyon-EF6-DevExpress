@@ -146,6 +146,7 @@ namespace Ticari_Otomasyon
         {
             lbl_KullaniciAdi.Text = CurrentUser.KullaniciAdi;
 
+
             // Birden fazla rol varsa ilkini gösterebiliriz
             if (CurrentUser.Roller != null && CurrentUser.Roller.Count > 0)
                 lbl_Gorev.Text = CurrentUser.Roller[0];

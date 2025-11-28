@@ -23,6 +23,7 @@
           <Property Name="AdminKullaniciAdi" Type="varchar" MaxLength="50" />
           <Property Name="AdminSifre" Type="varchar" MaxLength="50" />
           <Property Name="AdminProfilResim" Type="varbinary(max)" />
+          <Property Name="PersonellD" Type="int" />
         </EntityType>
         <EntityType Name="Tbl_AdminRules">
           <Key>
@@ -1011,6 +1012,7 @@
           <Property Name="AdminSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Tbl_AdminRules" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B961" FromRole="Tbl_Admin" ToRole="Tbl_AdminRules" />
           <Property Name="AdminProfilResim" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="PersonellD" Type="Int32" />
         </EntityType>
         <EntityType Name="Tbl_AltKategoriler">
           <Key>
@@ -1489,6 +1491,7 @@
           <EntitySetMapping Name="Tbl_Admin">
             <EntityTypeMapping TypeName="DboTicariOtomasyonModel.Tbl_Admin">
               <MappingFragment StoreEntitySet="Tbl_Admin">
+                <ScalarProperty Name="PersonellD" ColumnName="PersonellD" />
                 <ScalarProperty Name="AdminProfilResim" ColumnName="AdminProfilResim" />
                 <ScalarProperty Name="AdminSifre" ColumnName="AdminSifre" />
                 <ScalarProperty Name="AdminKullaniciAdi" ColumnName="AdminKullaniciAdi" />

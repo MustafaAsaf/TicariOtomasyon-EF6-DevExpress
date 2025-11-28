@@ -78,6 +78,9 @@ namespace Ticari_Otomasyon
                 .Distinct()
                 .ToList();
 
+            //Kullanıcı personel ad soyad bilgisi
+            /////////////////////
+
             // Şimdi bu bilgileri global olarak saklayalım
             CurrentUser.AdminID = admin.AdminID;
             CurrentUser.KullaniciAdi = admin.AdminKullaniciAdi;
@@ -85,6 +88,7 @@ namespace Ticari_Otomasyon
             CurrentUser.Izinler = izinler;
             CurrentUser.IsSuperAdmin = roller.Any(r => r.IsSuperAdmin);
             CurrentUser.ProfilResim = admin.AdminProfilResim;
+            //CurrentUser.PersonelAdSoyad = 
 
             // Ana forma geçiş
             FrmAna ana = new FrmAna();
