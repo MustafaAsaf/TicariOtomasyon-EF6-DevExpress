@@ -459,5 +459,21 @@ namespace Ticari_Otomasyon
                 _frmAnaSayfa.Activate();// Eğer açıksa aktif hale getir (isteğe bağlı)
             }
         }
+
+        private FrmSatisAnaliz _frmSatisAnaliz;
+        private void barButtonSatisAnaliz_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (_frmSatisAnaliz == null || _frmSatisAnaliz.IsDisposed)
+            {
+                _frmSatisAnaliz = new FrmSatisAnaliz();
+                _frmSatisAnaliz.MdiParent = this;
+                _frmSatisAnaliz.WindowState = FormWindowState.Maximized;
+                _frmSatisAnaliz.Show();
+            }
+            else
+            {
+                _frmSatisAnaliz.Activate();
+            }
+        }
     }
 }

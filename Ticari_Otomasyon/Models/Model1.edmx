@@ -290,6 +290,46 @@
           <Property Name="IslemTarihi" Type="datetime" />
           <Property Name="Kullanici" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_KategoriSatisOzet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_KategoriSatisOzet">
+          <Key>
+            <PropertyRef Name="KategoriID" />
+            <PropertyRef Name="KategoriAdi" />
+          </Key>
+          <Property Name="KategoriID" Type="int" Nullable="false" />
+          <Property Name="KategoriAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UrunSayisi" Type="int" />
+          <Property Name="ToplamAdet" Type="int" />
+          <Property Name="ToplamCiro" Type="decimal" Precision="38" Scale="2" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_PersonelSatisOzet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_PersonelSatisOzet">
+          <Key>
+            <PropertyRef Name="PersonelID" />
+          </Key>
+          <Property Name="PersonelID" Type="int" Nullable="false" />
+          <Property Name="PersonelAd" Type="nvarchar" MaxLength="50" />
+          <Property Name="PersonelSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="ToplamAdet" Type="int" />
+          <Property Name="ToplamCiro" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="SatisSayisi" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_UrunSatisOzet">
+          <Key>
+            <PropertyRef Name="UrunID" />
+          </Key>
+          <Property Name="UrunID" Type="int" Nullable="false" />
+          <Property Name="UrunAdi" Type="nvarchar" MaxLength="30" />
+          <Property Name="KategoriAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="AltKategoriAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="ToplamAdet" Type="int" />
+          <Property Name="ToplamCiro" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="SonSatisTarihi" Type="date" />
+        </EntityType>
         <Association Name="FK__Tbl_Admin__Admin__0AF29B96">
           <End Role="Tbl_Admin" Type="Self.Tbl_Admin" Multiplicity="1" />
           <End Role="Tbl_AdminRules" Type="Self.Tbl_AdminRules" Multiplicity="*" />
@@ -528,6 +568,36 @@
           <EntitySet Name="Tbl_Stoklar" EntityType="Self.Tbl_Stoklar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Urunler" EntityType="Self.Tbl_Urunler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_UrunLoglari" EntityType="Self.Tbl_UrunLoglari" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_KategoriSatisOzet" EntityType="Self.vw_KategoriSatisOzet" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_KategoriSatisOzet].[KategoriID] AS [KategoriID], 
+    [vw_KategoriSatisOzet].[KategoriAdi] AS [KategoriAdi], 
+    [vw_KategoriSatisOzet].[UrunSayisi] AS [UrunSayisi], 
+    [vw_KategoriSatisOzet].[ToplamAdet] AS [ToplamAdet], 
+    [vw_KategoriSatisOzet].[ToplamCiro] AS [ToplamCiro]
+    FROM [dbo].[vw_KategoriSatisOzet] AS [vw_KategoriSatisOzet]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_PersonelSatisOzet" EntityType="Self.vw_PersonelSatisOzet" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_PersonelSatisOzet].[PersonelID] AS [PersonelID], 
+    [vw_PersonelSatisOzet].[PersonelAd] AS [PersonelAd], 
+    [vw_PersonelSatisOzet].[PersonelSoyad] AS [PersonelSoyad], 
+    [vw_PersonelSatisOzet].[ToplamAdet] AS [ToplamAdet], 
+    [vw_PersonelSatisOzet].[ToplamCiro] AS [ToplamCiro], 
+    [vw_PersonelSatisOzet].[SatisSayisi] AS [SatisSayisi]
+    FROM [dbo].[vw_PersonelSatisOzet] AS [vw_PersonelSatisOzet]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_UrunSatisOzet" EntityType="Self.vw_UrunSatisOzet" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_UrunSatisOzet].[UrunID] AS [UrunID], 
+    [vw_UrunSatisOzet].[UrunAdi] AS [UrunAdi], 
+    [vw_UrunSatisOzet].[KategoriAdi] AS [KategoriAdi], 
+    [vw_UrunSatisOzet].[AltKategoriAdi] AS [AltKategoriAdi], 
+    [vw_UrunSatisOzet].[ToplamAdet] AS [ToplamAdet], 
+    [vw_UrunSatisOzet].[ToplamCiro] AS [ToplamCiro], 
+    [vw_UrunSatisOzet].[SonSatisTarihi] AS [SonSatisTarihi]
+    FROM [dbo].[vw_UrunSatisOzet] AS [vw_UrunSatisOzet]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK__Tbl_Admin__Admin__0AF29B96" Association="Self.FK__Tbl_Admin__Admin__0AF29B96">
             <End Role="Tbl_Admin" EntitySet="Tbl_Admin" />
             <End Role="Tbl_AdminRules" EntitySet="Tbl_AdminRules" />
@@ -710,6 +780,9 @@
             <End Role="Tbl_Roller" EntitySet="Tbl_Roller" />
             <End Role="Tbl_AdminRules" EntitySet="Tbl_AdminRules" />
           </AssociationSet>
+          <EntitySet Name="vw_KategoriSatisOzet" EntityType="DboTicariOtomasyonModel.vw_KategoriSatisOzet" />
+          <EntitySet Name="vw_PersonelSatisOzet" EntityType="DboTicariOtomasyonModel.vw_PersonelSatisOzet" />
+          <EntitySet Name="vw_UrunSatisOzet" EntityType="DboTicariOtomasyonModel.vw_UrunSatisOzet" />
           </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -1242,6 +1315,40 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="vw_KategoriSatisOzet">
+          <Key>
+            <PropertyRef Name="KategoriID" />
+            <PropertyRef Name="KategoriAdi" />
+          </Key>
+          <Property Name="KategoriID" Type="Int32" Nullable="false" />
+          <Property Name="KategoriAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UrunSayisi" Type="Int32" />
+          <Property Name="ToplamAdet" Type="Int32" />
+          <Property Name="ToplamCiro" Type="Decimal" Precision="38" Scale="2" />
+        </EntityType>
+        <EntityType Name="vw_PersonelSatisOzet">
+          <Key>
+            <PropertyRef Name="PersonelID" />
+          </Key>
+          <Property Name="PersonelID" Type="Int32" Nullable="false" />
+          <Property Name="PersonelAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PersonelSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ToplamAdet" Type="Int32" />
+          <Property Name="ToplamCiro" Type="Decimal" Precision="38" Scale="2" />
+          <Property Name="SatisSayisi" Type="Int32" />
+        </EntityType>
+        <EntityType Name="vw_UrunSatisOzet">
+          <Key>
+            <PropertyRef Name="UrunID" />
+          </Key>
+          <Property Name="UrunID" Type="Int32" Nullable="false" />
+          <Property Name="UrunAdi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="KategoriAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AltKategoriAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ToplamAdet" Type="Int32" />
+          <Property Name="ToplamCiro" Type="Decimal" Precision="38" Scale="2" />
+          <Property Name="SonSatisTarihi" Type="DateTime" Precision="0" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1611,6 +1718,42 @@
                 <ScalarProperty Name="RolId" ColumnName="RolId" />
                 <ScalarProperty Name="AdminID" ColumnName="AdminID" />
                 <ScalarProperty Name="AdminRoleId" ColumnName="AdminRoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_KategoriSatisOzet">
+            <EntityTypeMapping TypeName="DboTicariOtomasyonModel.vw_KategoriSatisOzet">
+              <MappingFragment StoreEntitySet="vw_KategoriSatisOzet">
+                <ScalarProperty Name="ToplamCiro" ColumnName="ToplamCiro" />
+                <ScalarProperty Name="ToplamAdet" ColumnName="ToplamAdet" />
+                <ScalarProperty Name="UrunSayisi" ColumnName="UrunSayisi" />
+                <ScalarProperty Name="KategoriAdi" ColumnName="KategoriAdi" />
+                <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_PersonelSatisOzet">
+            <EntityTypeMapping TypeName="DboTicariOtomasyonModel.vw_PersonelSatisOzet">
+              <MappingFragment StoreEntitySet="vw_PersonelSatisOzet">
+                <ScalarProperty Name="SatisSayisi" ColumnName="SatisSayisi" />
+                <ScalarProperty Name="ToplamCiro" ColumnName="ToplamCiro" />
+                <ScalarProperty Name="ToplamAdet" ColumnName="ToplamAdet" />
+                <ScalarProperty Name="PersonelSoyad" ColumnName="PersonelSoyad" />
+                <ScalarProperty Name="PersonelAd" ColumnName="PersonelAd" />
+                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_UrunSatisOzet">
+            <EntityTypeMapping TypeName="DboTicariOtomasyonModel.vw_UrunSatisOzet">
+              <MappingFragment StoreEntitySet="vw_UrunSatisOzet">
+                <ScalarProperty Name="SonSatisTarihi" ColumnName="SonSatisTarihi" />
+                <ScalarProperty Name="ToplamCiro" ColumnName="ToplamCiro" />
+                <ScalarProperty Name="ToplamAdet" ColumnName="ToplamAdet" />
+                <ScalarProperty Name="AltKategoriAdi" ColumnName="AltKategoriAdi" />
+                <ScalarProperty Name="KategoriAdi" ColumnName="KategoriAdi" />
+                <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+                <ScalarProperty Name="UrunID" ColumnName="UrunID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

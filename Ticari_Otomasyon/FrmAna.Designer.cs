@@ -53,6 +53,7 @@
             this.barButtonRaporlar = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonSettings = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonSatisAnaliz = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -92,15 +93,16 @@
             this.barButtonHareketler,
             this.barButtonRaporlar,
             this.barButtonItem1,
-            this.barButtonSettings});
+            this.barButtonSettings,
+            this.barButtonSatisAnaliz});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(14);
-            this.ribbonControl1.MaxItemId = 26;
+            this.ribbonControl1.MaxItemId = 27;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 1509;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1710, 183);
+            this.ribbonControl1.Size = new System.Drawing.Size(1767, 183);
             // 
             // barButtonUrunler
             // 
@@ -333,6 +335,16 @@
             this.barButtonSettings.Name = "barButtonSettings";
             this.barButtonSettings.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonSettings_ItemClick);
             // 
+            // barButtonSatisAnaliz
+            // 
+            this.barButtonSatisAnaliz.Caption = "SATIŞ/ANALİZ";
+            this.barButtonSatisAnaliz.Id = 26;
+            this.barButtonSatisAnaliz.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonSatisAnaliz.ImageOptions.SvgImage")));
+            this.barButtonSatisAnaliz.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.barButtonSatisAnaliz.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonSatisAnaliz.Name = "barButtonSatisAnaliz";
+            this.barButtonSatisAnaliz.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonSatisAnaliz_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -357,6 +369,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonFaturalar);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonHareketler);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonRaporlar);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonSatisAnaliz);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonSettings);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
@@ -400,7 +413,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1710, 840);
+            this.ClientSize = new System.Drawing.Size(1767, 840);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "FrmAna";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -445,6 +458,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonSettings;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarButtonItem barButtonSatisAnaliz;
     }
 }
 
