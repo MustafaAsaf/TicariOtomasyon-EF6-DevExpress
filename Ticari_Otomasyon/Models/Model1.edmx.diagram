@@ -44,9 +44,10 @@
         <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_AdminRules" Width="1.5" PointX="14.625" PointY="0.75" />
         <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B961" />
         <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_Admin__RolId__0BE6BFCF1" />
-        <EntityTypeShape EntityType="DboTicariOtomasyonModel.vw_KategoriSatisOzet" Width="2.625" PointX="14.375" PointY="9.75" />
-        <EntityTypeShape EntityType="DboTicariOtomasyonModel.vw_PersonelSatisOzet" Width="2.625" PointX="14.375" PointY="12.75" />
-        <EntityTypeShape EntityType="DboTicariOtomasyonModel.vw_UrunSatisOzet" Width="2.625" PointX="15.375" PointY="15.75" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.vw_SatisHareketleri" Width="2.375" PointX="12.375" PointY="24.375" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.vw_KategoriSatisOzet" Width="2.75" PointX="1" PointY="24.5" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.vw_PersonelSatisOzet" Width="3.625" PointX="4.25" PointY="24.5" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.vw_UrunSatisOzet" Width="3.625" PointX="8.125" PointY="24.375" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

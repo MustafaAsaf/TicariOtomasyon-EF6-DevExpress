@@ -16,10 +16,9 @@ namespace Ticari_Otomasyon.Models
     {
         public int UrunID { get; set; }
         public string UrunAdi { get; set; }
-        public string KategoriAdi { get; set; }
-        public string AltKategoriAdi { get; set; }
         public Nullable<int> ToplamAdet { get; set; }
-        public Nullable<decimal> ToplamCiro { get; set; }
-        public Nullable<System.DateTime> SonSatisTarihi { get; set; }
+        public Nullable<decimal> ToplamSatisTutari { get; set; }
+        public Nullable<decimal> OrtalamaSatisFiyati { get; set; }
+        public Nullable<int> AltKategoriID { get; set; }
     }
 }

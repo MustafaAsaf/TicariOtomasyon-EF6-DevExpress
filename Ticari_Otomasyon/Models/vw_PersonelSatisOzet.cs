@@ -15,10 +15,8 @@ namespace Ticari_Otomasyon.Models
     public partial class vw_PersonelSatisOzet
     {
         public int PersonelID { get; set; }
-        public string PersonelAd { get; set; }
-        public string PersonelSoyad { get; set; }
+        public string PersonelAdi { get; set; }
         public Nullable<int> ToplamAdet { get; set; }
-        public Nullable<decimal> ToplamCiro { get; set; }
-        public Nullable<int> SatisSayisi { get; set; }
+        public Nullable<decimal> ToplamSatisTutari { get; set; }
     }
 }

@@ -299,9 +299,8 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_KategoriSatisOzet' does 
           </Key>
           <Property Name="KategoriID" Type="int" Nullable="false" />
           <Property Name="KategoriAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="UrunSayisi" Type="int" />
           <Property Name="ToplamAdet" Type="int" />
-          <Property Name="ToplamCiro" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="ToplamSatisTutari" Type="decimal" Precision="38" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_PersonelSatisOzet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -310,11 +309,28 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_PersonelSatisOzet' does 
             <PropertyRef Name="PersonelID" />
           </Key>
           <Property Name="PersonelID" Type="int" Nullable="false" />
-          <Property Name="PersonelAd" Type="nvarchar" MaxLength="50" />
-          <Property Name="PersonelSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="PersonelAdi" Type="nvarchar" MaxLength="101" />
           <Property Name="ToplamAdet" Type="int" />
-          <Property Name="ToplamCiro" Type="decimal" Precision="38" Scale="2" />
-          <Property Name="SatisSayisi" Type="int" />
+          <Property Name="ToplamSatisTutari" Type="decimal" Precision="38" Scale="2" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_SatisHareketleri' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_SatisHareketleri">
+          <Key>
+            <PropertyRef Name="HareketID" />
+            <PropertyRef Name="CariTip" />
+          </Key>
+          <Property Name="HareketID" Type="int" Nullable="false" />
+          <Property Name="UrunID" Type="int" />
+          <Property Name="Adet" Type="int" />
+          <Property Name="PersonelID" Type="int" />
+          <Property Name="CariID" Type="int" />
+          <Property Name="Fiyat" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Toplam" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="FaturaID" Type="int" />
+          <Property Name="Tarih" Type="varchar" MaxLength="30" />
+          <Property Name="Notlar" Type="nvarchar(max)" />
+          <Property Name="CariTip" Type="varchar" MaxLength="7" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -324,11 +340,10 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
           </Key>
           <Property Name="UrunID" Type="int" Nullable="false" />
           <Property Name="UrunAdi" Type="nvarchar" MaxLength="30" />
-          <Property Name="KategoriAdi" Type="nvarchar" MaxLength="50" />
-          <Property Name="AltKategoriAdi" Type="nvarchar" MaxLength="50" />
           <Property Name="ToplamAdet" Type="int" />
-          <Property Name="ToplamCiro" Type="decimal" Precision="38" Scale="2" />
-          <Property Name="SonSatisTarihi" Type="date" />
+          <Property Name="ToplamSatisTutari" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="OrtalamaSatisFiyati" Type="decimal" Precision="38" Scale="6" />
+          <Property Name="AltKategoriID" Type="int" />
         </EntityType>
         <Association Name="FK__Tbl_Admin__Admin__0AF29B96">
           <End Role="Tbl_Admin" Type="Self.Tbl_Admin" Multiplicity="1" />
@@ -572,30 +587,41 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
             <DefiningQuery>SELECT 
     [vw_KategoriSatisOzet].[KategoriID] AS [KategoriID], 
     [vw_KategoriSatisOzet].[KategoriAdi] AS [KategoriAdi], 
-    [vw_KategoriSatisOzet].[UrunSayisi] AS [UrunSayisi], 
     [vw_KategoriSatisOzet].[ToplamAdet] AS [ToplamAdet], 
-    [vw_KategoriSatisOzet].[ToplamCiro] AS [ToplamCiro]
+    [vw_KategoriSatisOzet].[ToplamSatisTutari] AS [ToplamSatisTutari]
     FROM [dbo].[vw_KategoriSatisOzet] AS [vw_KategoriSatisOzet]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_PersonelSatisOzet" EntityType="Self.vw_PersonelSatisOzet" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [vw_PersonelSatisOzet].[PersonelID] AS [PersonelID], 
-    [vw_PersonelSatisOzet].[PersonelAd] AS [PersonelAd], 
-    [vw_PersonelSatisOzet].[PersonelSoyad] AS [PersonelSoyad], 
+    [vw_PersonelSatisOzet].[PersonelAdi] AS [PersonelAdi], 
     [vw_PersonelSatisOzet].[ToplamAdet] AS [ToplamAdet], 
-    [vw_PersonelSatisOzet].[ToplamCiro] AS [ToplamCiro], 
-    [vw_PersonelSatisOzet].[SatisSayisi] AS [SatisSayisi]
+    [vw_PersonelSatisOzet].[ToplamSatisTutari] AS [ToplamSatisTutari]
     FROM [dbo].[vw_PersonelSatisOzet] AS [vw_PersonelSatisOzet]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_SatisHareketleri" EntityType="Self.vw_SatisHareketleri" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_SatisHareketleri].[HareketID] AS [HareketID], 
+    [vw_SatisHareketleri].[UrunID] AS [UrunID], 
+    [vw_SatisHareketleri].[Adet] AS [Adet], 
+    [vw_SatisHareketleri].[PersonelID] AS [PersonelID], 
+    [vw_SatisHareketleri].[CariID] AS [CariID], 
+    [vw_SatisHareketleri].[Fiyat] AS [Fiyat], 
+    [vw_SatisHareketleri].[Toplam] AS [Toplam], 
+    [vw_SatisHareketleri].[FaturaID] AS [FaturaID], 
+    [vw_SatisHareketleri].[Tarih] AS [Tarih], 
+    [vw_SatisHareketleri].[Notlar] AS [Notlar], 
+    [vw_SatisHareketleri].[CariTip] AS [CariTip]
+    FROM [dbo].[vw_SatisHareketleri] AS [vw_SatisHareketleri]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_UrunSatisOzet" EntityType="Self.vw_UrunSatisOzet" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [vw_UrunSatisOzet].[UrunID] AS [UrunID], 
     [vw_UrunSatisOzet].[UrunAdi] AS [UrunAdi], 
-    [vw_UrunSatisOzet].[KategoriAdi] AS [KategoriAdi], 
-    [vw_UrunSatisOzet].[AltKategoriAdi] AS [AltKategoriAdi], 
     [vw_UrunSatisOzet].[ToplamAdet] AS [ToplamAdet], 
-    [vw_UrunSatisOzet].[ToplamCiro] AS [ToplamCiro], 
-    [vw_UrunSatisOzet].[SonSatisTarihi] AS [SonSatisTarihi]
+    [vw_UrunSatisOzet].[ToplamSatisTutari] AS [ToplamSatisTutari], 
+    [vw_UrunSatisOzet].[OrtalamaSatisFiyati] AS [OrtalamaSatisFiyati], 
+    [vw_UrunSatisOzet].[AltKategoriID] AS [AltKategoriID]
     FROM [dbo].[vw_UrunSatisOzet] AS [vw_UrunSatisOzet]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK__Tbl_Admin__Admin__0AF29B96" Association="Self.FK__Tbl_Admin__Admin__0AF29B96">
@@ -780,6 +806,7 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
             <End Role="Tbl_Roller" EntitySet="Tbl_Roller" />
             <End Role="Tbl_AdminRules" EntitySet="Tbl_AdminRules" />
           </AssociationSet>
+          <EntitySet Name="vw_SatisHareketleri" EntityType="DboTicariOtomasyonModel.vw_SatisHareketleri" />
           <EntitySet Name="vw_KategoriSatisOzet" EntityType="DboTicariOtomasyonModel.vw_KategoriSatisOzet" />
           <EntitySet Name="vw_PersonelSatisOzet" EntityType="DboTicariOtomasyonModel.vw_PersonelSatisOzet" />
           <EntitySet Name="vw_UrunSatisOzet" EntityType="DboTicariOtomasyonModel.vw_UrunSatisOzet" />
@@ -1315,6 +1342,23 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="vw_SatisHareketleri">
+          <Key>
+            <PropertyRef Name="HareketID" />
+            <PropertyRef Name="CariTip" />
+          </Key>
+          <Property Name="HareketID" Type="Int32" Nullable="false" />
+          <Property Name="UrunID" Type="Int32" />
+          <Property Name="Adet" Type="Int32" />
+          <Property Name="PersonelID" Type="Int32" />
+          <Property Name="CariID" Type="Int32" />
+          <Property Name="Fiyat" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Toplam" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="FaturaID" Type="Int32" />
+          <Property Name="Tarih" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Notlar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CariTip" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="vw_KategoriSatisOzet">
           <Key>
             <PropertyRef Name="KategoriID" />
@@ -1322,20 +1366,17 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
           </Key>
           <Property Name="KategoriID" Type="Int32" Nullable="false" />
           <Property Name="KategoriAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="UrunSayisi" Type="Int32" />
           <Property Name="ToplamAdet" Type="Int32" />
-          <Property Name="ToplamCiro" Type="Decimal" Precision="38" Scale="2" />
+          <Property Name="ToplamSatisTutari" Type="Decimal" Precision="38" Scale="2" />
         </EntityType>
         <EntityType Name="vw_PersonelSatisOzet">
           <Key>
             <PropertyRef Name="PersonelID" />
           </Key>
           <Property Name="PersonelID" Type="Int32" Nullable="false" />
-          <Property Name="PersonelAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="PersonelSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PersonelAdi" Type="String" MaxLength="101" FixedLength="false" Unicode="true" />
           <Property Name="ToplamAdet" Type="Int32" />
-          <Property Name="ToplamCiro" Type="Decimal" Precision="38" Scale="2" />
-          <Property Name="SatisSayisi" Type="Int32" />
+          <Property Name="ToplamSatisTutari" Type="Decimal" Precision="38" Scale="2" />
         </EntityType>
         <EntityType Name="vw_UrunSatisOzet">
           <Key>
@@ -1343,11 +1384,10 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
           </Key>
           <Property Name="UrunID" Type="Int32" Nullable="false" />
           <Property Name="UrunAdi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="KategoriAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="AltKategoriAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ToplamAdet" Type="Int32" />
-          <Property Name="ToplamCiro" Type="Decimal" Precision="38" Scale="2" />
-          <Property Name="SonSatisTarihi" Type="DateTime" Precision="0" />
+          <Property Name="ToplamSatisTutari" Type="Decimal" Precision="38" Scale="2" />
+          <Property Name="OrtalamaSatisFiyati" Type="Decimal" Precision="38" Scale="6" />
+          <Property Name="AltKategoriID" Type="Int32" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -1721,12 +1761,28 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="vw_SatisHareketleri">
+            <EntityTypeMapping TypeName="DboTicariOtomasyonModel.vw_SatisHareketleri">
+              <MappingFragment StoreEntitySet="vw_SatisHareketleri">
+                <ScalarProperty Name="CariTip" ColumnName="CariTip" />
+                <ScalarProperty Name="Notlar" ColumnName="Notlar" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="FaturaID" ColumnName="FaturaID" />
+                <ScalarProperty Name="Toplam" ColumnName="Toplam" />
+                <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+                <ScalarProperty Name="CariID" ColumnName="CariID" />
+                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+                <ScalarProperty Name="Adet" ColumnName="Adet" />
+                <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+                <ScalarProperty Name="HareketID" ColumnName="HareketID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="vw_KategoriSatisOzet">
             <EntityTypeMapping TypeName="DboTicariOtomasyonModel.vw_KategoriSatisOzet">
               <MappingFragment StoreEntitySet="vw_KategoriSatisOzet">
-                <ScalarProperty Name="ToplamCiro" ColumnName="ToplamCiro" />
+                <ScalarProperty Name="ToplamSatisTutari" ColumnName="ToplamSatisTutari" />
                 <ScalarProperty Name="ToplamAdet" ColumnName="ToplamAdet" />
-                <ScalarProperty Name="UrunSayisi" ColumnName="UrunSayisi" />
                 <ScalarProperty Name="KategoriAdi" ColumnName="KategoriAdi" />
                 <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
               </MappingFragment>
@@ -1735,11 +1791,9 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
           <EntitySetMapping Name="vw_PersonelSatisOzet">
             <EntityTypeMapping TypeName="DboTicariOtomasyonModel.vw_PersonelSatisOzet">
               <MappingFragment StoreEntitySet="vw_PersonelSatisOzet">
-                <ScalarProperty Name="SatisSayisi" ColumnName="SatisSayisi" />
-                <ScalarProperty Name="ToplamCiro" ColumnName="ToplamCiro" />
+                <ScalarProperty Name="ToplamSatisTutari" ColumnName="ToplamSatisTutari" />
                 <ScalarProperty Name="ToplamAdet" ColumnName="ToplamAdet" />
-                <ScalarProperty Name="PersonelSoyad" ColumnName="PersonelSoyad" />
-                <ScalarProperty Name="PersonelAd" ColumnName="PersonelAd" />
+                <ScalarProperty Name="PersonelAdi" ColumnName="PersonelAdi" />
                 <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1747,11 +1801,10 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
           <EntitySetMapping Name="vw_UrunSatisOzet">
             <EntityTypeMapping TypeName="DboTicariOtomasyonModel.vw_UrunSatisOzet">
               <MappingFragment StoreEntitySet="vw_UrunSatisOzet">
-                <ScalarProperty Name="SonSatisTarihi" ColumnName="SonSatisTarihi" />
-                <ScalarProperty Name="ToplamCiro" ColumnName="ToplamCiro" />
+                <ScalarProperty Name="AltKategoriID" ColumnName="AltKategoriID" />
+                <ScalarProperty Name="OrtalamaSatisFiyati" ColumnName="OrtalamaSatisFiyati" />
+                <ScalarProperty Name="ToplamSatisTutari" ColumnName="ToplamSatisTutari" />
                 <ScalarProperty Name="ToplamAdet" ColumnName="ToplamAdet" />
-                <ScalarProperty Name="AltKategoriAdi" ColumnName="AltKategoriAdi" />
-                <ScalarProperty Name="KategoriAdi" ColumnName="KategoriAdi" />
                 <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
                 <ScalarProperty Name="UrunID" ColumnName="UrunID" />
               </MappingFragment>

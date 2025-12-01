@@ -16,8 +16,7 @@ namespace Ticari_Otomasyon.Models
     {
         public int KategoriID { get; set; }
         public string KategoriAdi { get; set; }
-        public Nullable<int> UrunSayisi { get; set; }
         public Nullable<int> ToplamAdet { get; set; }
-        public Nullable<decimal> ToplamCiro { get; set; }
+        public Nullable<decimal> ToplamSatisTutari { get; set; }
     }
 }

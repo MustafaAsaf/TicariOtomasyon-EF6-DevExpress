@@ -70,6 +70,14 @@ namespace Ticari_Otomasyon {
         
         private Tbl_NotlarDataTable tableTbl_Notlar;
         
+        private vw_KategoriSatisOzetDataTable tablevw_KategoriSatisOzet;
+        
+        private vw_PersonelSatisOzetDataTable tablevw_PersonelSatisOzet;
+        
+        private vw_SatisHareketleriDataTable tablevw_SatisHareketleri;
+        
+        private vw_UrunSatisOzetDataTable tablevw_UrunSatisOzet;
+        
         private global::System.Data.DataRelation relationFK_Tbl_Bankalar_Tbl_Sirketler;
         
         private global::System.Data.DataRelation relationFK__Tbl_Admin__Admin__0AF29B96;
@@ -196,6 +204,18 @@ namespace Ticari_Otomasyon {
                 }
                 if ((ds.Tables["Tbl_Notlar"] != null)) {
                     base.Tables.Add(new Tbl_NotlarDataTable(ds.Tables["Tbl_Notlar"]));
+                }
+                if ((ds.Tables["vw_KategoriSatisOzet"] != null)) {
+                    base.Tables.Add(new vw_KategoriSatisOzetDataTable(ds.Tables["vw_KategoriSatisOzet"]));
+                }
+                if ((ds.Tables["vw_PersonelSatisOzet"] != null)) {
+                    base.Tables.Add(new vw_PersonelSatisOzetDataTable(ds.Tables["vw_PersonelSatisOzet"]));
+                }
+                if ((ds.Tables["vw_SatisHareketleri"] != null)) {
+                    base.Tables.Add(new vw_SatisHareketleriDataTable(ds.Tables["vw_SatisHareketleri"]));
+                }
+                if ((ds.Tables["vw_UrunSatisOzet"] != null)) {
+                    base.Tables.Add(new vw_UrunSatisOzetDataTable(ds.Tables["vw_UrunSatisOzet"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -447,6 +467,46 @@ namespace Ticari_Otomasyon {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public vw_KategoriSatisOzetDataTable vw_KategoriSatisOzet {
+            get {
+                return this.tablevw_KategoriSatisOzet;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public vw_PersonelSatisOzetDataTable vw_PersonelSatisOzet {
+            get {
+                return this.tablevw_PersonelSatisOzet;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public vw_SatisHareketleriDataTable vw_SatisHareketleri {
+            get {
+                return this.tablevw_SatisHareketleri;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public vw_UrunSatisOzetDataTable vw_UrunSatisOzet {
+            get {
+                return this.tablevw_UrunSatisOzet;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -580,6 +640,18 @@ namespace Ticari_Otomasyon {
                 }
                 if ((ds.Tables["Tbl_Notlar"] != null)) {
                     base.Tables.Add(new Tbl_NotlarDataTable(ds.Tables["Tbl_Notlar"]));
+                }
+                if ((ds.Tables["vw_KategoriSatisOzet"] != null)) {
+                    base.Tables.Add(new vw_KategoriSatisOzetDataTable(ds.Tables["vw_KategoriSatisOzet"]));
+                }
+                if ((ds.Tables["vw_PersonelSatisOzet"] != null)) {
+                    base.Tables.Add(new vw_PersonelSatisOzetDataTable(ds.Tables["vw_PersonelSatisOzet"]));
+                }
+                if ((ds.Tables["vw_SatisHareketleri"] != null)) {
+                    base.Tables.Add(new vw_SatisHareketleriDataTable(ds.Tables["vw_SatisHareketleri"]));
+                }
+                if ((ds.Tables["vw_UrunSatisOzet"] != null)) {
+                    base.Tables.Add(new vw_UrunSatisOzetDataTable(ds.Tables["vw_UrunSatisOzet"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -752,6 +824,30 @@ namespace Ticari_Otomasyon {
                     this.tableTbl_Notlar.InitVars();
                 }
             }
+            this.tablevw_KategoriSatisOzet = ((vw_KategoriSatisOzetDataTable)(base.Tables["vw_KategoriSatisOzet"]));
+            if ((initTable == true)) {
+                if ((this.tablevw_KategoriSatisOzet != null)) {
+                    this.tablevw_KategoriSatisOzet.InitVars();
+                }
+            }
+            this.tablevw_PersonelSatisOzet = ((vw_PersonelSatisOzetDataTable)(base.Tables["vw_PersonelSatisOzet"]));
+            if ((initTable == true)) {
+                if ((this.tablevw_PersonelSatisOzet != null)) {
+                    this.tablevw_PersonelSatisOzet.InitVars();
+                }
+            }
+            this.tablevw_SatisHareketleri = ((vw_SatisHareketleriDataTable)(base.Tables["vw_SatisHareketleri"]));
+            if ((initTable == true)) {
+                if ((this.tablevw_SatisHareketleri != null)) {
+                    this.tablevw_SatisHareketleri.InitVars();
+                }
+            }
+            this.tablevw_UrunSatisOzet = ((vw_UrunSatisOzetDataTable)(base.Tables["vw_UrunSatisOzet"]));
+            if ((initTable == true)) {
+                if ((this.tablevw_UrunSatisOzet != null)) {
+                    this.tablevw_UrunSatisOzet.InitVars();
+                }
+            }
             this.relationFK_Tbl_Bankalar_Tbl_Sirketler = this.Relations["FK_Tbl_Bankalar_Tbl_Sirketler"];
             this.relationFK__Tbl_Admin__Admin__0AF29B96 = this.Relations["FK__Tbl_Admin__Admin__0AF29B96"];
             this.relationFK__Tbl_AltKa__Kateg__69C6B1F5 = this.Relations["FK__Tbl_AltKa__Kateg__69C6B1F5"];
@@ -823,6 +919,14 @@ namespace Ticari_Otomasyon {
             base.Tables.Add(this.tableTbl_Stoklar);
             this.tableTbl_Notlar = new Tbl_NotlarDataTable();
             base.Tables.Add(this.tableTbl_Notlar);
+            this.tablevw_KategoriSatisOzet = new vw_KategoriSatisOzetDataTable();
+            base.Tables.Add(this.tablevw_KategoriSatisOzet);
+            this.tablevw_PersonelSatisOzet = new vw_PersonelSatisOzetDataTable();
+            base.Tables.Add(this.tablevw_PersonelSatisOzet);
+            this.tablevw_SatisHareketleri = new vw_SatisHareketleriDataTable();
+            base.Tables.Add(this.tablevw_SatisHareketleri);
+            this.tablevw_UrunSatisOzet = new vw_UrunSatisOzetDataTable();
+            base.Tables.Add(this.tablevw_UrunSatisOzet);
             this.relationFK_Tbl_Bankalar_Tbl_Sirketler = new global::System.Data.DataRelation("FK_Tbl_Bankalar_Tbl_Sirketler", new global::System.Data.DataColumn[] {
                         this.tableTbl_Sirketler.SirketIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTbl_Bankalar.SirketIDColumn}, false);
@@ -1025,6 +1129,30 @@ namespace Ticari_Otomasyon {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializevw_KategoriSatisOzet() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializevw_PersonelSatisOzet() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializevw_SatisHareketleri() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializevw_UrunSatisOzet() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1146,6 +1274,18 @@ namespace Ticari_Otomasyon {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void Tbl_NotlarRowChangeEventHandler(object sender, Tbl_NotlarRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void vw_KategoriSatisOzetRowChangeEventHandler(object sender, vw_KategoriSatisOzetRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void vw_PersonelSatisOzetRowChangeEventHandler(object sender, vw_PersonelSatisOzetRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void vw_SatisHareketleriRowChangeEventHandler(object sender, vw_SatisHareketleriRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void vw_UrunSatisOzetRowChangeEventHandler(object sender, vw_UrunSatisOzetRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -9317,6 +9457,1331 @@ namespace Ticari_Otomasyon {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class vw_KategoriSatisOzetDataTable : global::System.Data.TypedTableBase<vw_KategoriSatisOzetRow> {
+            
+            private global::System.Data.DataColumn columnKategoriID;
+            
+            private global::System.Data.DataColumn columnKategoriAdi;
+            
+            private global::System.Data.DataColumn columnToplamAdet;
+            
+            private global::System.Data.DataColumn columnToplamSatisTutari;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_KategoriSatisOzetDataTable() {
+                this.TableName = "vw_KategoriSatisOzet";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal vw_KategoriSatisOzetDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected vw_KategoriSatisOzetDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn KategoriIDColumn {
+                get {
+                    return this.columnKategoriID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn KategoriAdiColumn {
+                get {
+                    return this.columnKategoriAdi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ToplamAdetColumn {
+                get {
+                    return this.columnToplamAdet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ToplamSatisTutariColumn {
+                get {
+                    return this.columnToplamSatisTutari;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_KategoriSatisOzetRow this[int index] {
+                get {
+                    return ((vw_KategoriSatisOzetRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_KategoriSatisOzetRowChangeEventHandler vw_KategoriSatisOzetRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_KategoriSatisOzetRowChangeEventHandler vw_KategoriSatisOzetRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_KategoriSatisOzetRowChangeEventHandler vw_KategoriSatisOzetRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_KategoriSatisOzetRowChangeEventHandler vw_KategoriSatisOzetRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Addvw_KategoriSatisOzetRow(vw_KategoriSatisOzetRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_KategoriSatisOzetRow Addvw_KategoriSatisOzetRow(int KategoriID, string KategoriAdi, int ToplamAdet, decimal ToplamSatisTutari) {
+                vw_KategoriSatisOzetRow rowvw_KategoriSatisOzetRow = ((vw_KategoriSatisOzetRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        KategoriID,
+                        KategoriAdi,
+                        ToplamAdet,
+                        ToplamSatisTutari};
+                rowvw_KategoriSatisOzetRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowvw_KategoriSatisOzetRow);
+                return rowvw_KategoriSatisOzetRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_KategoriSatisOzetRow FindByKategoriID(int KategoriID) {
+                return ((vw_KategoriSatisOzetRow)(this.Rows.Find(new object[] {
+                            KategoriID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                vw_KategoriSatisOzetDataTable cln = ((vw_KategoriSatisOzetDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new vw_KategoriSatisOzetDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnKategoriID = base.Columns["KategoriID"];
+                this.columnKategoriAdi = base.Columns["KategoriAdi"];
+                this.columnToplamAdet = base.Columns["ToplamAdet"];
+                this.columnToplamSatisTutari = base.Columns["ToplamSatisTutari"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnKategoriID = new global::System.Data.DataColumn("KategoriID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKategoriID);
+                this.columnKategoriAdi = new global::System.Data.DataColumn("KategoriAdi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKategoriAdi);
+                this.columnToplamAdet = new global::System.Data.DataColumn("ToplamAdet", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamAdet);
+                this.columnToplamSatisTutari = new global::System.Data.DataColumn("ToplamSatisTutari", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamSatisTutari);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnKategoriID}, true));
+                this.columnKategoriID.AllowDBNull = false;
+                this.columnKategoriID.Unique = true;
+                this.columnKategoriAdi.AllowDBNull = false;
+                this.columnKategoriAdi.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_KategoriSatisOzetRow Newvw_KategoriSatisOzetRow() {
+                return ((vw_KategoriSatisOzetRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new vw_KategoriSatisOzetRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(vw_KategoriSatisOzetRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.vw_KategoriSatisOzetRowChanged != null)) {
+                    this.vw_KategoriSatisOzetRowChanged(this, new vw_KategoriSatisOzetRowChangeEvent(((vw_KategoriSatisOzetRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.vw_KategoriSatisOzetRowChanging != null)) {
+                    this.vw_KategoriSatisOzetRowChanging(this, new vw_KategoriSatisOzetRowChangeEvent(((vw_KategoriSatisOzetRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.vw_KategoriSatisOzetRowDeleted != null)) {
+                    this.vw_KategoriSatisOzetRowDeleted(this, new vw_KategoriSatisOzetRowChangeEvent(((vw_KategoriSatisOzetRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.vw_KategoriSatisOzetRowDeleting != null)) {
+                    this.vw_KategoriSatisOzetRowDeleting(this, new vw_KategoriSatisOzetRowChangeEvent(((vw_KategoriSatisOzetRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Removevw_KategoriSatisOzetRow(vw_KategoriSatisOzetRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DboTicariOtomasyonDataSet ds = new DboTicariOtomasyonDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "vw_KategoriSatisOzetDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class vw_PersonelSatisOzetDataTable : global::System.Data.TypedTableBase<vw_PersonelSatisOzetRow> {
+            
+            private global::System.Data.DataColumn columnPersonelID;
+            
+            private global::System.Data.DataColumn columnPersonelAdi;
+            
+            private global::System.Data.DataColumn columnToplamAdet;
+            
+            private global::System.Data.DataColumn columnToplamSatisTutari;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_PersonelSatisOzetDataTable() {
+                this.TableName = "vw_PersonelSatisOzet";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal vw_PersonelSatisOzetDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected vw_PersonelSatisOzetDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PersonelIDColumn {
+                get {
+                    return this.columnPersonelID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PersonelAdiColumn {
+                get {
+                    return this.columnPersonelAdi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ToplamAdetColumn {
+                get {
+                    return this.columnToplamAdet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ToplamSatisTutariColumn {
+                get {
+                    return this.columnToplamSatisTutari;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_PersonelSatisOzetRow this[int index] {
+                get {
+                    return ((vw_PersonelSatisOzetRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_PersonelSatisOzetRowChangeEventHandler vw_PersonelSatisOzetRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_PersonelSatisOzetRowChangeEventHandler vw_PersonelSatisOzetRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_PersonelSatisOzetRowChangeEventHandler vw_PersonelSatisOzetRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_PersonelSatisOzetRowChangeEventHandler vw_PersonelSatisOzetRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Addvw_PersonelSatisOzetRow(vw_PersonelSatisOzetRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_PersonelSatisOzetRow Addvw_PersonelSatisOzetRow(int PersonelID, string PersonelAdi, int ToplamAdet, decimal ToplamSatisTutari) {
+                vw_PersonelSatisOzetRow rowvw_PersonelSatisOzetRow = ((vw_PersonelSatisOzetRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        PersonelID,
+                        PersonelAdi,
+                        ToplamAdet,
+                        ToplamSatisTutari};
+                rowvw_PersonelSatisOzetRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowvw_PersonelSatisOzetRow);
+                return rowvw_PersonelSatisOzetRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_PersonelSatisOzetRow FindByPersonelID(int PersonelID) {
+                return ((vw_PersonelSatisOzetRow)(this.Rows.Find(new object[] {
+                            PersonelID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                vw_PersonelSatisOzetDataTable cln = ((vw_PersonelSatisOzetDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new vw_PersonelSatisOzetDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnPersonelID = base.Columns["PersonelID"];
+                this.columnPersonelAdi = base.Columns["PersonelAdi"];
+                this.columnToplamAdet = base.Columns["ToplamAdet"];
+                this.columnToplamSatisTutari = base.Columns["ToplamSatisTutari"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnPersonelID = new global::System.Data.DataColumn("PersonelID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPersonelID);
+                this.columnPersonelAdi = new global::System.Data.DataColumn("PersonelAdi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPersonelAdi);
+                this.columnToplamAdet = new global::System.Data.DataColumn("ToplamAdet", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamAdet);
+                this.columnToplamSatisTutari = new global::System.Data.DataColumn("ToplamSatisTutari", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamSatisTutari);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnPersonelID}, true));
+                this.columnPersonelID.AllowDBNull = false;
+                this.columnPersonelID.Unique = true;
+                this.columnPersonelAdi.ReadOnly = true;
+                this.columnPersonelAdi.MaxLength = 101;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_PersonelSatisOzetRow Newvw_PersonelSatisOzetRow() {
+                return ((vw_PersonelSatisOzetRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new vw_PersonelSatisOzetRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(vw_PersonelSatisOzetRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.vw_PersonelSatisOzetRowChanged != null)) {
+                    this.vw_PersonelSatisOzetRowChanged(this, new vw_PersonelSatisOzetRowChangeEvent(((vw_PersonelSatisOzetRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.vw_PersonelSatisOzetRowChanging != null)) {
+                    this.vw_PersonelSatisOzetRowChanging(this, new vw_PersonelSatisOzetRowChangeEvent(((vw_PersonelSatisOzetRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.vw_PersonelSatisOzetRowDeleted != null)) {
+                    this.vw_PersonelSatisOzetRowDeleted(this, new vw_PersonelSatisOzetRowChangeEvent(((vw_PersonelSatisOzetRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.vw_PersonelSatisOzetRowDeleting != null)) {
+                    this.vw_PersonelSatisOzetRowDeleting(this, new vw_PersonelSatisOzetRowChangeEvent(((vw_PersonelSatisOzetRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Removevw_PersonelSatisOzetRow(vw_PersonelSatisOzetRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DboTicariOtomasyonDataSet ds = new DboTicariOtomasyonDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "vw_PersonelSatisOzetDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class vw_SatisHareketleriDataTable : global::System.Data.TypedTableBase<vw_SatisHareketleriRow> {
+            
+            private global::System.Data.DataColumn columnHareketID;
+            
+            private global::System.Data.DataColumn columnUrunID;
+            
+            private global::System.Data.DataColumn columnAdet;
+            
+            private global::System.Data.DataColumn columnPersonelID;
+            
+            private global::System.Data.DataColumn columnCariID;
+            
+            private global::System.Data.DataColumn columnFiyat;
+            
+            private global::System.Data.DataColumn columnToplam;
+            
+            private global::System.Data.DataColumn columnFaturaID;
+            
+            private global::System.Data.DataColumn columnTarih;
+            
+            private global::System.Data.DataColumn columnNotlar;
+            
+            private global::System.Data.DataColumn columnCariTip;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_SatisHareketleriDataTable() {
+                this.TableName = "vw_SatisHareketleri";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal vw_SatisHareketleriDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected vw_SatisHareketleriDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn HareketIDColumn {
+                get {
+                    return this.columnHareketID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UrunIDColumn {
+                get {
+                    return this.columnUrunID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AdetColumn {
+                get {
+                    return this.columnAdet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PersonelIDColumn {
+                get {
+                    return this.columnPersonelID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CariIDColumn {
+                get {
+                    return this.columnCariID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FiyatColumn {
+                get {
+                    return this.columnFiyat;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ToplamColumn {
+                get {
+                    return this.columnToplam;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FaturaIDColumn {
+                get {
+                    return this.columnFaturaID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TarihColumn {
+                get {
+                    return this.columnTarih;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NotlarColumn {
+                get {
+                    return this.columnNotlar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CariTipColumn {
+                get {
+                    return this.columnCariTip;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_SatisHareketleriRow this[int index] {
+                get {
+                    return ((vw_SatisHareketleriRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_SatisHareketleriRowChangeEventHandler vw_SatisHareketleriRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_SatisHareketleriRowChangeEventHandler vw_SatisHareketleriRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_SatisHareketleriRowChangeEventHandler vw_SatisHareketleriRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_SatisHareketleriRowChangeEventHandler vw_SatisHareketleriRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Addvw_SatisHareketleriRow(vw_SatisHareketleriRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_SatisHareketleriRow Addvw_SatisHareketleriRow(int HareketID, int UrunID, int Adet, int PersonelID, int CariID, decimal Fiyat, decimal Toplam, int FaturaID, string Tarih, string Notlar, string CariTip) {
+                vw_SatisHareketleriRow rowvw_SatisHareketleriRow = ((vw_SatisHareketleriRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        HareketID,
+                        UrunID,
+                        Adet,
+                        PersonelID,
+                        CariID,
+                        Fiyat,
+                        Toplam,
+                        FaturaID,
+                        Tarih,
+                        Notlar,
+                        CariTip};
+                rowvw_SatisHareketleriRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowvw_SatisHareketleriRow);
+                return rowvw_SatisHareketleriRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                vw_SatisHareketleriDataTable cln = ((vw_SatisHareketleriDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new vw_SatisHareketleriDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnHareketID = base.Columns["HareketID"];
+                this.columnUrunID = base.Columns["UrunID"];
+                this.columnAdet = base.Columns["Adet"];
+                this.columnPersonelID = base.Columns["PersonelID"];
+                this.columnCariID = base.Columns["CariID"];
+                this.columnFiyat = base.Columns["Fiyat"];
+                this.columnToplam = base.Columns["Toplam"];
+                this.columnFaturaID = base.Columns["FaturaID"];
+                this.columnTarih = base.Columns["Tarih"];
+                this.columnNotlar = base.Columns["Notlar"];
+                this.columnCariTip = base.Columns["CariTip"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnHareketID = new global::System.Data.DataColumn("HareketID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHareketID);
+                this.columnUrunID = new global::System.Data.DataColumn("UrunID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUrunID);
+                this.columnAdet = new global::System.Data.DataColumn("Adet", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdet);
+                this.columnPersonelID = new global::System.Data.DataColumn("PersonelID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPersonelID);
+                this.columnCariID = new global::System.Data.DataColumn("CariID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCariID);
+                this.columnFiyat = new global::System.Data.DataColumn("Fiyat", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFiyat);
+                this.columnToplam = new global::System.Data.DataColumn("Toplam", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplam);
+                this.columnFaturaID = new global::System.Data.DataColumn("FaturaID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFaturaID);
+                this.columnTarih = new global::System.Data.DataColumn("Tarih", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTarih);
+                this.columnNotlar = new global::System.Data.DataColumn("Notlar", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNotlar);
+                this.columnCariTip = new global::System.Data.DataColumn("CariTip", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCariTip);
+                this.columnHareketID.AllowDBNull = false;
+                this.columnTarih.MaxLength = 30;
+                this.columnNotlar.MaxLength = 2147483647;
+                this.columnCariTip.AllowDBNull = false;
+                this.columnCariTip.MaxLength = 7;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_SatisHareketleriRow Newvw_SatisHareketleriRow() {
+                return ((vw_SatisHareketleriRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new vw_SatisHareketleriRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(vw_SatisHareketleriRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.vw_SatisHareketleriRowChanged != null)) {
+                    this.vw_SatisHareketleriRowChanged(this, new vw_SatisHareketleriRowChangeEvent(((vw_SatisHareketleriRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.vw_SatisHareketleriRowChanging != null)) {
+                    this.vw_SatisHareketleriRowChanging(this, new vw_SatisHareketleriRowChangeEvent(((vw_SatisHareketleriRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.vw_SatisHareketleriRowDeleted != null)) {
+                    this.vw_SatisHareketleriRowDeleted(this, new vw_SatisHareketleriRowChangeEvent(((vw_SatisHareketleriRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.vw_SatisHareketleriRowDeleting != null)) {
+                    this.vw_SatisHareketleriRowDeleting(this, new vw_SatisHareketleriRowChangeEvent(((vw_SatisHareketleriRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Removevw_SatisHareketleriRow(vw_SatisHareketleriRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DboTicariOtomasyonDataSet ds = new DboTicariOtomasyonDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "vw_SatisHareketleriDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class vw_UrunSatisOzetDataTable : global::System.Data.TypedTableBase<vw_UrunSatisOzetRow> {
+            
+            private global::System.Data.DataColumn columnUrunID;
+            
+            private global::System.Data.DataColumn columnUrunAdi;
+            
+            private global::System.Data.DataColumn columnToplamAdet;
+            
+            private global::System.Data.DataColumn columnToplamSatisTutari;
+            
+            private global::System.Data.DataColumn columnOrtalamaSatisFiyati;
+            
+            private global::System.Data.DataColumn columnAltKategoriID;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_UrunSatisOzetDataTable() {
+                this.TableName = "vw_UrunSatisOzet";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal vw_UrunSatisOzetDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected vw_UrunSatisOzetDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UrunIDColumn {
+                get {
+                    return this.columnUrunID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UrunAdiColumn {
+                get {
+                    return this.columnUrunAdi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ToplamAdetColumn {
+                get {
+                    return this.columnToplamAdet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ToplamSatisTutariColumn {
+                get {
+                    return this.columnToplamSatisTutari;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn OrtalamaSatisFiyatiColumn {
+                get {
+                    return this.columnOrtalamaSatisFiyati;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AltKategoriIDColumn {
+                get {
+                    return this.columnAltKategoriID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_UrunSatisOzetRow this[int index] {
+                get {
+                    return ((vw_UrunSatisOzetRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_UrunSatisOzetRowChangeEventHandler vw_UrunSatisOzetRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_UrunSatisOzetRowChangeEventHandler vw_UrunSatisOzetRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_UrunSatisOzetRowChangeEventHandler vw_UrunSatisOzetRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event vw_UrunSatisOzetRowChangeEventHandler vw_UrunSatisOzetRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Addvw_UrunSatisOzetRow(vw_UrunSatisOzetRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_UrunSatisOzetRow Addvw_UrunSatisOzetRow(int UrunID, string UrunAdi, int ToplamAdet, decimal ToplamSatisTutari, decimal OrtalamaSatisFiyati, int AltKategoriID) {
+                vw_UrunSatisOzetRow rowvw_UrunSatisOzetRow = ((vw_UrunSatisOzetRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        UrunID,
+                        UrunAdi,
+                        ToplamAdet,
+                        ToplamSatisTutari,
+                        OrtalamaSatisFiyati,
+                        AltKategoriID};
+                rowvw_UrunSatisOzetRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowvw_UrunSatisOzetRow);
+                return rowvw_UrunSatisOzetRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_UrunSatisOzetRow FindByUrunID(int UrunID) {
+                return ((vw_UrunSatisOzetRow)(this.Rows.Find(new object[] {
+                            UrunID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                vw_UrunSatisOzetDataTable cln = ((vw_UrunSatisOzetDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new vw_UrunSatisOzetDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnUrunID = base.Columns["UrunID"];
+                this.columnUrunAdi = base.Columns["UrunAdi"];
+                this.columnToplamAdet = base.Columns["ToplamAdet"];
+                this.columnToplamSatisTutari = base.Columns["ToplamSatisTutari"];
+                this.columnOrtalamaSatisFiyati = base.Columns["OrtalamaSatisFiyati"];
+                this.columnAltKategoriID = base.Columns["AltKategoriID"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnUrunID = new global::System.Data.DataColumn("UrunID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUrunID);
+                this.columnUrunAdi = new global::System.Data.DataColumn("UrunAdi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUrunAdi);
+                this.columnToplamAdet = new global::System.Data.DataColumn("ToplamAdet", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamAdet);
+                this.columnToplamSatisTutari = new global::System.Data.DataColumn("ToplamSatisTutari", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnToplamSatisTutari);
+                this.columnOrtalamaSatisFiyati = new global::System.Data.DataColumn("OrtalamaSatisFiyati", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOrtalamaSatisFiyati);
+                this.columnAltKategoriID = new global::System.Data.DataColumn("AltKategoriID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAltKategoriID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnUrunID}, true));
+                this.columnUrunID.AllowDBNull = false;
+                this.columnUrunID.Unique = true;
+                this.columnUrunAdi.MaxLength = 30;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_UrunSatisOzetRow Newvw_UrunSatisOzetRow() {
+                return ((vw_UrunSatisOzetRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new vw_UrunSatisOzetRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(vw_UrunSatisOzetRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.vw_UrunSatisOzetRowChanged != null)) {
+                    this.vw_UrunSatisOzetRowChanged(this, new vw_UrunSatisOzetRowChangeEvent(((vw_UrunSatisOzetRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.vw_UrunSatisOzetRowChanging != null)) {
+                    this.vw_UrunSatisOzetRowChanging(this, new vw_UrunSatisOzetRowChangeEvent(((vw_UrunSatisOzetRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.vw_UrunSatisOzetRowDeleted != null)) {
+                    this.vw_UrunSatisOzetRowDeleted(this, new vw_UrunSatisOzetRowChangeEvent(((vw_UrunSatisOzetRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.vw_UrunSatisOzetRowDeleting != null)) {
+                    this.vw_UrunSatisOzetRowDeleting(this, new vw_UrunSatisOzetRowChangeEvent(((vw_UrunSatisOzetRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Removevw_UrunSatisOzetRow(vw_UrunSatisOzetRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DboTicariOtomasyonDataSet ds = new DboTicariOtomasyonDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "vw_UrunSatisOzetDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class Tbl_AdminRow : global::System.Data.DataRow {
@@ -13939,6 +15404,667 @@ namespace Ticari_Otomasyon {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class vw_KategoriSatisOzetRow : global::System.Data.DataRow {
+            
+            private vw_KategoriSatisOzetDataTable tablevw_KategoriSatisOzet;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal vw_KategoriSatisOzetRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablevw_KategoriSatisOzet = ((vw_KategoriSatisOzetDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int KategoriID {
+                get {
+                    return ((int)(this[this.tablevw_KategoriSatisOzet.KategoriIDColumn]));
+                }
+                set {
+                    this[this.tablevw_KategoriSatisOzet.KategoriIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string KategoriAdi {
+                get {
+                    return ((string)(this[this.tablevw_KategoriSatisOzet.KategoriAdiColumn]));
+                }
+                set {
+                    this[this.tablevw_KategoriSatisOzet.KategoriAdiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ToplamAdet {
+                get {
+                    try {
+                        return ((int)(this[this.tablevw_KategoriSatisOzet.ToplamAdetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ToplamAdet\' in table \'vw_KategoriSatisOzet\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_KategoriSatisOzet.ToplamAdetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal ToplamSatisTutari {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablevw_KategoriSatisOzet.ToplamSatisTutariColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ToplamSatisTutari\' in table \'vw_KategoriSatisOzet\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_KategoriSatisOzet.ToplamSatisTutariColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsToplamAdetNull() {
+                return this.IsNull(this.tablevw_KategoriSatisOzet.ToplamAdetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetToplamAdetNull() {
+                this[this.tablevw_KategoriSatisOzet.ToplamAdetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsToplamSatisTutariNull() {
+                return this.IsNull(this.tablevw_KategoriSatisOzet.ToplamSatisTutariColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetToplamSatisTutariNull() {
+                this[this.tablevw_KategoriSatisOzet.ToplamSatisTutariColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class vw_PersonelSatisOzetRow : global::System.Data.DataRow {
+            
+            private vw_PersonelSatisOzetDataTable tablevw_PersonelSatisOzet;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal vw_PersonelSatisOzetRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablevw_PersonelSatisOzet = ((vw_PersonelSatisOzetDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int PersonelID {
+                get {
+                    return ((int)(this[this.tablevw_PersonelSatisOzet.PersonelIDColumn]));
+                }
+                set {
+                    this[this.tablevw_PersonelSatisOzet.PersonelIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PersonelAdi {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_PersonelSatisOzet.PersonelAdiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PersonelAdi\' in table \'vw_PersonelSatisOzet\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_PersonelSatisOzet.PersonelAdiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ToplamAdet {
+                get {
+                    try {
+                        return ((int)(this[this.tablevw_PersonelSatisOzet.ToplamAdetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ToplamAdet\' in table \'vw_PersonelSatisOzet\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_PersonelSatisOzet.ToplamAdetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal ToplamSatisTutari {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablevw_PersonelSatisOzet.ToplamSatisTutariColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ToplamSatisTutari\' in table \'vw_PersonelSatisOzet\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_PersonelSatisOzet.ToplamSatisTutariColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPersonelAdiNull() {
+                return this.IsNull(this.tablevw_PersonelSatisOzet.PersonelAdiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPersonelAdiNull() {
+                this[this.tablevw_PersonelSatisOzet.PersonelAdiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsToplamAdetNull() {
+                return this.IsNull(this.tablevw_PersonelSatisOzet.ToplamAdetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetToplamAdetNull() {
+                this[this.tablevw_PersonelSatisOzet.ToplamAdetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsToplamSatisTutariNull() {
+                return this.IsNull(this.tablevw_PersonelSatisOzet.ToplamSatisTutariColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetToplamSatisTutariNull() {
+                this[this.tablevw_PersonelSatisOzet.ToplamSatisTutariColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class vw_SatisHareketleriRow : global::System.Data.DataRow {
+            
+            private vw_SatisHareketleriDataTable tablevw_SatisHareketleri;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal vw_SatisHareketleriRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablevw_SatisHareketleri = ((vw_SatisHareketleriDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int HareketID {
+                get {
+                    return ((int)(this[this.tablevw_SatisHareketleri.HareketIDColumn]));
+                }
+                set {
+                    this[this.tablevw_SatisHareketleri.HareketIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int UrunID {
+                get {
+                    try {
+                        return ((int)(this[this.tablevw_SatisHareketleri.UrunIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UrunID\' in table \'vw_SatisHareketleri\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_SatisHareketleri.UrunIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Adet {
+                get {
+                    try {
+                        return ((int)(this[this.tablevw_SatisHareketleri.AdetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Adet\' in table \'vw_SatisHareketleri\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_SatisHareketleri.AdetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int PersonelID {
+                get {
+                    try {
+                        return ((int)(this[this.tablevw_SatisHareketleri.PersonelIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PersonelID\' in table \'vw_SatisHareketleri\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_SatisHareketleri.PersonelIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int CariID {
+                get {
+                    try {
+                        return ((int)(this[this.tablevw_SatisHareketleri.CariIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CariID\' in table \'vw_SatisHareketleri\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_SatisHareketleri.CariIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal Fiyat {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablevw_SatisHareketleri.FiyatColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fiyat\' in table \'vw_SatisHareketleri\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_SatisHareketleri.FiyatColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal Toplam {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablevw_SatisHareketleri.ToplamColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Toplam\' in table \'vw_SatisHareketleri\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_SatisHareketleri.ToplamColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int FaturaID {
+                get {
+                    try {
+                        return ((int)(this[this.tablevw_SatisHareketleri.FaturaIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FaturaID\' in table \'vw_SatisHareketleri\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_SatisHareketleri.FaturaIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Tarih {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_SatisHareketleri.TarihColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tarih\' in table \'vw_SatisHareketleri\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_SatisHareketleri.TarihColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Notlar {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_SatisHareketleri.NotlarColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Notlar\' in table \'vw_SatisHareketleri\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_SatisHareketleri.NotlarColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CariTip {
+                get {
+                    return ((string)(this[this.tablevw_SatisHareketleri.CariTipColumn]));
+                }
+                set {
+                    this[this.tablevw_SatisHareketleri.CariTipColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsUrunIDNull() {
+                return this.IsNull(this.tablevw_SatisHareketleri.UrunIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetUrunIDNull() {
+                this[this.tablevw_SatisHareketleri.UrunIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAdetNull() {
+                return this.IsNull(this.tablevw_SatisHareketleri.AdetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAdetNull() {
+                this[this.tablevw_SatisHareketleri.AdetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPersonelIDNull() {
+                return this.IsNull(this.tablevw_SatisHareketleri.PersonelIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPersonelIDNull() {
+                this[this.tablevw_SatisHareketleri.PersonelIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsCariIDNull() {
+                return this.IsNull(this.tablevw_SatisHareketleri.CariIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetCariIDNull() {
+                this[this.tablevw_SatisHareketleri.CariIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFiyatNull() {
+                return this.IsNull(this.tablevw_SatisHareketleri.FiyatColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFiyatNull() {
+                this[this.tablevw_SatisHareketleri.FiyatColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsToplamNull() {
+                return this.IsNull(this.tablevw_SatisHareketleri.ToplamColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetToplamNull() {
+                this[this.tablevw_SatisHareketleri.ToplamColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFaturaIDNull() {
+                return this.IsNull(this.tablevw_SatisHareketleri.FaturaIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFaturaIDNull() {
+                this[this.tablevw_SatisHareketleri.FaturaIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTarihNull() {
+                return this.IsNull(this.tablevw_SatisHareketleri.TarihColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTarihNull() {
+                this[this.tablevw_SatisHareketleri.TarihColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNotlarNull() {
+                return this.IsNull(this.tablevw_SatisHareketleri.NotlarColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNotlarNull() {
+                this[this.tablevw_SatisHareketleri.NotlarColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class vw_UrunSatisOzetRow : global::System.Data.DataRow {
+            
+            private vw_UrunSatisOzetDataTable tablevw_UrunSatisOzet;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal vw_UrunSatisOzetRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablevw_UrunSatisOzet = ((vw_UrunSatisOzetDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int UrunID {
+                get {
+                    return ((int)(this[this.tablevw_UrunSatisOzet.UrunIDColumn]));
+                }
+                set {
+                    this[this.tablevw_UrunSatisOzet.UrunIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string UrunAdi {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_UrunSatisOzet.UrunAdiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UrunAdi\' in table \'vw_UrunSatisOzet\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_UrunSatisOzet.UrunAdiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ToplamAdet {
+                get {
+                    try {
+                        return ((int)(this[this.tablevw_UrunSatisOzet.ToplamAdetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ToplamAdet\' in table \'vw_UrunSatisOzet\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_UrunSatisOzet.ToplamAdetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal ToplamSatisTutari {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablevw_UrunSatisOzet.ToplamSatisTutariColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ToplamSatisTutari\' in table \'vw_UrunSatisOzet\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_UrunSatisOzet.ToplamSatisTutariColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal OrtalamaSatisFiyati {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablevw_UrunSatisOzet.OrtalamaSatisFiyatiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OrtalamaSatisFiyati\' in table \'vw_UrunSatisOzet\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_UrunSatisOzet.OrtalamaSatisFiyatiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int AltKategoriID {
+                get {
+                    try {
+                        return ((int)(this[this.tablevw_UrunSatisOzet.AltKategoriIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AltKategoriID\' in table \'vw_UrunSatisOzet\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_UrunSatisOzet.AltKategoriIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsUrunAdiNull() {
+                return this.IsNull(this.tablevw_UrunSatisOzet.UrunAdiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetUrunAdiNull() {
+                this[this.tablevw_UrunSatisOzet.UrunAdiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsToplamAdetNull() {
+                return this.IsNull(this.tablevw_UrunSatisOzet.ToplamAdetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetToplamAdetNull() {
+                this[this.tablevw_UrunSatisOzet.ToplamAdetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsToplamSatisTutariNull() {
+                return this.IsNull(this.tablevw_UrunSatisOzet.ToplamSatisTutariColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetToplamSatisTutariNull() {
+                this[this.tablevw_UrunSatisOzet.ToplamSatisTutariColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsOrtalamaSatisFiyatiNull() {
+                return this.IsNull(this.tablevw_UrunSatisOzet.OrtalamaSatisFiyatiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetOrtalamaSatisFiyatiNull() {
+                this[this.tablevw_UrunSatisOzet.OrtalamaSatisFiyatiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAltKategoriIDNull() {
+                return this.IsNull(this.tablevw_UrunSatisOzet.AltKategoriIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAltKategoriIDNull() {
+                this[this.tablevw_UrunSatisOzet.AltKategoriIDColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -14706,6 +16832,142 @@ namespace Ticari_Otomasyon {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Tbl_NotlarRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class vw_KategoriSatisOzetRowChangeEvent : global::System.EventArgs {
+            
+            private vw_KategoriSatisOzetRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_KategoriSatisOzetRowChangeEvent(vw_KategoriSatisOzetRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_KategoriSatisOzetRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class vw_PersonelSatisOzetRowChangeEvent : global::System.EventArgs {
+            
+            private vw_PersonelSatisOzetRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_PersonelSatisOzetRowChangeEvent(vw_PersonelSatisOzetRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_PersonelSatisOzetRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class vw_SatisHareketleriRowChangeEvent : global::System.EventArgs {
+            
+            private vw_SatisHareketleriRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_SatisHareketleriRowChangeEvent(vw_SatisHareketleriRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_SatisHareketleriRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class vw_UrunSatisOzetRowChangeEvent : global::System.EventArgs {
+            
+            private vw_UrunSatisOzetRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_UrunSatisOzetRowChangeEvent(vw_UrunSatisOzetRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public vw_UrunSatisOzetRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -26528,6 +28790,695 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class vw_KategoriSatisOzetTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public vw_KategoriSatisOzetTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "vw_KategoriSatisOzet";
+            tableMapping.ColumnMappings.Add("KategoriID", "KategoriID");
+            tableMapping.ColumnMappings.Add("KategoriAdi", "KategoriAdi");
+            tableMapping.ColumnMappings.Add("ToplamAdet", "ToplamAdet");
+            tableMapping.ColumnMappings.Add("ToplamSatisTutari", "ToplamSatisTutari");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Ticari_Otomasyon.Properties.Settings.Default.DboTicariOtomasyonConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT vw_KategoriSatisOzet.*\r\nFROM     vw_KategoriSatisOzet";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DboTicariOtomasyonDataSet.vw_KategoriSatisOzetDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DboTicariOtomasyonDataSet.vw_KategoriSatisOzetDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DboTicariOtomasyonDataSet.vw_KategoriSatisOzetDataTable dataTable = new DboTicariOtomasyonDataSet.vw_KategoriSatisOzetDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class vw_PersonelSatisOzetTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public vw_PersonelSatisOzetTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "vw_PersonelSatisOzet";
+            tableMapping.ColumnMappings.Add("PersonelID", "PersonelID");
+            tableMapping.ColumnMappings.Add("PersonelAdi", "PersonelAdi");
+            tableMapping.ColumnMappings.Add("ToplamAdet", "ToplamAdet");
+            tableMapping.ColumnMappings.Add("ToplamSatisTutari", "ToplamSatisTutari");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Ticari_Otomasyon.Properties.Settings.Default.DboTicariOtomasyonConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT vw_PersonelSatisOzet.*\r\nFROM     vw_PersonelSatisOzet";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DboTicariOtomasyonDataSet.vw_PersonelSatisOzetDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DboTicariOtomasyonDataSet.vw_PersonelSatisOzetDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DboTicariOtomasyonDataSet.vw_PersonelSatisOzetDataTable dataTable = new DboTicariOtomasyonDataSet.vw_PersonelSatisOzetDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class vw_SatisHareketleriTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public vw_SatisHareketleriTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "vw_SatisHareketleri";
+            tableMapping.ColumnMappings.Add("HareketID", "HareketID");
+            tableMapping.ColumnMappings.Add("UrunID", "UrunID");
+            tableMapping.ColumnMappings.Add("Adet", "Adet");
+            tableMapping.ColumnMappings.Add("PersonelID", "PersonelID");
+            tableMapping.ColumnMappings.Add("CariID", "CariID");
+            tableMapping.ColumnMappings.Add("Fiyat", "Fiyat");
+            tableMapping.ColumnMappings.Add("Toplam", "Toplam");
+            tableMapping.ColumnMappings.Add("FaturaID", "FaturaID");
+            tableMapping.ColumnMappings.Add("Tarih", "Tarih");
+            tableMapping.ColumnMappings.Add("Notlar", "Notlar");
+            tableMapping.ColumnMappings.Add("CariTip", "CariTip");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Ticari_Otomasyon.Properties.Settings.Default.DboTicariOtomasyonConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT vw_SatisHareketleri.*\r\nFROM     vw_SatisHareketleri";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DboTicariOtomasyonDataSet.vw_SatisHareketleriDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DboTicariOtomasyonDataSet.vw_SatisHareketleriDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DboTicariOtomasyonDataSet.vw_SatisHareketleriDataTable dataTable = new DboTicariOtomasyonDataSet.vw_SatisHareketleriDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class vw_UrunSatisOzetTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public vw_UrunSatisOzetTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "vw_UrunSatisOzet";
+            tableMapping.ColumnMappings.Add("UrunID", "UrunID");
+            tableMapping.ColumnMappings.Add("UrunAdi", "UrunAdi");
+            tableMapping.ColumnMappings.Add("ToplamAdet", "ToplamAdet");
+            tableMapping.ColumnMappings.Add("ToplamSatisTutari", "ToplamSatisTutari");
+            tableMapping.ColumnMappings.Add("OrtalamaSatisFiyati", "OrtalamaSatisFiyati");
+            tableMapping.ColumnMappings.Add("AltKategoriID", "AltKategoriID");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Ticari_Otomasyon.Properties.Settings.Default.DboTicariOtomasyonConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT vw_UrunSatisOzet.*\r\nFROM     vw_UrunSatisOzet";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DboTicariOtomasyonDataSet.vw_UrunSatisOzetDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DboTicariOtomasyonDataSet.vw_UrunSatisOzetDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DboTicariOtomasyonDataSet.vw_UrunSatisOzetDataTable dataTable = new DboTicariOtomasyonDataSet.vw_UrunSatisOzetDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -27144,12 +30095,12 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tbl_AdminTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Admin.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tbl_IzinlerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Izinler.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_AdminTableAdapter.Update(updatedRows));
+                    result = (result + this._tbl_IzinlerTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -27162,21 +30113,12 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tbl_RollerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Roller.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tbl_SehirlerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Sehirler.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_RollerTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tbl_IzinlerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Izinler.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_IzinlerTableAdapter.Update(updatedRows));
+                    result = (result + this._tbl_SehirlerTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -27189,12 +30131,12 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tbl_SehirlerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Sehirler.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tbl_AdminTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Admin.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_SehirlerTableAdapter.Update(updatedRows));
+                    result = (result + this._tbl_AdminTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -27225,21 +30167,21 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tbl_GiderlerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Giderler.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tbl_RollerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Roller.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_GiderlerTableAdapter.Update(updatedRows));
+                    result = (result + this._tbl_RollerTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tbl_FaturaDetayTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_FaturaDetay.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tbl_FirmaHareketlerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_FirmaHareketler.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_FaturaDetayTableAdapter.Update(updatedRows));
+                    result = (result + this._tbl_FirmaHareketlerTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -27252,12 +30194,21 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tbl_IlcelerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Ilceler.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tbl_UrunLoglariTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_UrunLoglari.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_IlcelerTableAdapter.Update(updatedRows));
+                    result = (result + this._tbl_UrunLoglariTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tbl_NotlarTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Notlar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tbl_NotlarTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -27279,6 +30230,42 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._tbl_IlcelerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Ilceler.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tbl_IlcelerTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tbl_FaturaDetayTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_FaturaDetay.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tbl_FaturaDetayTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tbl_AdminRulesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_AdminRules.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tbl_AdminRulesTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tbl_GiderlerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Giderler.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tbl_GiderlerTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._tbl_BankalarTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Bankalar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -27294,42 +30281,6 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tbl_Rol_IzinleriTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tbl_FirmaHareketlerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_FirmaHareketler.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_FirmaHareketlerTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tbl_UrunLoglariTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_UrunLoglari.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_UrunLoglariTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tbl_AdminRulesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_AdminRules.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_AdminRulesTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tbl_NotlarTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Notlar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_NotlarTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -27359,11 +30310,11 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tbl_AdminTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Admin.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tbl_IzinlerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Izinler.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_AdminTableAdapter.Update(addedRows));
+                    result = (result + this._tbl_IzinlerTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -27375,19 +30326,11 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tbl_RollerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Roller.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tbl_SehirlerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Sehirler.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_RollerTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tbl_IzinlerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Izinler.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_IzinlerTableAdapter.Update(addedRows));
+                    result = (result + this._tbl_SehirlerTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -27399,11 +30342,11 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tbl_SehirlerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Sehirler.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tbl_AdminTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Admin.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_SehirlerTableAdapter.Update(addedRows));
+                    result = (result + this._tbl_AdminTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -27431,19 +30374,19 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tbl_GiderlerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Giderler.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tbl_RollerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Roller.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_GiderlerTableAdapter.Update(addedRows));
+                    result = (result + this._tbl_RollerTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tbl_FaturaDetayTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tbl_FaturaDetay.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tbl_FirmaHareketlerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tbl_FirmaHareketler.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_FaturaDetayTableAdapter.Update(addedRows));
+                    result = (result + this._tbl_FirmaHareketlerTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -27455,11 +30398,19 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tbl_IlcelerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Ilceler.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tbl_UrunLoglariTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tbl_UrunLoglari.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_IlcelerTableAdapter.Update(addedRows));
+                    result = (result + this._tbl_UrunLoglariTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tbl_NotlarTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Notlar.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tbl_NotlarTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -27479,6 +30430,38 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._tbl_IlcelerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Ilceler.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tbl_IlcelerTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tbl_FaturaDetayTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tbl_FaturaDetay.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tbl_FaturaDetayTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tbl_AdminRulesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tbl_AdminRules.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tbl_AdminRulesTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tbl_GiderlerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Giderler.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tbl_GiderlerTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._tbl_BankalarTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Tbl_Bankalar.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -27495,38 +30478,6 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tbl_FirmaHareketlerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tbl_FirmaHareketler.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_FirmaHareketlerTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tbl_UrunLoglariTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tbl_UrunLoglari.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_UrunLoglariTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tbl_AdminRulesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tbl_AdminRules.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_AdminRulesTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tbl_NotlarTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Notlar.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_NotlarTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -27537,38 +30488,6 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(DboTicariOtomasyonDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tbl_NotlarTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Notlar.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_NotlarTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tbl_AdminRulesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_AdminRules.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_AdminRulesTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tbl_UrunLoglariTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_UrunLoglari.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_UrunLoglariTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tbl_FirmaHareketlerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_FirmaHareketler.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_FirmaHareketlerTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._tbl_Rol_IzinleriTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Rol_Izinleri.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -27582,6 +30501,38 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tbl_BankalarTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tbl_GiderlerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Giderler.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tbl_GiderlerTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tbl_AdminRulesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_AdminRules.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tbl_AdminRulesTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tbl_FaturaDetayTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_FaturaDetay.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tbl_FaturaDetayTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tbl_IlcelerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Ilceler.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tbl_IlcelerTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -27601,11 +30552,19 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tbl_IlcelerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Ilceler.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tbl_NotlarTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Notlar.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_IlcelerTableAdapter.Update(deletedRows));
+                    result = (result + this._tbl_NotlarTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tbl_UrunLoglariTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_UrunLoglari.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tbl_UrunLoglariTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -27617,19 +30576,19 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tbl_FaturaDetayTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_FaturaDetay.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tbl_FirmaHareketlerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_FirmaHareketler.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_FaturaDetayTableAdapter.Update(deletedRows));
+                    result = (result + this._tbl_FirmaHareketlerTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tbl_GiderlerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Giderler.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tbl_RollerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Roller.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_GiderlerTableAdapter.Update(deletedRows));
+                    result = (result + this._tbl_RollerTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -27657,11 +30616,11 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tbl_SehirlerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Sehirler.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tbl_AdminTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Admin.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_SehirlerTableAdapter.Update(deletedRows));
+                    result = (result + this._tbl_AdminTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -27673,19 +30632,11 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tbl_IzinlerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Izinler.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tbl_SehirlerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Sehirler.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_IzinlerTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tbl_RollerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Roller.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_RollerTableAdapter.Update(deletedRows));
+                    result = (result + this._tbl_SehirlerTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -27697,11 +30648,11 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tbl_AdminTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Admin.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tbl_IzinlerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Izinler.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_AdminTableAdapter.Update(deletedRows));
+                    result = (result + this._tbl_IzinlerTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

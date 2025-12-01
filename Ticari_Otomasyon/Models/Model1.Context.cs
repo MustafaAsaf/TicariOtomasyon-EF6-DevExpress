@@ -51,6 +51,7 @@ namespace Ticari_Otomasyon.Models
         public virtual DbSet<Tbl_Rol_Izinleri> Tbl_Rol_Izinleri { get; set; }
         public virtual DbSet<Tbl_Roller> Tbl_Roller { get; set; }
         public virtual DbSet<Tbl_AdminRules> Tbl_AdminRules { get; set; }
+        public virtual DbSet<vw_SatisHareketleri> vw_SatisHareketleri { get; set; }
         public virtual DbSet<vw_KategoriSatisOzet> vw_KategoriSatisOzet { get; set; }
         public virtual DbSet<vw_PersonelSatisOzet> vw_PersonelSatisOzet { get; set; }
         public virtual DbSet<vw_UrunSatisOzet> vw_UrunSatisOzet { get; set; }
