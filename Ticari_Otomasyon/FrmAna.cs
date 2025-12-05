@@ -463,17 +463,29 @@ namespace Ticari_Otomasyon
         private FrmSatisAnaliz _frmSatisAnaliz;
         private void barButtonSatisAnaliz_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (_frmSatisAnaliz == null || _frmSatisAnaliz.IsDisposed)
+            if (!CurrentUser.HasPermission("ViewAnalysis"))
             {
-                _frmSatisAnaliz = new FrmSatisAnaliz();
-                _frmSatisAnaliz.MdiParent = this;
-                _frmSatisAnaliz.WindowState = FormWindowState.Maximized;
-                _frmSatisAnaliz.Show();
+                MessageBox.Show("Bu ekrana erişim izniniz yok!",
+                    "Yetkisiz Erişim",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
             }
             else
             {
-                _frmSatisAnaliz.Activate();
+                if (_frmSatisAnaliz == null || _frmSatisAnaliz.IsDisposed)
+                {
+                    _frmSatisAnaliz = new FrmSatisAnaliz();
+                    _frmSatisAnaliz.MdiParent = this;
+                    _frmSatisAnaliz.WindowState = FormWindowState.Maximized;
+                    _frmSatisAnaliz.Show();
+                }
+                else
+                {
+                    _frmSatisAnaliz.Activate();
+                }
             }
+
+         
         }
     }
 }

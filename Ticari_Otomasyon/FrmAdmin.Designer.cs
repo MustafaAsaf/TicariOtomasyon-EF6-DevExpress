@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.SvgImageItem svgImageItem1 = new DevExpress.XtraEditors.SvgImageItem("1/1");
+            DevExpress.XtraEditors.SvgImageItem svgImageItem2 = new DevExpress.XtraEditors.SvgImageItem("1/1");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdmin));
             this.svgImageBox1 = new DevExpress.XtraEditors.SvgImageBox();
             this.txtKullaniciAdi = new DevExpress.XtraEditors.TextEdit();
@@ -46,12 +46,13 @@
             // 
             // svgImageBox1
             // 
-            svgImageItem1.Appearance.Normal.BorderColor = DevExpress.LookAndFeel.DXSkinColors.IconColors.Black;
-            svgImageItem1.Appearance.Normal.FillColor = DevExpress.LookAndFeel.DXSkinColors.IconColors.Blue;
-            this.svgImageBox1.CustomizedItems.Add(svgImageItem1);
-            this.svgImageBox1.Location = new System.Drawing.Point(191, 12);
+            svgImageItem2.Appearance.Normal.BorderColor = DevExpress.LookAndFeel.DXSkinColors.IconColors.Black;
+            svgImageItem2.Appearance.Normal.FillColor = DevExpress.LookAndFeel.DXSkinColors.IconColors.Blue;
+            this.svgImageBox1.CustomizedItems.Add(svgImageItem2);
+            this.svgImageBox1.Location = new System.Drawing.Point(208, 37);
+            this.svgImageBox1.Margin = new System.Windows.Forms.Padding(4);
             this.svgImageBox1.Name = "svgImageBox1";
-            this.svgImageBox1.Size = new System.Drawing.Size(163, 148);
+            this.svgImageBox1.Size = new System.Drawing.Size(204, 185);
             this.svgImageBox1.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Zoom;
             this.svgImageBox1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox1.SvgImage")));
             this.svgImageBox1.TabIndex = 0;
@@ -59,21 +60,23 @@
             // 
             // txtKullaniciAdi
             // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(58, 300);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(72, 375);
+            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtKullaniciAdi.Properties.Appearance.Options.UseFont = true;
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(389, 34);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(486, 34);
             this.txtKullaniciAdi.TabIndex = 1;
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(58, 371);
+            this.txtSifre.Location = new System.Drawing.Point(72, 464);
+            this.txtSifre.Margin = new System.Windows.Forms.Padding(4);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSifre.Properties.Appearance.Options.UseFont = true;
             this.txtSifre.Properties.UseSystemPasswordChar = true;
-            this.txtSifre.Size = new System.Drawing.Size(389, 34);
+            this.txtSifre.Size = new System.Drawing.Size(486, 34);
             this.txtSifre.TabIndex = 2;
             // 
             // labelControl1
@@ -82,7 +85,8 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.SystemColors.Highlight;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(131, 184);
+            this.labelControl1.Location = new System.Drawing.Point(164, 230);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(273, 40);
             this.labelControl1.TabIndex = 3;
@@ -94,7 +98,8 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.DimGray;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(58, 269);
+            this.labelControl2.Location = new System.Drawing.Point(72, 336);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(98, 25);
             this.labelControl2.TabIndex = 4;
@@ -106,7 +111,8 @@
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.DimGray;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(58, 340);
+            this.labelControl3.Location = new System.Drawing.Point(72, 425);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(36, 25);
             this.labelControl3.TabIndex = 5;
@@ -114,10 +120,11 @@
             // 
             // checkEdit1
             // 
-            this.checkEdit1.Location = new System.Drawing.Point(339, 411);
+            this.checkEdit1.Location = new System.Drawing.Point(424, 519);
+            this.checkEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "Şifreyi Göster";
-            this.checkEdit1.Size = new System.Drawing.Size(108, 24);
+            this.checkEdit1.Size = new System.Drawing.Size(135, 24);
             this.checkEdit1.TabIndex = 7;
             this.checkEdit1.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
             // 
@@ -127,9 +134,10 @@
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton2.Appearance.Options.UseBackColor = true;
             this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(48, 441);
+            this.simpleButton2.Location = new System.Drawing.Point(60, 551);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(399, 56);
+            this.simpleButton2.Size = new System.Drawing.Size(499, 70);
             this.simpleButton2.TabIndex = 8;
             this.simpleButton2.Text = "Giriş Yap ";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -138,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 583);
+            this.ClientSize = new System.Drawing.Size(620, 646);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.checkEdit1);
             this.Controls.Add(this.labelControl3);
