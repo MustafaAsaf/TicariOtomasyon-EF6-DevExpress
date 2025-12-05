@@ -60,7 +60,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1051, 548);
+            this.tabControl1.Size = new System.Drawing.Size(1051, 560);
             this.tabControl1.TabIndex = 0;
             // 
             // tabUrunler
@@ -68,7 +68,7 @@
             this.tabUrunler.Controls.Add(this.gridUrunler);
             this.tabUrunler.Location = new System.Drawing.Point(4, 25);
             this.tabUrunler.Name = "tabUrunler";
-            this.tabUrunler.Size = new System.Drawing.Size(1043, 519);
+            this.tabUrunler.Size = new System.Drawing.Size(1043, 531);
             this.tabUrunler.TabIndex = 0;
             this.tabUrunler.Text = "Ürün Bazlı Analiz";
             this.tabUrunler.UseVisualStyleBackColor = true;
@@ -80,7 +80,7 @@
             this.gridUrunler.Location = new System.Drawing.Point(0, 0);
             this.gridUrunler.Name = "gridUrunler";
             this.gridUrunler.RowHeadersWidth = 51;
-            this.gridUrunler.Size = new System.Drawing.Size(1043, 519);
+            this.gridUrunler.Size = new System.Drawing.Size(1043, 531);
             this.gridUrunler.TabIndex = 0;
             // 
             // tabKategoriler
@@ -157,7 +157,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.txtAIResponse);
-            this.splitContainer1.Size = new System.Drawing.Size(1374, 548);
+            this.splitContainer1.Size = new System.Drawing.Size(1374, 560);
             this.splitContainer1.SplitterDistance = 1051;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -173,7 +173,7 @@
             this.txtAIResponse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtAIResponse.Location = new System.Drawing.Point(0, 0);
             this.txtAIResponse.Name = "txtAIResponse";
-            this.txtAIResponse.Size = new System.Drawing.Size(319, 548);
+            this.txtAIResponse.Size = new System.Drawing.Size(319, 560);
             this.txtAIResponse.TabIndex = 0;
             // 
             // lblGeminiCevap
@@ -231,7 +231,7 @@
             // 
             // FrmSatisAnaliz
             // 
-            this.ClientSize = new System.Drawing.Size(1374, 548);
+            this.ClientSize = new System.Drawing.Size(1374, 560);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmSatisAnaliz";
             this.Text = "Satış Analiz + Gemini";
