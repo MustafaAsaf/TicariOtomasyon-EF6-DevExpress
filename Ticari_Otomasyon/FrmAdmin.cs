@@ -95,6 +95,11 @@ namespace Ticari_Otomasyon
             ana.Show();
             this.Hide();
         }
+
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 
 
