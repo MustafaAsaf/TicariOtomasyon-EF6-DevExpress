@@ -1395,9 +1395,8 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
           <Property Name="AdminKullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="AdminSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="AdminProfilResim" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="FK_AdminPersonel" Type="Int32" />
-          <NavigationProperty Name="Tbl_AdminRules" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B96" FromRole="Tbl_Admin" ToRole="Tbl_AdminRules" />
           <Property Name="PersonelID" Type="Int32" />
+          <NavigationProperty Name="Tbl_AdminRules" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B96" FromRole="Tbl_Admin" ToRole="Tbl_AdminRules" />
           <NavigationProperty Name="Tbl_Personeller" Relationship="DboTicariOtomasyonModel.FK_Tbl_Admin_Tbl_Personeller" FromRole="Tbl_Admin" ToRole="Tbl_Personeller" />
         </EntityType>
         <Association Name="FK__Tbl_Admin__Admin__0AF29B96">

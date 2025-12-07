@@ -70,12 +70,12 @@ namespace Ticari_Otomasyon
                         ID=adm.AdminRoleId,
                         KullaniciAdi=adm.Tbl_Admin.AdminKullaniciAdi,
                         Sifre=adm.Tbl_Admin.AdminSifre,
-                        Rol =adm.Tbl_Roller.RolAdi,
-                        
-                        SuperAdmin=adm.Tbl_Roller.IsSuperAdmin
+                        AdSoyad=adm.Tbl_Admin.Tbl_Personeller.PersonelAd +" "+adm.Tbl_Admin.Tbl_Personeller.PersonelSoyad,
+                        Rol =adm.Tbl_Roller.RolAdi,   
                     }).ToList();
                     gridControl1.DataSource = adminList;
                     ListeleRoller();
+                    ListeleAdSoyad();
                 }
             }
             catch (Exception exception)
@@ -121,6 +121,17 @@ namespace Ticari_Otomasyon
             }
         }
 
+        public void ListeleAdSoyad()
+        {
+            using (var db = new DboTicariOtomasyonEntities1())
+            {
+                var personeller = dataBase.Tbl_Personeller
+                    .Select(p => p.PersonellD+":"+p.PersonelAd + " " + p.PersonelSoyad)
+                    .ToList();
+                combobox_AdSoyad.Properties.Items.AddRange(personeller);      
+            }
+        }
+
         public void ListeleIzinler()
         {
             using (var db = new DboTicariOtomasyonEntities1())
@@ -135,6 +146,7 @@ namespace Ticari_Otomasyon
         {
             GetAllAdminList();
             GetAllRole_Permisson();
+            gridView1.BestFitColumns();
         }
    
         // Byte dizisini Image'a dönüştüren yardımcı fonksiyon
@@ -175,7 +187,8 @@ namespace Ticari_Otomasyon
                 {
                     AdminKullaniciAdi = txtKullaniciAdi.Text,
                     AdminSifre = txtSifre.Text,
-                    AdminProfilResim = pictureBox1.Image != null ? ImageToByte(pictureBox1.Image) : null
+                    AdminProfilResim = pictureBox1.Image != null ? ImageToByte(pictureBox1.Image) : null,
+                    PersonelID=combobox_AdSoyad.Text.Split(':')[0]!=null ? Convert.ToInt32( combobox_AdSoyad.Text.Split(':')[0]) : (int?)null //Combobox'tan PersonelID'yi alıyoruz
                 };
 
                 Tbl_AdminRules adminRules = new Tbl_AdminRules
@@ -247,6 +260,7 @@ namespace Ticari_Otomasyon
                             MessageBox.Show("Kayıt Silindi", "ADMİNLER", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             GetAllAdminList(); // Grid'i yenile
+                            ClearForm(this);
                             txtKullaniciAdi.Text = "";
                             txtSifre.Text = "";
                             pictureBox1.Image = null;
@@ -309,6 +323,7 @@ namespace Ticari_Otomasyon
                     updateAdmin.AdminKullaniciAdi = txtKullaniciAdi.Text;
                     updateAdmin.AdminSifre = txtSifre.Text;
                     updateAdmin.AdminProfilResim = pictureBox1.Image != null ? ImageToByte(pictureBox1.Image) : null;
+                    updateAdmin.PersonelID = combobox_AdSoyad.Text.Split(':')[0] != null ? Convert.ToInt32(combobox_AdSoyad.Text.Split(':')[0]) : (int?)null;
 
                     // Roller güncellemesi
                     var currentRoles = dataBase.Tbl_AdminRules.Where(r => r.AdminID == adminId).ToList();
@@ -368,19 +383,7 @@ namespace Ticari_Otomasyon
             }
         }
 
-        private void checkEdit1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkEdit1.Checked)
-            {
-                // Şifreyi göster
-                txtSifre.Properties.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                // Şifreyi gizle
-                txtSifre.Properties.UseSystemPasswordChar = true;
-            }
-        }
+       
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
@@ -406,7 +409,7 @@ namespace Ticari_Otomasyon
                                       Sifre = ar.Tbl_Admin.AdminSifre,
                                       ProfilResim = ar.Tbl_Admin.AdminProfilResim,
                                       RolAdi = ar.Tbl_Roller.RolAdi,
-                                      SuperAdmin = ar.Tbl_Roller.IsSuperAdmin
+                                      AdSoyad = ar.Tbl_Admin.Tbl_Personeller.PersonellD+":"+ar.Tbl_Admin.Tbl_Personeller.PersonelAd + " " + ar.Tbl_Admin.Tbl_Personeller.PersonelSoyad,
                                   })
                                   .FirstOrDefault();
 
@@ -415,7 +418,7 @@ namespace Ticari_Otomasyon
                     txtKullaniciAdi.Text = adminRole.KullaniciAdi;
                     txtSifre.Text = adminRole.Sifre;
                     pictureBox1.Image = adminRole.ProfilResim != null ? ByteToImage(adminRole.ProfilResim) : null;
-
+                    combobox_AdSoyad.Text = adminRole.AdSoyad;
                     combobox_Roller.Text = adminRole.RolAdi;
                     //checkBoxSuperAdmin.Checked = adminRole.SuperAdmin; // Eğer SuperAdmin gösteriyorsan
                 }
@@ -432,9 +435,6 @@ namespace Ticari_Otomasyon
             }
         }
 
-        private void simpleButton5_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

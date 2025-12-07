@@ -35,10 +35,8 @@
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSifre = new DevExpress.XtraEditors.TextEdit();
             this.txtKullaniciAdi = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -54,6 +52,9 @@
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSifre = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.combobox_AdSoyad = new DevExpress.XtraEditors.ComboBoxEdit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -65,8 +66,6 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.combobox_Roller.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -76,6 +75,8 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxIzinler.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.combobox_Roller2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.combobox_AdSoyad.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -120,8 +121,8 @@
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.74234F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.25766F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.30736F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.69264F));
             this.tableLayoutPanel2.Controls.Add(this.gridControl1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.panelControl1, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -138,7 +139,7 @@
             this.gridControl1.Location = new System.Drawing.Point(3, 3);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(472, 698);
+            this.gridControl1.Size = new System.Drawing.Size(542, 698);
             this.gridControl1.TabIndex = 48;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -158,6 +159,9 @@
             // panelControl1
             // 
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.Controls.Add(this.combobox_AdSoyad);
+            this.panelControl1.Controls.Add(this.labelControl5);
+            this.panelControl1.Controls.Add(this.txtSifre);
             this.panelControl1.Controls.Add(this.btn_image);
             this.panelControl1.Controls.Add(this.pictureBox1);
             this.panelControl1.Controls.Add(this.labelControl4);
@@ -168,16 +172,14 @@
             this.panelControl1.Controls.Add(this.btnDelete);
             this.panelControl1.Controls.Add(this.btnAdd);
             this.panelControl1.Controls.Add(this.btnSave);
-            this.panelControl1.Controls.Add(this.checkEdit1);
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.labelControl2);
-            this.panelControl1.Controls.Add(this.txtSifre);
             this.panelControl1.Controls.Add(this.txtKullaniciAdi);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(481, 3);
+            this.panelControl1.Location = new System.Drawing.Point(551, 3);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Padding = new System.Windows.Forms.Padding(20);
-            this.panelControl1.Size = new System.Drawing.Size(440, 698);
+            this.panelControl1.Size = new System.Drawing.Size(370, 698);
             this.panelControl1.TabIndex = 49;
             // 
             // btn_image
@@ -186,10 +188,10 @@
             this.btn_image.Appearance.Options.UseFont = true;
             this.btn_image.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_image.ImageOptions.SvgImage")));
             this.btn_image.ImageOptions.SvgImageSize = new System.Drawing.Size(32, 32);
-            this.btn_image.Location = new System.Drawing.Point(170, 360);
+            this.btn_image.Location = new System.Drawing.Point(57, 552);
             this.btn_image.Margin = new System.Windows.Forms.Padding(6);
             this.btn_image.Name = "btn_image";
-            this.btn_image.Size = new System.Drawing.Size(235, 45);
+            this.btn_image.Size = new System.Drawing.Size(244, 45);
             this.btn_image.TabIndex = 62;
             this.btn_image.Text = "Fotoğraf Yükle";
             this.btn_image.Click += new System.EventHandler(this.btn_image_Click_1);
@@ -199,7 +201,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Enabled = false;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 315);
+            this.pictureBox1.Location = new System.Drawing.Point(114, 403);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(140, 140);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,7 +214,7 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(20, 275);
+            this.labelControl4.Location = new System.Drawing.Point(122, 372);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(126, 25);
             this.labelControl4.TabIndex = 60;
@@ -224,7 +226,7 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(20, 190);
+            this.labelControl1.Location = new System.Drawing.Point(17, 267);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(27, 25);
             this.labelControl1.TabIndex = 59;
@@ -232,7 +234,7 @@
             // 
             // combobox_Roller
             // 
-            this.combobox_Roller.Location = new System.Drawing.Point(20, 221);
+            this.combobox_Roller.Location = new System.Drawing.Point(17, 298);
             this.combobox_Roller.Name = "combobox_Roller";
             this.combobox_Roller.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.combobox_Roller.Properties.Appearance.Options.UseFont = true;
@@ -240,7 +242,7 @@
             this.combobox_Roller.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.combobox_Roller.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.combobox_Roller.Size = new System.Drawing.Size(385, 36);
+            this.combobox_Roller.Size = new System.Drawing.Size(339, 36);
             this.combobox_Roller.TabIndex = 58;
             // 
             // btnClear
@@ -255,7 +257,7 @@
             this.btnClear.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnClear.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClear.ImageOptions.SvgImage")));
             this.btnClear.ImageOptions.SvgImageSize = new System.Drawing.Size(32, 32);
-            this.btnClear.Location = new System.Drawing.Point(326, 605);
+            this.btnClear.Location = new System.Drawing.Point(296, 622);
             this.btnClear.Margin = new System.Windows.Forms.Padding(6);
             this.btnClear.Name = "btnClear";
             this.btnClear.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -276,7 +278,7 @@
             this.btnUpdate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUpdate.ImageOptions.SvgImage")));
             this.btnUpdate.ImageOptions.SvgImageSize = new System.Drawing.Size(32, 32);
-            this.btnUpdate.Location = new System.Drawing.Point(257, 605);
+            this.btnUpdate.Location = new System.Drawing.Point(227, 622);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(60, 50);
@@ -296,7 +298,7 @@
             this.btnDelete.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
             this.btnDelete.ImageOptions.SvgImageSize = new System.Drawing.Size(32, 32);
-            this.btnDelete.Location = new System.Drawing.Point(189, 605);
+            this.btnDelete.Location = new System.Drawing.Point(159, 622);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(6);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(60, 50);
@@ -316,7 +318,7 @@
             this.btnAdd.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
             this.btnAdd.ImageOptions.SvgImageSize = new System.Drawing.Size(32, 32);
-            this.btnAdd.Location = new System.Drawing.Point(121, 605);
+            this.btnAdd.Location = new System.Drawing.Point(91, 622);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(6);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(60, 50);
@@ -336,7 +338,7 @@
             this.btnSave.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
             this.btnSave.ImageOptions.SvgImageSize = new System.Drawing.Size(32, 32);
-            this.btnSave.Location = new System.Drawing.Point(52, 605);
+            this.btnSave.Location = new System.Drawing.Point(22, 622);
             this.btnSave.Margin = new System.Windows.Forms.Padding(6);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(60, 50);
@@ -344,24 +346,13 @@
             this.btnSave.ToolTip = "Kaydet";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // checkEdit1
-            // 
-            this.checkEdit1.Location = new System.Drawing.Point(280, 175);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkEdit1.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit1.Properties.Caption = "Şifreyi Göster";
-            this.checkEdit1.Size = new System.Drawing.Size(125, 24);
-            this.checkEdit1.TabIndex = 51;
-            this.checkEdit1.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
-            // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(20, 105);
+            this.labelControl3.Location = new System.Drawing.Point(17, 87);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(38, 25);
             this.labelControl3.TabIndex = 50;
@@ -373,31 +364,20 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(20, 30);
+            this.labelControl2.Location = new System.Drawing.Point(17, 11);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(103, 25);
             this.labelControl2.TabIndex = 49;
             this.labelControl2.Text = "Kullanıcı Adı";
             // 
-            // txtSifre
-            // 
-            this.txtSifre.Location = new System.Drawing.Point(20, 136);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSifre.Properties.Appearance.Options.UseFont = true;
-            this.txtSifre.Properties.AutoHeight = false;
-            this.txtSifre.Properties.UseSystemPasswordChar = true;
-            this.txtSifre.Size = new System.Drawing.Size(385, 36);
-            this.txtSifre.TabIndex = 48;
-            // 
             // txtKullaniciAdi
             // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(20, 61);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(17, 42);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtKullaniciAdi.Properties.Appearance.Options.UseFont = true;
             this.txtKullaniciAdi.Properties.AutoHeight = false;
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(385, 36);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(339, 36);
             this.txtKullaniciAdi.TabIndex = 47;
             // 
             // xtraTabPage2
@@ -571,7 +551,7 @@
             this.simpleButton5.Size = new System.Drawing.Size(60, 50);
             this.simpleButton5.TabIndex = 54;
             this.simpleButton5.ToolTip = "Ekle";
-            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
+          
             // 
             // simpleButton6
             // 
@@ -602,6 +582,41 @@
             this.labelControl7.TabIndex = 50;
             this.labelControl7.Text = "İzinler";
             // 
+            // txtSifre
+            // 
+            this.txtSifre.Location = new System.Drawing.Point(17, 117);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifre.Properties.Appearance.Options.UseFont = true;
+            this.txtSifre.Properties.AutoHeight = false;
+            this.txtSifre.Size = new System.Drawing.Size(339, 36);
+            this.txtSifre.TabIndex = 63;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Appearance.Options.UseForeColor = true;
+            this.labelControl5.Location = new System.Drawing.Point(17, 173);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(80, 25);
+            this.labelControl5.TabIndex = 64;
+            this.labelControl5.Text = "Ad-Soyad";
+            // 
+            // combobox_AdSoyad
+            // 
+            this.combobox_AdSoyad.Location = new System.Drawing.Point(17, 204);
+            this.combobox_AdSoyad.Name = "combobox_AdSoyad";
+            this.combobox_AdSoyad.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.combobox_AdSoyad.Properties.Appearance.Options.UseFont = true;
+            this.combobox_AdSoyad.Properties.AutoHeight = false;
+            this.combobox_AdSoyad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.combobox_AdSoyad.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.combobox_AdSoyad.Size = new System.Drawing.Size(339, 36);
+            this.combobox_AdSoyad.TabIndex = 65;
+            // 
             // FrmAyarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -625,8 +640,6 @@
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.combobox_Roller.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -637,6 +650,8 @@
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxIzinler.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.combobox_Roller2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.combobox_AdSoyad.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -661,10 +676,8 @@
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnSave;
-        private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit txtSifre;
         private DevExpress.XtraEditors.TextEdit txtKullaniciAdi;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private DevExpress.XtraGrid.GridControl gridControl2;
@@ -679,5 +692,8 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
         private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.TextEdit txtSifre;
+        private DevExpress.XtraEditors.ComboBoxEdit combobox_AdSoyad;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
     }
 }
