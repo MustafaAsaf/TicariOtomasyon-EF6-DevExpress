@@ -71,6 +71,7 @@ namespace Ticari_Otomasyon
                         KullaniciAdi=adm.Tbl_Admin.AdminKullaniciAdi,
                         Sifre=adm.Tbl_Admin.AdminSifre,
                         Rol =adm.Tbl_Roller.RolAdi,
+                        
                         SuperAdmin=adm.Tbl_Roller.IsSuperAdmin
                     }).ToList();
                     gridControl1.DataSource = adminList;
@@ -429,6 +430,11 @@ namespace Ticari_Otomasyon
                comboBoxIzinler.Text = gridView2.GetFocusedRowCellValue("Izin").ToString();
 
             }
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

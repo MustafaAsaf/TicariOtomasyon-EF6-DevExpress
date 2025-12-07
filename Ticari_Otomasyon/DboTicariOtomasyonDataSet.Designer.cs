@@ -108,6 +108,8 @@ namespace Ticari_Otomasyon {
         
         private global::System.Data.DataRelation relationFK__Tbl_Urunl__AltKa__6ABAD62E;
         
+        private global::System.Data.DataRelation relationFK_Tbl_Admin_Tbl_Personeller;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -863,6 +865,7 @@ namespace Ticari_Otomasyon {
             this.relationFK_Tbl_MusteriHareketler_Tbl_Urunler = this.Relations["FK_Tbl_MusteriHareketler_Tbl_Urunler"];
             this.relationFK_Tbl_FirmaHareketler_Tbl_Urunler = this.Relations["FK_Tbl_FirmaHareketler_Tbl_Urunler"];
             this.relationFK__Tbl_Urunl__AltKa__6ABAD62E = this.Relations["FK__Tbl_Urunl__AltKa__6ABAD62E"];
+            this.relationFK_Tbl_Admin_Tbl_Personeller = this.Relations["FK_Tbl_Admin_Tbl_Personeller"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -987,6 +990,10 @@ namespace Ticari_Otomasyon {
                         this.tableTbl_AltKategoriler.AltKategoriIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTbl_Urunler.AltKategoriIDColumn}, false);
             this.Relations.Add(this.relationFK__Tbl_Urunl__AltKa__6ABAD62E);
+            this.relationFK_Tbl_Admin_Tbl_Personeller = new global::System.Data.DataRelation("FK_Tbl_Admin_Tbl_Personeller", new global::System.Data.DataColumn[] {
+                        this.tableTbl_Personeller.PersonellDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTbl_Admin.PersonelIDColumn}, false);
+            this.Relations.Add(this.relationFK_Tbl_Admin_Tbl_Personeller);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1302,7 +1309,7 @@ namespace Ticari_Otomasyon {
             
             private global::System.Data.DataColumn columnAdminProfilResim;
             
-            private global::System.Data.DataColumn columnPersonellD;
+            private global::System.Data.DataColumn columnPersonelID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1371,9 +1378,9 @@ namespace Ticari_Otomasyon {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PersonellDColumn {
+            public global::System.Data.DataColumn PersonelIDColumn {
                 get {
-                    return this.columnPersonellD;
+                    return this.columnPersonelID;
                 }
             }
             
@@ -1414,14 +1421,17 @@ namespace Ticari_Otomasyon {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Tbl_AdminRow AddTbl_AdminRow(string AdminKullaniciAdi, string AdminSifre, byte[] AdminProfilResim, int PersonellD) {
+            public Tbl_AdminRow AddTbl_AdminRow(string AdminKullaniciAdi, string AdminSifre, byte[] AdminProfilResim, Tbl_PersonellerRow parentTbl_PersonellerRowByFK_Tbl_Admin_Tbl_Personeller) {
                 Tbl_AdminRow rowTbl_AdminRow = ((Tbl_AdminRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         AdminKullaniciAdi,
                         null,
                         AdminSifre,
                         AdminProfilResim,
-                        PersonellD};
+                        null};
+                if ((parentTbl_PersonellerRowByFK_Tbl_Admin_Tbl_Personeller != null)) {
+                    columnValuesArray[4] = parentTbl_PersonellerRowByFK_Tbl_Admin_Tbl_Personeller[0];
+                }
                 rowTbl_AdminRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTbl_AdminRow);
                 return rowTbl_AdminRow;
@@ -1455,7 +1465,7 @@ namespace Ticari_Otomasyon {
                 this.columnAdminID = base.Columns["AdminID"];
                 this.columnAdminSifre = base.Columns["AdminSifre"];
                 this.columnAdminProfilResim = base.Columns["AdminProfilResim"];
-                this.columnPersonellD = base.Columns["PersonellD"];
+                this.columnPersonelID = base.Columns["PersonelID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1469,8 +1479,8 @@ namespace Ticari_Otomasyon {
                 base.Columns.Add(this.columnAdminSifre);
                 this.columnAdminProfilResim = new global::System.Data.DataColumn("AdminProfilResim", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAdminProfilResim);
-                this.columnPersonellD = new global::System.Data.DataColumn("PersonellD", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPersonellD);
+                this.columnPersonelID = new global::System.Data.DataColumn("PersonelID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPersonelID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnAdminID}, true));
                 this.columnAdminKullaniciAdi.MaxLength = 50;
@@ -10856,17 +10866,28 @@ namespace Ticari_Otomasyon {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int PersonellD {
+            public int PersonelID {
                 get {
                     try {
-                        return ((int)(this[this.tableTbl_Admin.PersonellDColumn]));
+                        return ((int)(this[this.tableTbl_Admin.PersonelIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PersonellD\' in table \'Tbl_Admin\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PersonelID\' in table \'Tbl_Admin\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTbl_Admin.PersonellDColumn] = value;
+                    this[this.tableTbl_Admin.PersonelIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Tbl_PersonellerRow Tbl_PersonellerRow {
+                get {
+                    return ((Tbl_PersonellerRow)(this.GetParentRow(this.Table.ParentRelations["FK_Tbl_Admin_Tbl_Personeller"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Tbl_Admin_Tbl_Personeller"]);
                 }
             }
             
@@ -10908,14 +10929,14 @@ namespace Ticari_Otomasyon {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsPersonellDNull() {
-                return this.IsNull(this.tableTbl_Admin.PersonellDColumn);
+            public bool IsPersonelIDNull() {
+                return this.IsNull(this.tableTbl_Admin.PersonelIDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetPersonellDNull() {
-                this[this.tableTbl_Admin.PersonellDColumn] = global::System.Convert.DBNull;
+            public void SetPersonelIDNull() {
+                this[this.tableTbl_Admin.PersonelIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12507,6 +12528,17 @@ namespace Ticari_Otomasyon {
                 }
                 else {
                     return ((Tbl_FirmaHareketlerRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Tbl_FirmaHareketler_Tbl_Personeller"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Tbl_AdminRow[] GetTbl_AdminRows() {
+                if ((this.Table.ChildRelations["FK_Tbl_Admin_Tbl_Personeller"] == null)) {
+                    return new Tbl_AdminRow[0];
+                }
+                else {
+                    return ((Tbl_AdminRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Tbl_Admin_Tbl_Personeller"])));
                 }
             }
         }
@@ -17111,44 +17143,44 @@ namespace Ticari_Otomasyon.DboTicariOtomasyonDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("AdminID", "AdminID");
             tableMapping.ColumnMappings.Add("AdminSifre", "AdminSifre");
             tableMapping.ColumnMappings.Add("AdminProfilResim", "AdminProfilResim");
-            tableMapping.ColumnMappings.Add("PersonellD", "PersonellD");
+            tableMapping.ColumnMappings.Add("PersonelID", "PersonelID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Tbl_Admin] WHERE (((@IsNull_AdminKullaniciAdi = 1 AND [AdminKullaniciAdi] IS NULL) OR ([AdminKullaniciAdi] = @Original_AdminKullaniciAdi)) AND ([AdminID] = @Original_AdminID) AND ((@IsNull_AdminSifre = 1 AND [AdminSifre] IS NULL) OR ([AdminSifre] = @Original_AdminSifre)) AND ((@IsNull_PersonellD = 1 AND [PersonellD] IS NULL) OR ([PersonellD] = @Original_PersonellD)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Tbl_Admin] WHERE (((@IsNull_AdminKullaniciAdi = 1 AND [AdminKullaniciAdi] IS NULL) OR ([AdminKullaniciAdi] = @Original_AdminKullaniciAdi)) AND ([AdminID] = @Original_AdminID) AND ((@IsNull_AdminSifre = 1 AND [AdminSifre] IS NULL) OR ([AdminSifre] = @Original_AdminSifre)) AND ((@IsNull_PersonelID = 1 AND [PersonelID] IS NULL) OR ([PersonelID] = @Original_PersonelID)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AdminKullaniciAdi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminKullaniciAdi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdminKullaniciAdi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminKullaniciAdi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdminID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AdminSifre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminSifre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdminSifre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminSifre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PersonellD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonellD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PersonellD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonellD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PersonelID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonelID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PersonelID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonelID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Tbl_Admin] ([AdminKullaniciAdi], [AdminSifre], [AdminProfilResim], [PersonellD]) VALUES (@AdminKullaniciAdi, @AdminSifre, @AdminProfilResim, @PersonellD);
-SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonellD FROM Tbl_Admin WHERE (AdminID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Tbl_Admin] ([AdminKullaniciAdi], [AdminSifre], [AdminProfilResim], [PersonelID]) VALUES (@AdminKullaniciAdi, @AdminSifre, @AdminProfilResim, @PersonelID);
+SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonelID FROM Tbl_Admin WHERE (AdminID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdminKullaniciAdi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminKullaniciAdi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdminSifre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminSifre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdminProfilResim", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminProfilResim", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PersonellD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonellD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PersonelID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonelID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Tbl_Admin] SET [AdminKullaniciAdi] = @AdminKullaniciAdi, [AdminSifre] = @AdminSifre, [AdminProfilResim] = @AdminProfilResim, [PersonellD] = @PersonellD WHERE (((@IsNull_AdminKullaniciAdi = 1 AND [AdminKullaniciAdi] IS NULL) OR ([AdminKullaniciAdi] = @Original_AdminKullaniciAdi)) AND ([AdminID] = @Original_AdminID) AND ((@IsNull_AdminSifre = 1 AND [AdminSifre] IS NULL) OR ([AdminSifre] = @Original_AdminSifre)) AND ((@IsNull_PersonellD = 1 AND [PersonellD] IS NULL) OR ([PersonellD] = @Original_PersonellD)));
-SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonellD FROM Tbl_Admin WHERE (AdminID = @AdminID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Tbl_Admin] SET [AdminKullaniciAdi] = @AdminKullaniciAdi, [AdminSifre] = @AdminSifre, [AdminProfilResim] = @AdminProfilResim, [PersonelID] = @PersonelID WHERE (((@IsNull_AdminKullaniciAdi = 1 AND [AdminKullaniciAdi] IS NULL) OR ([AdminKullaniciAdi] = @Original_AdminKullaniciAdi)) AND ([AdminID] = @Original_AdminID) AND ((@IsNull_AdminSifre = 1 AND [AdminSifre] IS NULL) OR ([AdminSifre] = @Original_AdminSifre)) AND ((@IsNull_PersonelID = 1 AND [PersonelID] IS NULL) OR ([PersonelID] = @Original_PersonelID)));
+SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonelID FROM Tbl_Admin WHERE (AdminID = @AdminID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdminKullaniciAdi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminKullaniciAdi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdminSifre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminSifre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdminProfilResim", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminProfilResim", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PersonellD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonellD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PersonelID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonelID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AdminKullaniciAdi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminKullaniciAdi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdminKullaniciAdi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminKullaniciAdi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdminID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AdminSifre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminSifre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdminSifre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdminSifre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PersonellD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonellD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PersonellD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonellD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PersonelID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonelID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PersonelID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonelID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdminID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "AdminID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -17165,7 +17197,7 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonellD FROM
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonellD\r\nFROM" +
+            this._commandCollection[0].CommandText = "SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonelID\r\nFROM" +
                 "     Tbl_Admin";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -17227,7 +17259,7 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonellD FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_AdminKullaniciAdi, int Original_AdminID, string Original_AdminSifre, global::System.Nullable<int> Original_PersonellD) {
+        public virtual int Delete(string Original_AdminKullaniciAdi, int Original_AdminID, string Original_AdminSifre, global::System.Nullable<int> Original_PersonelID) {
             if ((Original_AdminKullaniciAdi == null)) {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -17245,9 +17277,9 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonellD FROM
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_AdminSifre));
             }
-            if ((Original_PersonellD.HasValue == true)) {
+            if ((Original_PersonelID.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_PersonellD.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_PersonelID.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
@@ -17273,7 +17305,7 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonellD FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string AdminKullaniciAdi, string AdminSifre, byte[] AdminProfilResim, global::System.Nullable<int> PersonellD) {
+        public virtual int Insert(string AdminKullaniciAdi, string AdminSifre, byte[] AdminProfilResim, global::System.Nullable<int> PersonelID) {
             if ((AdminKullaniciAdi == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -17292,8 +17324,8 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonellD FROM
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((byte[])(AdminProfilResim));
             }
-            if ((PersonellD.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(PersonellD.Value));
+            if ((PersonelID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(PersonelID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -17318,7 +17350,7 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonellD FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string AdminKullaniciAdi, string AdminSifre, byte[] AdminProfilResim, global::System.Nullable<int> PersonellD, string Original_AdminKullaniciAdi, int Original_AdminID, string Original_AdminSifre, global::System.Nullable<int> Original_PersonellD, int AdminID) {
+        public virtual int Update(string AdminKullaniciAdi, string AdminSifre, byte[] AdminProfilResim, global::System.Nullable<int> PersonelID, string Original_AdminKullaniciAdi, int Original_AdminID, string Original_AdminSifre, global::System.Nullable<int> Original_PersonelID, int AdminID) {
             if ((AdminKullaniciAdi == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -17337,8 +17369,8 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonellD FROM
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((byte[])(AdminProfilResim));
             }
-            if ((PersonellD.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(PersonellD.Value));
+            if ((PersonelID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(PersonelID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -17360,9 +17392,9 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonellD FROM
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_AdminSifre));
             }
-            if ((Original_PersonellD.HasValue == true)) {
+            if ((Original_PersonelID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_PersonellD.Value));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_PersonelID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
@@ -17389,8 +17421,8 @@ SELECT AdminKullaniciAdi, AdminID, AdminSifre, AdminProfilResim, PersonellD FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string AdminKullaniciAdi, string AdminSifre, byte[] AdminProfilResim, global::System.Nullable<int> PersonellD, string Original_AdminKullaniciAdi, int Original_AdminID, string Original_AdminSifre, global::System.Nullable<int> Original_PersonellD) {
-            return this.Update(AdminKullaniciAdi, AdminSifre, AdminProfilResim, PersonellD, Original_AdminKullaniciAdi, Original_AdminID, Original_AdminSifre, Original_PersonellD, Original_AdminID);
+        public virtual int Update(string AdminKullaniciAdi, string AdminSifre, byte[] AdminProfilResim, global::System.Nullable<int> PersonelID, string Original_AdminKullaniciAdi, int Original_AdminID, string Original_AdminSifre, global::System.Nullable<int> Original_PersonelID) {
+            return this.Update(AdminKullaniciAdi, AdminSifre, AdminProfilResim, PersonelID, Original_AdminKullaniciAdi, Original_AdminID, Original_AdminSifre, Original_PersonelID, Original_AdminID);
         }
     }
     
@@ -30095,6 +30127,15 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._tbl_PersonellerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Personeller.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tbl_PersonellerTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._tbl_IzinlerTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Izinler.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -30137,15 +30178,6 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tbl_AdminTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tbl_PersonellerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Personeller.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_PersonellerTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -30310,6 +30342,14 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._tbl_PersonellerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Personeller.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tbl_PersonellerTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._tbl_IzinlerTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Tbl_Izinler.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -30347,14 +30387,6 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tbl_AdminTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tbl_PersonellerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Personeller.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_PersonellerTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -30608,14 +30640,6 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tbl_PersonellerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Personeller.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_PersonellerTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._tbl_AdminTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Admin.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -30653,6 +30677,14 @@ SELECT NotID, NotTarih, NotSaat, NotBaslik, NotDetay, NotOlusturan, NotHitap FRO
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tbl_IzinlerTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tbl_PersonellerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Personeller.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tbl_PersonellerTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

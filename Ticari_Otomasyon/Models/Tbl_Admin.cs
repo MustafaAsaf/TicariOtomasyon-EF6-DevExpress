@@ -24,9 +24,11 @@ namespace Ticari_Otomasyon.Models
         public string AdminKullaniciAdi { get; set; }
         public string AdminSifre { get; set; }
         public byte[] AdminProfilResim { get; set; }
-        public Nullable<int> PersonellD { get; set; }
+        public Nullable<int> FK_AdminPersonel { get; set; }
+        public Nullable<int> PersonelID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tbl_AdminRules> Tbl_AdminRules { get; set; }
+        public virtual Tbl_Personeller Tbl_Personeller { get; set; }
     }
 }

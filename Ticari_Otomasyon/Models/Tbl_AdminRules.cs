@@ -18,7 +18,7 @@ namespace Ticari_Otomasyon.Models
         public int AdminID { get; set; }
         public int RolId { get; set; }
     
-        public virtual Tbl_Admin Tbl_Admin { get; set; }
         public virtual Tbl_Roller Tbl_Roller { get; set; }
+        public virtual Tbl_Admin Tbl_Admin { get; set; }
     }
 }

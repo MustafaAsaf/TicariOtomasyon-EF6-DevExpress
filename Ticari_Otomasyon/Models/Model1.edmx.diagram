@@ -24,7 +24,6 @@
         <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_Ilceler_Tbl_Sehirler" />
         <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_MusteriHareketler_Tbl_Musteriler" />
         <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_MusteriHareketler_Tbl_Personeller" />
-        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Admin" Width="1.5" PointX="3.75" PointY="0.625" />
         <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_AltKategoriler" Width="1.5" PointX="12.75" PointY="18.375" />
         <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Kategoriler" Width="1.5" PointX="10.5" PointY="17.625" />
         <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_AltKa__Kateg__69C6B1F5" />
@@ -42,12 +41,14 @@
         <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_Rol_I__IzinI__08162EEB" />
         <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_Rol_I__RolId__07220AB2" />
         <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_AdminRules" Width="1.5" PointX="14.625" PointY="0.75" />
-        <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B961" />
         <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_Admin__RolId__0BE6BFCF1" />
         <EntityTypeShape EntityType="DboTicariOtomasyonModel.vw_SatisHareketleri" Width="2.375" PointX="12.375" PointY="24.375" />
         <EntityTypeShape EntityType="DboTicariOtomasyonModel.vw_KategoriSatisOzet" Width="2.75" PointX="1" PointY="24.5" />
         <EntityTypeShape EntityType="DboTicariOtomasyonModel.vw_PersonelSatisOzet" Width="3.625" PointX="4.25" PointY="24.5" />
         <EntityTypeShape EntityType="DboTicariOtomasyonModel.vw_UrunSatisOzet" Width="3.625" PointX="8.125" PointY="24.375" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.Tbl_Admin" Width="1.5" PointX="3.75" PointY="0.5" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B96" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK_Tbl_Admin_Tbl_Personeller" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

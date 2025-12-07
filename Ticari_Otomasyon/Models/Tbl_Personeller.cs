@@ -19,6 +19,7 @@ namespace Ticari_Otomasyon.Models
         {
             this.Tbl_FirmaHareketler = new HashSet<Tbl_FirmaHareketler>();
             this.Tbl_MusteriHareketler = new HashSet<Tbl_MusteriHareketler>();
+            this.Tbl_Admin = new HashSet<Tbl_Admin>();
         }
     
         public int PersonellD { get; set; }
@@ -36,5 +37,7 @@ namespace Ticari_Otomasyon.Models
         public virtual ICollection<Tbl_FirmaHareketler> Tbl_FirmaHareketler { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tbl_MusteriHareketler> Tbl_MusteriHareketler { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tbl_Admin> Tbl_Admin { get; set; }
     }
 }

@@ -40,7 +40,6 @@ namespace Ticari_Otomasyon.Models
         public virtual DbSet<Tbl_Sehirler> Tbl_Sehirler { get; set; }
         public virtual DbSet<Tbl_Sirketler> Tbl_Sirketler { get; set; }
         public virtual DbSet<Tbl_Stoklar> Tbl_Stoklar { get; set; }
-        public virtual DbSet<Tbl_Admin> Tbl_Admin { get; set; }
         public virtual DbSet<Tbl_AltKategoriler> Tbl_AltKategoriler { get; set; }
         public virtual DbSet<Tbl_Kategoriler> Tbl_Kategoriler { get; set; }
         public virtual DbSet<Tbl_FaturaBilgi> Tbl_FaturaBilgi { get; set; }
@@ -55,6 +54,7 @@ namespace Ticari_Otomasyon.Models
         public virtual DbSet<vw_KategoriSatisOzet> vw_KategoriSatisOzet { get; set; }
         public virtual DbSet<vw_PersonelSatisOzet> vw_PersonelSatisOzet { get; set; }
         public virtual DbSet<vw_UrunSatisOzet> vw_UrunSatisOzet { get; set; }
+        public virtual DbSet<Tbl_Admin> Tbl_Admin { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

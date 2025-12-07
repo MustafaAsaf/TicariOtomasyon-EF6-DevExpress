@@ -23,7 +23,7 @@
           <Property Name="AdminKullaniciAdi" Type="varchar" MaxLength="50" />
           <Property Name="AdminSifre" Type="varchar" MaxLength="50" />
           <Property Name="AdminProfilResim" Type="varbinary(max)" />
-          <Property Name="PersonellD" Type="int" />
+          <Property Name="PersonelID" Type="int" />
         </EntityType>
         <EntityType Name="Tbl_AdminRules">
           <Key>
@@ -417,6 +417,18 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Tbl_Admin_Tbl_Personeller">
+          <End Role="Tbl_Personeller" Type="Self.Tbl_Personeller" Multiplicity="0..1" />
+          <End Role="Tbl_Admin" Type="Self.Tbl_Admin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Personeller">
+              <PropertyRef Name="PersonellD" />
+            </Principal>
+            <Dependent Role="Tbl_Admin">
+              <PropertyRef Name="PersonelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Tbl_Bankalar_Tbl_Sirketler">
           <End Role="Tbl_Sirketler" Type="Self.Tbl_Sirketler" Multiplicity="0..1" />
           <End Role="Tbl_Bankalar" Type="Self.Tbl_Bankalar" Multiplicity="*" />
@@ -648,6 +660,10 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
             <End Role="Tbl_AltKategoriler" EntitySet="Tbl_AltKategoriler" />
             <End Role="Tbl_Urunler" EntitySet="Tbl_Urunler" />
           </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Admin_Tbl_Personeller" Association="Self.FK_Tbl_Admin_Tbl_Personeller">
+            <End Role="Tbl_Personeller" EntitySet="Tbl_Personeller" />
+            <End Role="Tbl_Admin" EntitySet="Tbl_Admin" />
+          </AssociationSet>
           <AssociationSet Name="FK_Tbl_Bankalar_Tbl_Sirketler" Association="Self.FK_Tbl_Bankalar_Tbl_Sirketler">
             <End Role="Tbl_Sirketler" EntitySet="Tbl_Sirketler" />
             <End Role="Tbl_Bankalar" EntitySet="Tbl_Bankalar" />
@@ -759,7 +775,6 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
           </AssociationSet>
           <FunctionImport Name="PrcFirmaHareketler" ReturnType="Collection(DboTicariOtomasyonModel.PrcFirmaHareketler_Result)" />
           <FunctionImport Name="PrcMusteriHareketler" ReturnType="Collection(DboTicariOtomasyonModel.PrcMusteriHareketler_Result)" />
-          <EntitySet Name="Tbl_Admin" EntityType="DboTicariOtomasyonModel.Tbl_Admin" />
           <EntitySet Name="Tbl_AltKategoriler" EntityType="DboTicariOtomasyonModel.Tbl_AltKategoriler" />
           <EntitySet Name="Tbl_Kategoriler" EntityType="DboTicariOtomasyonModel.Tbl_Kategoriler" />
           <AssociationSet Name="FK__Tbl_AltKa__Kateg__69C6B1F5" Association="DboTicariOtomasyonModel.FK__Tbl_AltKa__Kateg__69C6B1F5">
@@ -798,10 +813,6 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
             <End Role="Tbl_Rol_Izinleri" EntitySet="Tbl_Rol_Izinleri" />
           </AssociationSet>
           <EntitySet Name="Tbl_AdminRules" EntityType="DboTicariOtomasyonModel.Tbl_AdminRules" />
-          <AssociationSet Name="FK__Tbl_Admin__Admin__0AF29B961" Association="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B961">
-            <End Role="Tbl_Admin" EntitySet="Tbl_Admin" />
-            <End Role="Tbl_AdminRules" EntitySet="Tbl_AdminRules" />
-          </AssociationSet>
           <AssociationSet Name="FK__Tbl_Admin__RolId__0BE6BFCF1" Association="DboTicariOtomasyonModel.FK__Tbl_Admin__RolId__0BE6BFCF1">
             <End Role="Tbl_Roller" EntitySet="Tbl_Roller" />
             <End Role="Tbl_AdminRules" EntitySet="Tbl_AdminRules" />
@@ -810,6 +821,15 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
           <EntitySet Name="vw_KategoriSatisOzet" EntityType="DboTicariOtomasyonModel.vw_KategoriSatisOzet" />
           <EntitySet Name="vw_PersonelSatisOzet" EntityType="DboTicariOtomasyonModel.vw_PersonelSatisOzet" />
           <EntitySet Name="vw_UrunSatisOzet" EntityType="DboTicariOtomasyonModel.vw_UrunSatisOzet" />
+          <EntitySet Name="Tbl_Admin" EntityType="DboTicariOtomasyonModel.Tbl_Admin" />
+          <AssociationSet Name="FK__Tbl_Admin__Admin__0AF29B96" Association="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B96">
+            <End Role="Tbl_Admin" EntitySet="Tbl_Admin" />
+            <End Role="Tbl_AdminRules" EntitySet="Tbl_AdminRules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Admin_Tbl_Personeller" Association="DboTicariOtomasyonModel.FK_Tbl_Admin_Tbl_Personeller">
+            <End Role="Tbl_Personeller" EntitySet="Tbl_Personeller" />
+            <End Role="Tbl_Admin" EntitySet="Tbl_Admin" />
+          </AssociationSet>
           </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -964,6 +984,7 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
           <Property Name="PersonelGorev" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Tbl_FirmaHareketler" Relationship="DboTicariOtomasyonModel.FK_Tbl_FirmaHareketler_Tbl_Personeller" FromRole="Tbl_Personeller" ToRole="Tbl_FirmaHareketler" />
           <NavigationProperty Name="Tbl_MusteriHareketler" Relationship="DboTicariOtomasyonModel.FK_Tbl_MusteriHareketler_Tbl_Personeller" FromRole="Tbl_Personeller" ToRole="Tbl_MusteriHareketler" />
+          <NavigationProperty Name="Tbl_Admin" Relationship="DboTicariOtomasyonModel.FK_Tbl_Admin_Tbl_Personeller" FromRole="Tbl_Personeller" ToRole="Tbl_Admin" />
         </EntityType>
         <EntityType Name="Tbl_Sehirler">
           <Key>
@@ -1103,17 +1124,6 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
           <Property Type="String" Name="Tarih" Nullable="true" MaxLength="30" />
           <Property Type="String" Name="Notlar" Nullable="true" />
         </ComplexType>
-        <EntityType Name="Tbl_Admin">
-          <Key>
-            <PropertyRef Name="AdminID" />
-          </Key>
-          <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AdminKullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="AdminSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Tbl_AdminRules" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B961" FromRole="Tbl_Admin" ToRole="Tbl_AdminRules" />
-          <Property Name="AdminProfilResim" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="PersonellD" Type="Int32" />
-        </EntityType>
         <EntityType Name="Tbl_AltKategoriler">
           <Key>
             <PropertyRef Name="AltKategoriID" />
@@ -1315,21 +1325,9 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
           <Property Name="AdminRoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AdminID" Type="Int32" Nullable="false" />
           <Property Name="RolId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Tbl_Admin" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B961" FromRole="Tbl_AdminRules" ToRole="Tbl_Admin" />
           <NavigationProperty Name="Tbl_Roller" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__RolId__0BE6BFCF1" FromRole="Tbl_AdminRules" ToRole="Tbl_Roller" />
+          <NavigationProperty Name="Tbl_Admin" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B96" FromRole="Tbl_AdminRules" ToRole="Tbl_Admin" />
         </EntityType>
-        <Association Name="FK__Tbl_Admin__Admin__0AF29B961">
-          <End Type="DboTicariOtomasyonModel.Tbl_Admin" Role="Tbl_Admin" Multiplicity="1" />
-          <End Type="DboTicariOtomasyonModel.Tbl_AdminRules" Role="Tbl_AdminRules" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Tbl_Admin">
-              <PropertyRef Name="AdminID" />
-            </Principal>
-            <Dependent Role="Tbl_AdminRules">
-              <PropertyRef Name="AdminID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Tbl_Admin__RolId__0BE6BFCF1">
           <End Type="DboTicariOtomasyonModel.Tbl_Roller" Role="Tbl_Roller" Multiplicity="1" />
           <End Type="DboTicariOtomasyonModel.Tbl_AdminRules" Role="Tbl_AdminRules" Multiplicity="*" />
@@ -1389,6 +1387,43 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
           <Property Name="OrtalamaSatisFiyati" Type="Decimal" Precision="38" Scale="6" />
           <Property Name="AltKategoriID" Type="Int32" />
         </EntityType>
+        <EntityType Name="Tbl_Admin">
+          <Key>
+            <PropertyRef Name="AdminID" />
+          </Key>
+          <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdminKullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AdminSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AdminProfilResim" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="FK_AdminPersonel" Type="Int32" />
+          <NavigationProperty Name="Tbl_AdminRules" Relationship="DboTicariOtomasyonModel.FK__Tbl_Admin__Admin__0AF29B96" FromRole="Tbl_Admin" ToRole="Tbl_AdminRules" />
+          <Property Name="PersonelID" Type="Int32" />
+          <NavigationProperty Name="Tbl_Personeller" Relationship="DboTicariOtomasyonModel.FK_Tbl_Admin_Tbl_Personeller" FromRole="Tbl_Admin" ToRole="Tbl_Personeller" />
+        </EntityType>
+        <Association Name="FK__Tbl_Admin__Admin__0AF29B96">
+          <End Type="DboTicariOtomasyonModel.Tbl_Admin" Role="Tbl_Admin" Multiplicity="1" />
+          <End Type="DboTicariOtomasyonModel.Tbl_AdminRules" Role="Tbl_AdminRules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Admin">
+              <PropertyRef Name="AdminID" />
+            </Principal>
+            <Dependent Role="Tbl_AdminRules">
+              <PropertyRef Name="AdminID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Admin_Tbl_Personeller">
+          <End Type="DboTicariOtomasyonModel.Tbl_Personeller" Role="Tbl_Personeller" Multiplicity="0..1" />
+          <End Type="DboTicariOtomasyonModel.Tbl_Admin" Role="Tbl_Admin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Personeller">
+              <PropertyRef Name="PersonellD" />
+            </Principal>
+            <Dependent Role="Tbl_Admin">
+              <PropertyRef Name="PersonelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1635,17 +1670,6 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <EntitySetMapping Name="Tbl_Admin">
-            <EntityTypeMapping TypeName="DboTicariOtomasyonModel.Tbl_Admin">
-              <MappingFragment StoreEntitySet="Tbl_Admin">
-                <ScalarProperty Name="PersonellD" ColumnName="PersonellD" />
-                <ScalarProperty Name="AdminProfilResim" ColumnName="AdminProfilResim" />
-                <ScalarProperty Name="AdminSifre" ColumnName="AdminSifre" />
-                <ScalarProperty Name="AdminKullaniciAdi" ColumnName="AdminKullaniciAdi" />
-                <ScalarProperty Name="AdminID" ColumnName="AdminID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Tbl_AltKategoriler">
             <EntityTypeMapping TypeName="DboTicariOtomasyonModel.Tbl_AltKategoriler">
               <MappingFragment StoreEntitySet="Tbl_AltKategoriler">
@@ -1807,6 +1831,17 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.vw_UrunSatisOzet' does not 
                 <ScalarProperty Name="ToplamAdet" ColumnName="ToplamAdet" />
                 <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
                 <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Admin">
+            <EntityTypeMapping TypeName="DboTicariOtomasyonModel.Tbl_Admin">
+              <MappingFragment StoreEntitySet="Tbl_Admin">
+                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+                <ScalarProperty Name="AdminProfilResim" ColumnName="AdminProfilResim" />
+                <ScalarProperty Name="AdminSifre" ColumnName="AdminSifre" />
+                <ScalarProperty Name="AdminKullaniciAdi" ColumnName="AdminKullaniciAdi" />
+                <ScalarProperty Name="AdminID" ColumnName="AdminID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
