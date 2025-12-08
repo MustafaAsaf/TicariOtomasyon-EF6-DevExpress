@@ -54,6 +54,7 @@
             this.txtKullaniciAdi.Properties.Appearance.Options.UseFont = true;
             this.txtKullaniciAdi.Properties.AutoHeight = false;
             this.txtKullaniciAdi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtKullaniciAdi.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtKullaniciAdi.Properties.NullValuePrompt = "Kullanıcı Adı";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(300, 40);
             this.txtKullaniciAdi.TabIndex = 1;

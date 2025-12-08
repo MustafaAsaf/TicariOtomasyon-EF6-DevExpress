@@ -124,169 +124,203 @@ namespace Ticari_Otomasyon
 
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            try
+            if (!CurrentUser.HasPermission("EditStock"))//Stok üzerinde değişiklik yapma izni yoksa 
             {
-                // Kullanıcıdan onay al
-                DialogResult result = MessageBox.Show(
-                    "Bu ürünü eklemek istiyor musunuz?",
-                    "Ürün Ekleme Onayı",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
-
-                if (result == DialogResult.No)
-                {
-                    MessageBox.Show("Ürün ekleme işlemi iptal edildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-
-                // Alt kategori seçilmemişse uyarı ver
-                if (cbAltKategori.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Lütfen bir alt kategori seçin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                // AltKategoriID'yi al
-                string selectedAltKategori = cbAltKategori.SelectedItem.ToString();
-                var altKategoriEntity = dataBase.Tbl_AltKategoriler
-                    .FirstOrDefault(a => a.AltKategoriAdi == selectedAltKategori);
-
-                if (altKategoriEntity == null)
-                {
-                    MessageBox.Show("Seçilen alt kategori bulunamadı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Ürün bilgilerini al
-                Tbl_Urunler tblUrunler = new Tbl_Urunler
-                {
-                    UrunAdi = txtUrunAd.Text,
-                    UrunMarka = txtMarka.Text,
-                    UrunModel = txtModel.Text,
-                    UrunYil = txtYil.Text,
-                    UrunAdet = (short)Convert.ToInt32(numericAdet.Text),
-                    UrunAlisFiyat = Convert.ToDecimal(txtAlisFiyat.Text),
-                    UrunSatisFiyat = Convert.ToDecimal(txtSatisFiyat.Text),
-                    UrunDetay = txtDetay.Text,
-                    AltKategoriID = altKategoriEntity.AltKategoriID // İlişki buradan kuruluyor
-                };
-
-                // Kaydet
-                dataBase.Tbl_Urunler.Add(tblUrunler);
-                dataBase.SaveChanges();
-
-                MessageBox.Show("Yeni Ürün Eklendi!", "ÜRÜNLER", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                GetAll();  // Listeyi yenile
-                ClearForm(groupControl1); // Formu temizle
+                MessageBox.Show("Bu işlem için izniniz yok!",
+                    "Yetkisiz Erişim",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
             }
-            catch (Exception exception)
+            else
             {
-                MessageBox.Show($"Hata: {exception.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    // Kullanıcıdan onay al
+                    DialogResult result = MessageBox.Show(
+                        "Bu ürünü eklemek istiyor musunuz?",
+                        "Ürün Ekleme Onayı",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+
+                    if (result == DialogResult.No)
+                    {
+                        MessageBox.Show("Ürün ekleme işlemi iptal edildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+                    // Alt kategori seçilmemişse uyarı ver
+                    if (cbAltKategori.SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Lütfen bir alt kategori seçin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    // AltKategoriID'yi al
+                    string selectedAltKategori = cbAltKategori.SelectedItem.ToString();
+                    var altKategoriEntity = dataBase.Tbl_AltKategoriler
+                        .FirstOrDefault(a => a.AltKategoriAdi == selectedAltKategori);
+
+                    if (altKategoriEntity == null)
+                    {
+                        MessageBox.Show("Seçilen alt kategori bulunamadı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Ürün bilgilerini al
+                    Tbl_Urunler tblUrunler = new Tbl_Urunler
+                    {
+                        UrunAdi = txtUrunAd.Text,
+                        UrunMarka = txtMarka.Text,
+                        UrunModel = txtModel.Text,
+                        UrunYil = txtYil.Text,
+                        UrunAdet = (short)Convert.ToInt32(numericAdet.Text),
+                        UrunAlisFiyat = Convert.ToDecimal(txtAlisFiyat.Text),
+                        UrunSatisFiyat = Convert.ToDecimal(txtSatisFiyat.Text),
+                        UrunDetay = txtDetay.Text,
+                        AltKategoriID = altKategoriEntity.AltKategoriID // İlişki buradan kuruluyor
+                    };
+
+                    // Kaydet
+                    dataBase.Tbl_Urunler.Add(tblUrunler);
+                    dataBase.SaveChanges();
+
+                    MessageBox.Show("Yeni Ürün Eklendi!", "ÜRÜNLER", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    GetAll();  // Listeyi yenile
+                    ClearForm(groupControl1); // Formu temizle
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show($"Hata: {exception.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+                
         }
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
-            try
+            if (!CurrentUser.HasPermission("EditStock"))//Stok üzerinde değişiklik yapma izni yoksa 
             {
-                if (gridView1.FocusedRowHandle >= 0) // Seçili satır kontrolü
+                MessageBox.Show("Bu işlem için izniniz yok!",
+                    "Yetkisiz Erişim",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
                 {
-                    int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID")); // ID'yi al
-                    var removeValues = dataBase.Tbl_Urunler.Find(id);
-
-                    if (removeValues != null)
+                    if (gridView1.FocusedRowHandle >= 0) // Seçili satır kontrolü
                     {
-                        // Kullanıcıya onay mesajı göster
-                        DialogResult result = MessageBox.Show("Bu kaydı silmek istediğinize emin misiniz?",
-                            "Silme Onayı",
-                            MessageBoxButtons.YesNo,
-                            MessageBoxIcon.Warning);
+                        int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID")); // ID'yi al
+                        var removeValues = dataBase.Tbl_Urunler.Find(id);
 
-                        if (result == DialogResult.Yes) // Kullanıcı "Evet" derse sil
+                        if (removeValues != null)
                         {
-                            dataBase.Tbl_Urunler.Remove(removeValues);
-                            dataBase.SaveChanges();
+                            // Kullanıcıya onay mesajı göster
+                            DialogResult result = MessageBox.Show("Bu kaydı silmek istediğinize emin misiniz?",
+                                "Silme Onayı",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Warning);
 
-                            MessageBox.Show("Kayıt Silindi", "ÜRÜNLER", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            GetAll(); // Listeyi yenile
-                            ClearForm(groupControl1); // Formu temizle
+                            if (result == DialogResult.Yes) // Kullanıcı "Evet" derse sil
+                            {
+                                dataBase.Tbl_Urunler.Remove(removeValues);
+                                dataBase.SaveChanges();
+
+                                MessageBox.Show("Kayıt Silindi", "ÜRÜNLER", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                GetAll(); // Listeyi yenile
+                                ClearForm(groupControl1); // Formu temizle
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Silinecek kayıt bulunamadı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("Silinecek kayıt bulunamadı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show($"Hata: {exception.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception exception)
-            {
-                MessageBox.Show($"Hata: {exception.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+               
         }
 
-        private void btnUpdate_Click_1(object sender, EventArgs e)
+        private void btnUpdate_Click_1(object sender, EventArgs e)//Stok üzerinde değişiklik yapma izni yoksa
         {
-            try
+            if (!CurrentUser.HasPermission("EditStock"))
             {
-                if (gridView1.FocusedRowHandle >= 0) // Eğer seçili satır varsa
+                MessageBox.Show("Bu ekrana erişim izniniz yok!",
+                    "Yetkisiz Erişim",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
                 {
-                    int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID")); // "ID" alanı kullanılmalı
-                    var updateProduct = dataBase.Tbl_Urunler.Find(id);
-
-                    if (updateProduct != null)
+                    if (gridView1.FocusedRowHandle >= 0) // Eğer seçili satır varsa
                     {
-                        // Kullanıcıdan onay al
-                        DialogResult result = MessageBox.Show("Bu ürünü güncellemek istiyor musunuz?",
-                                                              "Güncelleme Onayı",
-                                                              MessageBoxButtons.YesNo,
-                                                              MessageBoxIcon.Question);
+                        int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID")); // "ID" alanı kullanılmalı
+                        var updateProduct = dataBase.Tbl_Urunler.Find(id);
 
-                        if (result == DialogResult.Yes)
+                        if (updateProduct != null)
                         {
-                            updateProduct.UrunAdi = txtUrunAd.Text;
-                            updateProduct.UrunMarka = txtMarka.Text;
-                            updateProduct.UrunModel = txtModel.Text;
-                            updateProduct.UrunYil = txtYil.Text;
-                            updateProduct.UrunAdet = (short)numericAdet.Value;
-                            updateProduct.UrunAlisFiyat = Convert.ToDecimal(txtAlisFiyat.Text);
-                            updateProduct.UrunSatisFiyat = Convert.ToDecimal(txtSatisFiyat.Text);
-                            updateProduct.UrunDetay = txtDetay.Text;
+                            // Kullanıcıdan onay al
+                            DialogResult result = MessageBox.Show("Bu ürünü güncellemek istiyor musunuz?",
+                                                                  "Güncelleme Onayı",
+                                                                  MessageBoxButtons.YesNo,
+                                                                  MessageBoxIcon.Question);
 
-                            // Alt kategori seçimi
-                            if (cbAltKategori.SelectedIndex != -1)
+                            if (result == DialogResult.Yes)
                             {
-                                string selectedAltKategori = cbAltKategori.SelectedItem.ToString();
-                                var altKategoriEntity = dataBase.Tbl_AltKategoriler
-                                    .FirstOrDefault(a => a.AltKategoriAdi == selectedAltKategori);
+                                updateProduct.UrunAdi = txtUrunAd.Text;
+                                updateProduct.UrunMarka = txtMarka.Text;
+                                updateProduct.UrunModel = txtModel.Text;
+                                updateProduct.UrunYil = txtYil.Text;
+                                updateProduct.UrunAdet = (short)numericAdet.Value;
+                                updateProduct.UrunAlisFiyat = Convert.ToDecimal(txtAlisFiyat.Text);
+                                updateProduct.UrunSatisFiyat = Convert.ToDecimal(txtSatisFiyat.Text);
+                                updateProduct.UrunDetay = txtDetay.Text;
 
-                                if (altKategoriEntity != null)
+                                // Alt kategori seçimi
+                                if (cbAltKategori.SelectedIndex != -1)
                                 {
-                                    updateProduct.AltKategoriID = altKategoriEntity.AltKategoriID;
+                                    string selectedAltKategori = cbAltKategori.SelectedItem.ToString();
+                                    var altKategoriEntity = dataBase.Tbl_AltKategoriler
+                                        .FirstOrDefault(a => a.AltKategoriAdi == selectedAltKategori);
+
+                                    if (altKategoriEntity != null)
+                                    {
+                                        updateProduct.AltKategoriID = altKategoriEntity.AltKategoriID;
+                                    }
                                 }
+
+                                dataBase.SaveChanges();
+                                MessageBox.Show("Ürün başarıyla güncellendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                GetAll();
+                                ClearForm(groupControl1);
                             }
-
-                            dataBase.SaveChanges();
-                            MessageBox.Show("Ürün başarıyla güncellendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            GetAll();
-                            ClearForm(groupControl1);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Güncellenecek ürün bulunamadı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Güncellenecek ürün bulunamadı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Lütfen önce bir ürün seçin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Lütfen önce bir ürün seçin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Güncelleme sırasında bir hata oluştu! " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Güncelleme sırasında bir hata oluştu! " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+               
         }
 
         private void btnClear_Click_1(object sender, EventArgs e)

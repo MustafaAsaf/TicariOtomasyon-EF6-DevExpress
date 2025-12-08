@@ -123,7 +123,7 @@ namespace Ticari_Otomasyon
                 if (gridView1.FocusedRowHandle >= 0) // Eğer seçili satır varsa
                 {
                     int id = Convert.ToInt32(
-                        gridView1.GetFocusedRowCellValue("PersonellD")); // Seçili satırdaki "Personel ID" değerini al
+                        gridView1.GetFocusedRowCellValue("ID")); // Seçili satırdaki "Personel ID" değerini al
                     var updateProduct = dataBase.Tbl_Personeller.Find(id); // ID'ye göre veriyi bul
 
                     if (updateProduct != null)
@@ -196,7 +196,7 @@ namespace Ticari_Otomasyon
             {
                 if (gridView1.FocusedRowHandle >= 0) // Seçili satır kontrolü
                 {
-                    int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("PersonellD")); // ID'yi al
+                    int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID")); // ID'yi al
                     var removeValues = dataBase.Tbl_Personeller.Find(id);
 
                     if (removeValues != null)

@@ -88,8 +88,8 @@ namespace Ticari_Otomasyon
             CurrentUser.Izinler = izinler;
             CurrentUser.IsSuperAdmin = roller.Any(r => r.IsSuperAdmin);
             CurrentUser.ProfilResim = admin.AdminProfilResim;
-            //CurrentUser.PersonelAdSoyad = 
-
+            CurrentUser.PersonelAdSoyad = admin.Tbl_Personeller.PersonelAd + " " + admin.Tbl_Personeller.PersonelSoyad;
+   
             // Ana forma geçiş
             FrmAna ana = new FrmAna();
             ana.Show();

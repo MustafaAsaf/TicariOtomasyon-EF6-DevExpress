@@ -65,7 +65,7 @@ namespace Ticari_Otomasyon
         {
             if (!CurrentUser.HasPermission("ViewStock")) //Stok görüntüleme izni yoksa
             {
-                MessageBox.Show("Bu ekrana erişim izniniz yok!",
+                MessageBox.Show("Bu işlem için izniniz yok!",
                     "Yetkisiz Erişim",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
@@ -91,7 +91,7 @@ namespace Ticari_Otomasyon
         {
             if (!CurrentUser.HasPermission("ViewCustomers")) // Müşteri görüntüleme izni yoksa
             {
-                MessageBox.Show("Bu ekrana erişim izniniz yok!",
+                MessageBox.Show("Bu işlem için izniniz yok!",
                     "Yetkisiz Erişim",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);

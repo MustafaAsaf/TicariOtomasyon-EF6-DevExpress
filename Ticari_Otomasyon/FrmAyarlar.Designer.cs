@@ -25,6 +25,9 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.combobox_AdSoyad = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSifre = new DevExpress.XtraEditors.TextEdit();
             this.btn_image = new DevExpress.XtraEditors.SimpleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -52,9 +55,6 @@
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSifre = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.combobox_AdSoyad = new DevExpress.XtraEditors.ComboBoxEdit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -64,6 +64,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.combobox_AdSoyad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.combobox_Roller.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).BeginInit();
@@ -75,8 +77,6 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxIzinler.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.combobox_Roller2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.combobox_AdSoyad.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -181,6 +181,41 @@
             this.panelControl1.Padding = new System.Windows.Forms.Padding(20);
             this.panelControl1.Size = new System.Drawing.Size(370, 698);
             this.panelControl1.TabIndex = 49;
+            // 
+            // combobox_AdSoyad
+            // 
+            this.combobox_AdSoyad.Location = new System.Drawing.Point(17, 204);
+            this.combobox_AdSoyad.Name = "combobox_AdSoyad";
+            this.combobox_AdSoyad.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.combobox_AdSoyad.Properties.Appearance.Options.UseFont = true;
+            this.combobox_AdSoyad.Properties.AutoHeight = false;
+            this.combobox_AdSoyad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.combobox_AdSoyad.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.combobox_AdSoyad.Size = new System.Drawing.Size(339, 36);
+            this.combobox_AdSoyad.TabIndex = 65;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Appearance.Options.UseForeColor = true;
+            this.labelControl5.Location = new System.Drawing.Point(17, 173);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(80, 25);
+            this.labelControl5.TabIndex = 64;
+            this.labelControl5.Text = "Ad-Soyad";
+            // 
+            // txtSifre
+            // 
+            this.txtSifre.Location = new System.Drawing.Point(17, 117);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifre.Properties.Appearance.Options.UseFont = true;
+            this.txtSifre.Properties.AutoHeight = false;
+            this.txtSifre.Size = new System.Drawing.Size(339, 36);
+            this.txtSifre.TabIndex = 63;
             // 
             // btn_image
             // 
@@ -377,6 +412,7 @@
             this.txtKullaniciAdi.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtKullaniciAdi.Properties.Appearance.Options.UseFont = true;
             this.txtKullaniciAdi.Properties.AutoHeight = false;
+            this.txtKullaniciAdi.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtKullaniciAdi.Size = new System.Drawing.Size(339, 36);
             this.txtKullaniciAdi.TabIndex = 47;
             // 
@@ -551,7 +587,6 @@
             this.simpleButton5.Size = new System.Drawing.Size(60, 50);
             this.simpleButton5.TabIndex = 54;
             this.simpleButton5.ToolTip = "Ekle";
-          
             // 
             // simpleButton6
             // 
@@ -582,41 +617,6 @@
             this.labelControl7.TabIndex = 50;
             this.labelControl7.Text = "İzinler";
             // 
-            // txtSifre
-            // 
-            this.txtSifre.Location = new System.Drawing.Point(17, 117);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSifre.Properties.Appearance.Options.UseFont = true;
-            this.txtSifre.Properties.AutoHeight = false;
-            this.txtSifre.Size = new System.Drawing.Size(339, 36);
-            this.txtSifre.TabIndex = 63;
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(17, 173);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(80, 25);
-            this.labelControl5.TabIndex = 64;
-            this.labelControl5.Text = "Ad-Soyad";
-            // 
-            // combobox_AdSoyad
-            // 
-            this.combobox_AdSoyad.Location = new System.Drawing.Point(17, 204);
-            this.combobox_AdSoyad.Name = "combobox_AdSoyad";
-            this.combobox_AdSoyad.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.combobox_AdSoyad.Properties.Appearance.Options.UseFont = true;
-            this.combobox_AdSoyad.Properties.AutoHeight = false;
-            this.combobox_AdSoyad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.combobox_AdSoyad.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.combobox_AdSoyad.Size = new System.Drawing.Size(339, 36);
-            this.combobox_AdSoyad.TabIndex = 65;
-            // 
             // FrmAyarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -638,6 +638,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.combobox_AdSoyad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.combobox_Roller.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).EndInit();
@@ -650,8 +652,6 @@
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxIzinler.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.combobox_Roller2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.combobox_AdSoyad.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

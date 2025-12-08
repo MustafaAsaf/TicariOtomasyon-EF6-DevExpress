@@ -42,14 +42,15 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.pictureBox_Profil = new System.Windows.Forms.PictureBox();
             this.lbl_Gorev = new DevExpress.XtraEditors.LabelControl();
             this.lbl_KullaniciAdi = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.pictureBox_Profil = new System.Windows.Forms.PictureBox();
+            this.lblNameLastName = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.tableLayoutAna.SuspendLayout();
             this.tableLayoutSol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
@@ -66,10 +67,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Profil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Profil)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutAna
@@ -202,22 +203,34 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.labelControl2);
+            this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Controls.Add(this.lblNameLastName);
             this.panelControl1.Controls.Add(this.pictureBox_Profil);
             this.panelControl1.Controls.Add(this.lbl_Gorev);
             this.panelControl1.Controls.Add(this.lbl_KullaniciAdi);
-            this.panelControl1.Controls.Add(this.labelControl2);
-            this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(3, 3);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(601, 411);
             this.panelControl1.TabIndex = 15;
             // 
+            // pictureBox_Profil
+            // 
+            this.pictureBox_Profil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_Profil.Enabled = false;
+            this.pictureBox_Profil.Location = new System.Drawing.Point(338, 50);
+            this.pictureBox_Profil.Name = "pictureBox_Profil";
+            this.pictureBox_Profil.Size = new System.Drawing.Size(240, 240);
+            this.pictureBox_Profil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Profil.TabIndex = 62;
+            this.pictureBox_Profil.TabStop = false;
+            // 
             // lbl_Gorev
             // 
             this.lbl_Gorev.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_Gorev.Appearance.Options.UseFont = true;
-            this.lbl_Gorev.Location = new System.Drawing.Point(145, 85);
+            this.lbl_Gorev.Location = new System.Drawing.Point(151, 138);
             this.lbl_Gorev.Name = "lbl_Gorev";
             this.lbl_Gorev.Size = new System.Drawing.Size(114, 24);
             this.lbl_Gorev.TabIndex = 3;
@@ -227,31 +240,11 @@
             // 
             this.lbl_KullaniciAdi.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_KullaniciAdi.Appearance.Options.UseFont = true;
-            this.lbl_KullaniciAdi.Location = new System.Drawing.Point(145, 41);
+            this.lbl_KullaniciAdi.Location = new System.Drawing.Point(151, 85);
             this.lbl_KullaniciAdi.Name = "lbl_KullaniciAdi";
             this.lbl_KullaniciAdi.Size = new System.Drawing.Size(114, 24);
             this.lbl_KullaniciAdi.TabIndex = 2;
             this.lbl_KullaniciAdi.Text = "...................";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(104, 85);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(35, 24);
-            this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "Rol:";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(24, 41);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(115, 24);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Kullanıcı Adı:";
             // 
             // xtraTabControl1
             // 
@@ -283,16 +276,35 @@
             this.webBrowser1.Size = new System.Drawing.Size(482, 780);
             this.webBrowser1.TabIndex = 0;
             // 
-            // pictureBox_Profil
+            // lblNameLastName
             // 
-            this.pictureBox_Profil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox_Profil.Enabled = false;
-            this.pictureBox_Profil.Location = new System.Drawing.Point(322, 50);
-            this.pictureBox_Profil.Name = "pictureBox_Profil";
-            this.pictureBox_Profil.Size = new System.Drawing.Size(240, 240);
-            this.pictureBox_Profil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_Profil.TabIndex = 62;
-            this.pictureBox_Profil.TabStop = false;
+            this.lblNameLastName.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblNameLastName.Appearance.Options.UseFont = true;
+            this.lblNameLastName.Location = new System.Drawing.Point(371, 311);
+            this.lblNameLastName.Name = "lblNameLastName";
+            this.lblNameLastName.Size = new System.Drawing.Size(114, 24);
+            this.lblNameLastName.TabIndex = 63;
+            this.lblNameLastName.Text = "...................";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(7, 82);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(125, 28);
+            this.labelControl1.TabIndex = 64;
+            this.labelControl1.Text = "Kullanıcı Adı:";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(96, 138);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(36, 28);
+            this.labelControl2.TabIndex = 65;
+            this.labelControl2.Text = "Rol:";
             // 
             // FrmAnaSayfa
             // 
@@ -324,10 +336,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Profil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Profil)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,10 +361,11 @@
         private DevExpress.XtraGrid.GridControl gridControl4;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl lbl_Gorev;
         private DevExpress.XtraEditors.LabelControl lbl_KullaniciAdi;
         private System.Windows.Forms.PictureBox pictureBox_Profil;
+        private DevExpress.XtraEditors.LabelControl lblNameLastName;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

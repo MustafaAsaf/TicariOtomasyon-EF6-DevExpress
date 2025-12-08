@@ -22,9 +22,11 @@ namespace Ticari_Otomasyon
         public FrmHareketler()  
         {
             InitializeComponent();
+
         }
 
-        private DboTicariOtomasyonEntities1 dataBase = new DboTicariOtomasyonEntities1();
+        //private DboTicariOtomasyonEntities1 dataBase = new DboTicariOtomasyonEntities1();
+        
         private void FrmHareketler_Load(object sender, EventArgs e)
         {
             GetFirmaMusteriHareketleri();
@@ -90,6 +92,7 @@ namespace Ticari_Otomasyon
         }
         public void GetStokHareketleri()
         {
+           
             try
             {
                 using (var values = new DboTicariOtomasyonEntities1())
