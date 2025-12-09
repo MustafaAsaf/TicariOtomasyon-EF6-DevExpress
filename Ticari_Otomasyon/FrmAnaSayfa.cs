@@ -54,15 +54,6 @@ namespace Ticari_Otomasyon
             // 4. PROFİL RESMİNİ YUVARLAK YAPMA
             MakeCircular(pictureBox_Profil);
 
-            // 5. ETİKETLER (LABELS)
-            Font baslikFont = new Font("Segoe UI", 14, FontStyle.Bold);
-            Font normalFont = new Font("Segoe UI", 12, FontStyle.Regular);
-
-            lbl_KullaniciAdi.Font = normalFont;
-            lbl_Gorev.Font = normalFont;
-            labelControl1.Font = new Font("Segoe UI", 12, FontStyle.Bold); // "Kullanıcı Adı" başlığı
-            labelControl2.Font = new Font("Segoe UI", 12, FontStyle.Bold); // "Rol" başlığı
-
             // Panel rengini biraz daha yumuşatalım (Eğer skin kullanmıyorsan)
             panelControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             panelControl1.Appearance.BackColor = Color.White;

@@ -98,7 +98,7 @@
             this.checkEdit1.Properties.Appearance.Options.UseFont = true;
             this.checkEdit1.Properties.Appearance.Options.UseForeColor = true;
             this.checkEdit1.Properties.Caption = "Şifreyi Göster";
-            this.checkEdit1.Size = new System.Drawing.Size(117, 24);
+            this.checkEdit1.Size = new System.Drawing.Size(138, 24);
             this.checkEdit1.TabIndex = 7;
             this.checkEdit1.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
             // 
